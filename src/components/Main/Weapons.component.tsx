@@ -19,12 +19,11 @@ function Weapons() {
           </Tooltip>
         )}
       >
-        <Button variant="outline-dark">
+        <Button data-testid="saks" variant="outline-dark">
           <HandScissors />
         </Button>
       </OverlayTrigger>
       {' '}
-
       <OverlayTrigger
         placement="bottom"
         overlay={(
@@ -33,12 +32,11 @@ function Weapons() {
           </Tooltip>
         )}
       >
-        <Button variant="outline-dark">
+        <Button data-testid="stein" variant="outline-dark">
           <HandRock />
         </Button>
       </OverlayTrigger>
       {' '}
-
       <OverlayTrigger
         placement="bottom"
         overlay={(
@@ -47,7 +45,7 @@ function Weapons() {
           </Tooltip>
         )}
       >
-        <Button variant="outline-dark">
+        <Button data-testid="papir" variant="outline-dark">
           <HandPaper />
         </Button>
       </OverlayTrigger>
