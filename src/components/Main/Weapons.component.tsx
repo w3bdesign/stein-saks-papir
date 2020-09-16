@@ -19,7 +19,7 @@ function Weapons() {
           </Tooltip>
         )}
       >
-        <Button data-testid="saks" variant="outline-dark">
+        <Button data-testid="saks" variant="outline-dark" onClick={() => { console.log('Saks'); }}>
           <HandScissors />
         </Button>
       </OverlayTrigger>

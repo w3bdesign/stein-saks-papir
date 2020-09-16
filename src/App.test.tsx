@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 import React from 'react';
 import { render, screen } from '@testing-library/react';
 
@@ -25,7 +26,7 @@ describe('Sjekk at alle nødvendige elementer er på plass i dokumentet', () => 
     expect(Saks).toBeInTheDocument();
   });
 
-  test('Sjekk at saks er på plass', () => {
+  test('Sjekk at stein er på plass', () => {
     const { getByTestId } = render(<App />);
     const Stein = getByTestId('stein');
     expect(Stein).toBeInTheDocument();
