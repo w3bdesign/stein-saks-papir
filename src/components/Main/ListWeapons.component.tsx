@@ -8,7 +8,7 @@ import { ReactComponent as HandScissors } from '../../assets/hand-scissors-solid
 import { ReactComponent as HandRock } from '../../assets/hand-rock-solid.svg';
 import { ReactComponent as HandPaper } from '../../assets/hand-paper-solid.svg';
 
-function Weapons() {
+function ListWeapons() {
   return (
     <>
       <OverlayTrigger
@@ -19,11 +19,18 @@ function Weapons() {
           </Tooltip>
         )}
       >
-        <Button data-testid="saks" variant="outline-dark">
+        <Button
+          className="m-4"
+          data-testid="saks"
+          variant="outline-dark"
+          onClick={() => {
+            console.log('Saks');
+          }}
+        >
           <HandScissors />
         </Button>
       </OverlayTrigger>
-      {' '}
+
       <OverlayTrigger
         placement="bottom"
         overlay={(
@@ -32,11 +39,11 @@ function Weapons() {
           </Tooltip>
         )}
       >
-        <Button data-testid="stein" variant="outline-dark">
+        <Button className="m-4" data-testid="stein" variant="outline-dark">
           <HandRock />
         </Button>
       </OverlayTrigger>
-      {' '}
+
       <OverlayTrigger
         placement="bottom"
         overlay={(
@@ -45,13 +52,12 @@ function Weapons() {
           </Tooltip>
         )}
       >
-        <Button data-testid="papir" variant="outline-dark">
+        <Button className="m-4" data-testid="papir" variant="outline-dark">
           <HandPaper />
         </Button>
       </OverlayTrigger>
-      {' '}
     </>
   );
 }
 
-export default Weapons;
+export default ListWeapons;
