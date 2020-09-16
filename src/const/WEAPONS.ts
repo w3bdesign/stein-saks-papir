@@ -1,4 +1,4 @@
-const VÅPEN = [
+const WEAPONS = [
   {
     name: 'Stein',
     emoji: '✊',
@@ -16,4 +16,4 @@ const VÅPEN = [
   },
 ];
 
-export default VÅPEN;
+export default WEAPONS;
