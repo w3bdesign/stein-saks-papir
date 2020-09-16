@@ -5,7 +5,7 @@ import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
 
 import Scoreboard from './Scoreboard.component';
-import Weapons from './Weapons.component';
+import Weapons from './ListWeapons.component';
 
 function Main() {
   return (
