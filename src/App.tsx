@@ -1,21 +1,16 @@
 import React from 'react';
-
 import Container from 'react-bootstrap/Container';
-import Col from 'react-bootstrap/Col';
-import Row from 'react-bootstrap/Row';
 
-
+import Main from './components/Main/Main.component';
 
 function App() {
   return (
-    <div className="App">
+    <div className="root">
       <Container fluid>
-        <Row>
-          <Col>Stein Saks Papir</Col>
-        </Row>
+        <Main />
       </Container>
-
     </div>
+
   );
 }
 
