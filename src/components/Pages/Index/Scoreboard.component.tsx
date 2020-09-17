@@ -1,7 +1,13 @@
-import React from 'react';
-import { Card, CardDeck } from 'react-bootstrap';
+import React, { useContext } from 'react';
+
+import CardDeck from 'react-bootstrap/CardDeck';
+import Card from 'react-bootstrap/Card';
+
+import ScoreBoardContext from '../../../context/ScoreBoardContext';
 
 function Scoreboard() {
+  const PlayerScore = useContext(ScoreBoardContext);
+
   return (
     <>
       <Card className="mx-auto mt-5 text-center">
@@ -12,21 +18,27 @@ function Scoreboard() {
         <CardDeck className="m-4">
           <Card>
             <Card.Body>
-              <Card.Title><h5>Spiller 1</h5></Card.Title>
+              <Card.Title>
+                <span style={{ fontSize: '1.25rem' }}>
+                  {PlayerScore[0].Name}
+                </span>
+              </Card.Title>
               <Card.Text>
-                <h3>0</h3>
+                <span className="display-3">{PlayerScore[0].Score}</span>
               </Card.Text>
             </Card.Body>
-
           </Card>
           <Card>
             <Card.Body>
-              <Card.Title><h5>CPU</h5></Card.Title>
+              <Card.Title>
+                <span style={{ fontSize: '1.25rem' }}>
+                  {PlayerScore[1].Name}
+                </span>
+              </Card.Title>
               <Card.Text>
-                <h3>0</h3>
+                <span className="display-3">{PlayerScore[1].Score}</span>
               </Card.Text>
             </Card.Body>
-
           </Card>
         </CardDeck>
       </Card>
