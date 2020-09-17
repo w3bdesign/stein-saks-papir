@@ -4,6 +4,8 @@ import Button from 'react-bootstrap/Button';
 import OverlayTrigger from 'react-bootstrap/OverlayTrigger';
 import Tooltip from 'react-bootstrap/Tooltip';
 
+import PlayGame from '../../../functions/PlayGame';
+
 import { ReactComponent as HandScissors } from '../../../assets/hand-scissors-solid.svg';
 import { ReactComponent as HandRock } from '../../../assets/hand-rock-solid.svg';
 import { ReactComponent as HandPaper } from '../../../assets/hand-paper-solid.svg';
@@ -24,7 +26,7 @@ function ListWeapons() {
           data-testid="saks"
           variant="outline-dark"
           onClick={() => {
-            console.log('Saks');
+            PlayGame('Saks');
           }}
         >
           <HandScissors />
@@ -38,7 +40,14 @@ function ListWeapons() {
           </Tooltip>
         )}
       >
-        <Button className="m-4" data-testid="stein" variant="outline-dark">
+        <Button
+          className="m-4"
+          data-testid="stein"
+          variant="outline-dark"
+          onClick={() => {
+            PlayGame('Stein');
+          }}
+        >
           <HandRock />
         </Button>
       </OverlayTrigger>
@@ -50,7 +59,14 @@ function ListWeapons() {
           </Tooltip>
         )}
       >
-        <Button className="m-4" data-testid="papir" variant="outline-dark">
+        <Button
+          className="m-4"
+          data-testid="papir"
+          variant="outline-dark"
+          onClick={() => {
+            PlayGame('Papir');
+          }}
+        >
           <HandPaper />
         </Button>
       </OverlayTrigger>
