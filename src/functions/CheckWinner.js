@@ -1,7 +1,5 @@
-// import WEAPONS from '../const/WEAPONS';
-
-function CheckWinner(Weapon) {
-  return Weapon;
+function CheckWinner(selection, opponentSelection) {
+  return selection.beats === opponentSelection.name;
 }
 
 export default CheckWinner;
