@@ -2,9 +2,10 @@
 
 // function PlayGame(Weapon: string) {
 function PlayGame(Weapon) {
-  return Weapon;
+  // alert(`Du valgte ${Weapon}`);
   // console.log('Playing game ...');
   // console.log(Weapon);
+  return Weapon;
 }
 
 export default PlayGame;
