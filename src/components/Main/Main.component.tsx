@@ -1,11 +1,12 @@
 import React from 'react';
-import { Card } from 'react-bootstrap';
 
 import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
+import Card from 'react-bootstrap/Card';
 
 import Scoreboard from './Scoreboard.component';
-import Weapons from './ListWeapons.component';
+import ListWeapons from './ListWeapons.component';
+import ResetGame from './ResetGame.component';
 
 function Main() {
   return (
@@ -18,8 +19,9 @@ function Main() {
           <Card.Header>
             <h5>Velg ditt våpen under for å starte spillet</h5>
           </Card.Header>
-
-          <Weapons />
+          <ListWeapons />
+          <br />
+          <ResetGame />
         </Card>
         <Scoreboard />
       </Col>
