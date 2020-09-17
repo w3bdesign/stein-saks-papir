@@ -1,7 +1,7 @@
 import React from 'react';
 import Container from 'react-bootstrap/Container';
 
-import Main from './components/Main/Main.component';
+import Main from './components/Pages/Index/Main.component';
 
 function App() {
   return (
