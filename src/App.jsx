@@ -13,12 +13,11 @@ function App() {
   const store = createStore({
     score: DEFAULT_SCORE,
     increase: action((state, payload) => {
+      console.log(state);
       console.log(payload);
       // state.score.length = 0;
     }),
-    reset: action((state) => {
-      console.log(state);
-    }),
+    reset: action((state) => ({ Test: state })),
   });
 
   return (
