@@ -9,6 +9,8 @@
 
 Live URL: <https://steinsakspapir.dfweb.no>
 
+<img src="https://github.com/w3bdesign/stein-saks-papir/blob/master/screenshot/screenshot.jpg" alt="screenshot">
+
 # Stein Saks Papir
 
 Prosjekt/hjemmeoppgave av Daniel.
