@@ -3,4 +3,6 @@ const DEFAULT_SCORE = [
   { Name: 'CPU', Score: 0 },
 ];
 
+// const DEFAULT_SCORE = [{}];
+
 export default DEFAULT_SCORE;

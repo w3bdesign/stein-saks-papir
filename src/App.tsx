@@ -1,22 +1,31 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Container from 'react-bootstrap/Container';
 
+import { action, createStore, StoreProvider } from 'easy-peasy';
 import DEFAULT_SCORE from './const/DEFAULT_SCORE';
-
-import ScoreBoardContext from './context/ScoreBoardContext';
 
 import Main from './components/Pages/Index/Main.component';
 
 function App() {
-  const [score] = useState(DEFAULT_SCORE);
+  const store = createStore({
+    scores: {
+      score: DEFAULT_SCORE,
+      increase: action((state, payload) => {
+        console.log(state);
+        console.log(payload);
+        // state.items.push(payload);
+      }),
+    },
+  });
+
   return (
-    <ScoreBoardContext.Provider value={score}>
+    <StoreProvider store={store}>
       <div className="root">
         <Container fluid="md">
           <Main />
         </Container>
       </div>
-    </ScoreBoardContext.Provider>
+    </StoreProvider>
   );
 }
 
