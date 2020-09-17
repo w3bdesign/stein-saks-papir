@@ -18,7 +18,12 @@ function App() {
       // console.log(payload);
       // state.score.length = 0;
     }),
-    reset: action((state) => ({ Test: state })),
+
+    reset: action((state) => {
+      const test = state;
+      console.log(test);
+    }),
+    devTools: process.env.NODE_ENV === 'development',
   });
 
   return (
