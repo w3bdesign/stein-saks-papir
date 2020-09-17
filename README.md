@@ -2,6 +2,8 @@
 
 <img src="https://github.com/w3bdesign/stein-saks-papir/blob/master/screenshot/screenshot.jpg" alt="screenshot">
 
+Live URL: <a href="https://hungry-shockley-392371.netlify.app/">https://hungry-shockley-392371.netlify.app/</a>
+
 # Stein Saks Papir
 
 Prosjekt av Daniel laget for NovaCare.
