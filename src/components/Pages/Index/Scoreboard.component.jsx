@@ -16,12 +16,12 @@ function Scoreboard() {
           <Card>
             <Card.Body>
               <Card.Title>
-                <span style={{ fontSize: '1.25rem' }}>{Player[0].Name}</span>
+                <span style={{ fontSize: '1.25rem' }}>{Player && Player[0].Name}</span>
               </Card.Title>
               <Card.Text>
                 <span className="display-3">
                   {' '}
-                  {Player[0].Score}
+                  {Player && Player[0].Score}
                 </span>
               </Card.Text>
             </Card.Body>
@@ -29,12 +29,12 @@ function Scoreboard() {
           <Card>
             <Card.Body>
               <Card.Title>
-                <span style={{ fontSize: '1.25rem' }}>{Player[1].Name}</span>
+                <span style={{ fontSize: '1.25rem' }}>{Player && Player[1].Name}</span>
               </Card.Title>
               <Card.Text>
                 <span className="display-3">
                   {' '}
-                  {Player[1].Score}
+                  {Player && Player[1].Score}
                 </span>
               </Card.Text>
             </Card.Body>
