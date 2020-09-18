@@ -4,6 +4,12 @@ import PropTypes from 'prop-types';
 
 import Modal from 'react-bootstrap/Modal';
 
+/**
+ * Viser hvem som har vunnet hver runde med en modal man kan lukke via show
+ * @param {Boolean} show Skal vi vise modal eller ikke?
+ * @param {Function} setShow Funksjon for å endre show til false (og lukke)
+ * @param {String} winner Hvem som har vunnet
+ */
 function ShowWinner({ show, setShow, winner }) {
   const handleClose = () => { setShow(false); };
 
