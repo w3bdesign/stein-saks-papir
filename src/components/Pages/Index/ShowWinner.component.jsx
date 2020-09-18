@@ -4,6 +4,10 @@ import PropTypes from 'prop-types';
 
 import Modal from 'react-bootstrap/Modal';
 
+import { ReactComponent as HandScissors } from '../../../assets/hand-scissors-solid.svg';
+import { ReactComponent as HandRock } from '../../../assets/hand-rock-solid.svg';
+import { ReactComponent as HandPaper } from '../../../assets/hand-paper-solid.svg';
+
 /**
  * Viser hvem som har vunnet hver runde med en modal man kan lukke via show
  * @param {Boolean} show Skal vi vise modal eller ikke?
@@ -33,14 +37,18 @@ function ShowWinner({
         <h3 className="text-center">
           Vinner:
           {' '}
+          {' '}
           {winner && winner.toString()}
         </h3>
       </Modal.Title>
       <Modal.Body>
         <h3 className="text-center">
           Motstander valgte:
-          {' '}
-          {computerSelected}
+          <br />
+          <br />
+          {computerSelected === 'Stein' && <HandRock />}
+          {computerSelected === 'Saks' && <HandScissors />}
+          {computerSelected === 'Papir' && <HandPaper />}
         </h3>
       </Modal.Body>
     </Modal>
