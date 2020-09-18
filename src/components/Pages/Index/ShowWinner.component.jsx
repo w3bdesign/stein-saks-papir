@@ -34,21 +34,21 @@ function ShowWinner({
     >
       <Modal.Header closeButton />
       <Modal.Title>
-        <h3 className="text-center">
+        <h4 className="text-center mt-2">
           Vinner:
           {' '}
           {winner && winner.toString()}
-        </h3>
+        </h4>
       </Modal.Title>
       <Modal.Body>
-        <h3 className="text-center">
+        <h4 className="text-center">
           Motstander valgte:
           <br />
           <br />
           {computerSelected === 'Stein' && <HandRock />}
           {computerSelected === 'Saks' && <HandScissors />}
           {computerSelected === 'Papir' && <HandPaper />}
-        </h3>
+        </h4>
       </Modal.Body>
     </Modal>
   );
