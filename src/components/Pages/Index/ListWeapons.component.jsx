@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useStoreActions } from 'easy-peasy';
+import { useStoreActions, useStoreState } from 'easy-peasy';
 
 import Button from 'react-bootstrap/Button';
 import OverlayTrigger from 'react-bootstrap/OverlayTrigger';
@@ -20,27 +20,29 @@ import { ReactComponent as HandPaper } from '../../../assets/hand-paper-solid.sv
  * @returns void
  */
 function ListWeapons() {
-  // eslint-disable-next-line no-unused-vars
-  const [show, setShow] = useState(false);
+  const [showWinnerModal, setShowWinnerModal] = useState(false);
   const [winner, setWinner] = useState(null);
 
   const increaseScore = useStoreActions((actions) => actions.increaseScore);
+  const getScore = useStoreState((score) => score.score);
+
+  console.log(getScore);
 
   const handlePlayGameClick = (Weapon) => {
     switch (PlayGame(Weapon)) {
       case 'Player 1':
         setWinner('Player 1');
-        setShow(true);
+        setShowWinnerModal(true);
         increaseScore('Player 1');
         break;
       case 'CPU':
         setWinner('CPU');
-        setShow(true);
+        setShowWinnerModal(true);
         increaseScore('CPU');
         break;
       case 'Uavgjort':
         setWinner('Uavgjort');
-        setShow(true);
+        setShowWinnerModal(true);
         break;
       default:
         break;
@@ -49,7 +51,11 @@ function ListWeapons() {
 
   return (
     <>
-      <ShowWinner show={show} setShow={setShow} winner={winner} />
+      <ShowWinner
+        showWinnerModal={showWinnerModal}
+        setShowWinnerModal={setShowWinnerModal}
+        winner={winner}
+      />
       <OverlayTrigger
         placement="bottom"
         overlay={(

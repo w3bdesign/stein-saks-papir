@@ -10,36 +10,39 @@ import Modal from 'react-bootstrap/Modal';
  * @param {Function} setShow Funksjon for å endre show til false (og lukke)
  * @param {String} winner Hvem som har vunnet
  */
-function ShowWinner({ show, setShow, winner }) {
-  const handleClose = () => { setShow(false); };
+function ShowWinner({ showWinnerModal, setShowWinnerModal, winner }) {
+  const handleClose = () => {
+    setShowWinnerModal(false);
+  };
 
   return (
-    <Modal show={show} onClick={handleClose} onHide={handleClose} centered>
+    <Modal
+      show={showWinnerModal}
+      onClick={handleClose}
+      onHide={handleClose}
+      centered
+    >
       <Modal.Header closeButton />
-      <Modal.Title>
-        {' '}
-      </Modal.Title>
+      <Modal.Title> </Modal.Title>
       <Modal.Body>
         <h3 className="text-center">
           Vinner:
-          {' '}
           {winner && winner.toString()}
         </h3>
       </Modal.Body>
-
     </Modal>
   );
 }
 
 ShowWinner.defaultProps = {
-  show: PropTypes.bool,
-  setShow: PropTypes.func,
+  showWinnerModal: PropTypes.bool,
+  setShowWinnerModal: PropTypes.func,
   winner: PropTypes.string,
 };
 
 ShowWinner.propTypes = {
-  show: PropTypes.bool,
-  setShow: PropTypes.func,
+  showWinnerModal: PropTypes.bool,
+  setShowWinnerModal: PropTypes.func,
   winner: PropTypes.string,
 };
 
