@@ -1,7 +1,7 @@
 /* eslint-disable no-undef */
 import React from 'react';
-// eslint-disable-next-line no-unused-vars
-import { render, screen } from '@testing-library/react';
+
+import { render } from '@testing-library/react';
 
 import App from '../App';
 import Header from '../components/Layout/Header/Header.component';
@@ -14,20 +14,20 @@ describe('Sjekk at alle nødvendige elementer er på plass i dokumentet', () => 
   });
 
   test('Sjekk at saks er på plass', () => {
-    const { getByTestId } = render(<App />);
-    const Saks = getByTestId('saks');
+    const { getByRole } = render(<App />);
+    const Saks = getByRole('button', { name: /saks/i });
     expect(Saks).toBeInTheDocument();
   });
 
   test('Sjekk at stein er på plass', () => {
-    const { getByTestId } = render(<App />);
-    const Stein = getByTestId('stein');
+    const { getByRole } = render(<App />);
+    const Stein = getByRole('button', { name: /stein/i });
     expect(Stein).toBeInTheDocument();
   });
 
   test('Sjekk at papir er på plass', () => {
-    const { getByTestId } = render(<App />);
-    const Papir = getByTestId('stein');
+    const { getByRole } = render(<App />);
+    const Papir = getByRole('button', { name: /papir/i });
     expect(Papir).toBeInTheDocument();
   });
 
@@ -35,5 +35,11 @@ describe('Sjekk at alle nødvendige elementer er på plass i dokumentet', () => 
     const { getByRole } = render(<App />);
     const Poengtavle = getByRole('heading', { name: /poengtavle/i });
     expect(Poengtavle).toBeInTheDocument();
+  });
+
+  test('Sjekk at poengoversikt er på plass', () => {
+    const { getByRole } = render(<App />);
+    const Poengoversikt = getByRole('heading', { name: /poengoversikt/i });
+    expect(Poengoversikt).toBeInTheDocument();
   });
 });
