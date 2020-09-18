@@ -72,6 +72,7 @@ function ListWeapons() {
           className="m-4"
           data-testid="saks"
           variant="outline-dark"
+          aria-label="Saks"
           onClick={() => {
             handlePlayGameClick('Saks');
           }}
@@ -91,6 +92,7 @@ function ListWeapons() {
           className="m-4"
           data-testid="stein"
           variant="outline-dark"
+          aria-label="Stein"
           onClick={() => {
             handlePlayGameClick('Stein');
           }}
@@ -110,6 +112,7 @@ function ListWeapons() {
           className="m-4"
           data-testid="papir"
           variant="outline-dark"
+          aria-label="Papir"
           onClick={() => {
             handlePlayGameClick('Papir');
           }}
