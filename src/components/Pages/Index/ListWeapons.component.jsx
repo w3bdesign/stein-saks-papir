@@ -22,6 +22,7 @@ import { ReactComponent as HandPaper } from '../../../assets/hand-paper-solid.sv
 function ListWeapons() {
   const [showWinnerModal, setShowWinnerModal] = useState(false);
   const [winner, setWinner] = useState(null);
+  const [computerSelected, setcomputerSelected] = useState(null);
 
   const increaseScore = useStoreActions((actions) => actions.increaseScore);
   // const getScore = useStoreState((score) => score.score);
@@ -31,7 +32,10 @@ function ListWeapons() {
   const handlePlayGameClick = (Weapon) => {
     // console.log(getScore);
 
-    switch (PlayGame(Weapon)) {
+    const resultOfGame = PlayGame(Weapon);
+    setcomputerSelected(resultOfGame.computerSelected);
+
+    switch (resultOfGame.winner) {
       case 'Spiller 1':
         setWinner('Spiller 1');
         setShowWinnerModal(true);
@@ -58,6 +62,7 @@ function ListWeapons() {
       <ShowWinner
         showWinnerModal={showWinnerModal}
         setShowWinnerModal={setShowWinnerModal}
+        computerSelected={computerSelected}
         winner={winner}
       />
       <OverlayTrigger
