@@ -32,7 +32,7 @@ function ListWeapons() {
   const getScore = useStoreState((score) => score.score);
 
   useEffect(() => {
-    const haveFinalWinner = getScore.find((score) => score.Score === 3);
+    const haveFinalWinner = getScore.find((score) => score.Score > 2);
 
     if (haveFinalWinner) {
       sethavewonThreeRounds(haveFinalWinner.Name);
