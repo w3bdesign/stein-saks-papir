@@ -1,4 +1,5 @@
 import React from 'react';
+import { useStoreActions } from 'easy-peasy';
 
 import Button from 'react-bootstrap/Button';
 import OverlayTrigger from 'react-bootstrap/OverlayTrigger';
@@ -10,7 +11,20 @@ import { ReactComponent as HandScissors } from '../../../assets/hand-scissors-so
 import { ReactComponent as HandRock } from '../../../assets/hand-rock-solid.svg';
 import { ReactComponent as HandPaper } from '../../../assets/hand-paper-solid.svg';
 
+/**
+ * Generer knappene som viser våpnene
+ * Håndterer det som skjer når knappene trykkes på via handlePlayGameClick()
+ * Kaller increaseScore action fra Easy Peasy state
+ * @returns void
+ */
 function ListWeapons() {
+  const increaseScore = useStoreActions((actions) => actions.increaseScore);
+
+  const handlePlayGameClick = (Weapon) => {
+    PlayGame(Weapon);
+    increaseScore('Player 1');
+  };
+
   return (
     <>
       <OverlayTrigger
@@ -26,7 +40,7 @@ function ListWeapons() {
           data-testid="saks"
           variant="outline-dark"
           onClick={() => {
-            PlayGame('Saks');
+            handlePlayGameClick('Saks');
           }}
         >
           <HandScissors />
@@ -45,7 +59,7 @@ function ListWeapons() {
           data-testid="stein"
           variant="outline-dark"
           onClick={() => {
-            PlayGame('Stein');
+            handlePlayGameClick('Stein');
           }}
         >
           <HandRock />
@@ -64,7 +78,7 @@ function ListWeapons() {
           data-testid="papir"
           variant="outline-dark"
           onClick={() => {
-            PlayGame('Papir');
+            handlePlayGameClick('Papir');
           }}
         >
           <HandPaper />
