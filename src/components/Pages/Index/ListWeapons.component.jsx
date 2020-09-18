@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useStoreActions, useStoreState } from 'easy-peasy';
+import { useStoreActions } from 'easy-peasy';
 
 import Button from 'react-bootstrap/Button';
 import OverlayTrigger from 'react-bootstrap/OverlayTrigger';
@@ -24,21 +24,25 @@ function ListWeapons() {
   const [winner, setWinner] = useState(null);
 
   const increaseScore = useStoreActions((actions) => actions.increaseScore);
-  const getScore = useStoreState((score) => score.score);
+  // const getScore = useStoreState((score) => score.score);
 
-  console.log(getScore);
+  // const haveFinalWinner = getScore.find((score) => score.Score === 1);
 
   const handlePlayGameClick = (Weapon) => {
+    // console.log(getScore);
+
     switch (PlayGame(Weapon)) {
       case 'Player 1':
         setWinner('Player 1');
         setShowWinnerModal(true);
         increaseScore('Player 1');
+        // console.log(haveFinalWinner);
         break;
       case 'CPU':
         setWinner('CPU');
         setShowWinnerModal(true);
         increaseScore('CPU');
+        // console.log(haveFinalWinner);
         break;
       case 'Uavgjort':
         setWinner('Uavgjort');
