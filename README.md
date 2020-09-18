@@ -2,7 +2,7 @@
 
 <img src="https://github.com/w3bdesign/stein-saks-papir/blob/master/screenshot/screenshot.jpg" alt="screenshot">
 
-Live URL: <a href="https://hungry-shockley-392371.netlify.app/">https://hungry-shockley-392371.netlify.app/</a>
+Live URL: <a href="https://nova.dfweb.no/">https://nova.dfweb.no/</a>
 
 # Stein Saks Papir
 
