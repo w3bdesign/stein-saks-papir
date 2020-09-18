@@ -21,6 +21,7 @@ Lag en interaktiv side der man kan spille stein-saks-papir (reglene finner du he
 - Animate.css for animasjoner
 - Easy Peasy for state management
 - JSDoc for kode-dokumentering
+- Responsivt design
 - CircleCI integrasjon
 - ESLint med AirBnB
 - Vektorbilder (SVG) fra FontAwesome
