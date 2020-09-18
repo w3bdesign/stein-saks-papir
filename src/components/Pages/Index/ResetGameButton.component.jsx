@@ -1,6 +1,7 @@
 import React from 'react';
-import { useStoreActions } from 'easy-peasy';
 
+import { useStoreActions } from 'easy-peasy';
+import PropTypes from 'prop-types';
 import Button from 'react-bootstrap/Button';
 
 /**
@@ -8,16 +9,29 @@ import Button from 'react-bootstrap/Button';
  * Kaller reset funksjonen fra Easy Peasy store.
  * @returns {JSXElement} Returnerer knappen som beskrevet over
  */
-function ResetGameButton() {
+function ResetGameButton({ sethavewonThreeRounds }) {
   const resetGame = useStoreActions((actions) => actions.reset);
+
+  const handleResetClick = () => {
+    resetGame();
+    sethavewonThreeRounds(null);
+  };
 
   return (
     <>
-      <Button variant="danger" className="mt-0 mb-4" onClick={resetGame}>
+      <Button variant="danger" className="mt-0 mb-4" onClick={handleResetClick}>
         Restart spill
       </Button>
     </>
   );
 }
+
+ResetGameButton.defaultProps = {
+  sethavewonThreeRounds: PropTypes.func,
+};
+
+ResetGameButton.propTypes = {
+  sethavewonThreeRounds: PropTypes.func,
+};
 
 export default ResetGameButton;

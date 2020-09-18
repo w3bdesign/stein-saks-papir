@@ -3,7 +3,7 @@ import { action, createStore } from 'easy-peasy';
 import DEFAULT_SCORE from '../const/DEFAULT_SCORE';
 
 /**
- * Easy peasy store med poengstatus (score)
+ * Easy Peasy store med poengstatus (score)
  * increaseScore for å øke score og reset for å nullstille poengstatus
  */
 

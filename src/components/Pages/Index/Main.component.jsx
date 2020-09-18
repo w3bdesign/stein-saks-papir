@@ -6,7 +6,6 @@ import Card from 'react-bootstrap/Card';
 
 import Scoreboard from './Scoreboard.component';
 import ListWeapons from './ListWeapons.component';
-import ResetGameButton from './ResetGameButton.component';
 
 /**
  * Hovedkomponenten som viser våpnene, resetknapp og poengtavle.
@@ -24,8 +23,7 @@ function Main() {
             <h5>Velg ditt våpen under for å starte spillet</h5>
           </Card.Header>
           <ListWeapons />
-          <br />
-          <ResetGameButton />
+
         </Card>
         <Scoreboard />
       </Col>
