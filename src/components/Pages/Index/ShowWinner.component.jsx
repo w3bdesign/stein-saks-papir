@@ -1,22 +1,40 @@
 import React from 'react';
 
+import PropTypes from 'prop-types';
+
 import Modal from 'react-bootstrap/Modal';
 
-function ShowWinner(Winner) {
-  // const handleClose = () => setShow(false);
-  const show = true;
+function ShowWinner({ show, setShow, winner }) {
+  const handleClose = () => { setShow(false); };
 
   return (
-    <Modal show={show}>
-      <Modal.Header>
-        <Modal.Title>{Winner}</Modal.Title>
-      </Modal.Header>
-      <Modal.Body>Woohoo, youre reading this text in a modal!</Modal.Body>
-      <Modal.Footer>
-        Test
-      </Modal.Footer>
+    <Modal show={show} onClick={handleClose} onHide={handleClose} centered>
+      <Modal.Header closeButton />
+      <Modal.Title>
+        {' '}
+      </Modal.Title>
+      <Modal.Body>
+        <h3 className="text-center">
+          Vinner:
+          {' '}
+          {winner && winner.toString()}
+        </h3>
+      </Modal.Body>
+
     </Modal>
   );
 }
+
+ShowWinner.defaultProps = {
+  show: PropTypes.bool,
+  setShow: PropTypes.func,
+  winner: PropTypes.string,
+};
+
+ShowWinner.propTypes = {
+  show: PropTypes.bool,
+  setShow: PropTypes.func,
+  winner: PropTypes.string,
+};
 
 export default ShowWinner;
