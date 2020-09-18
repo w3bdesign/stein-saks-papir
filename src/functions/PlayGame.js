@@ -6,30 +6,35 @@ import CheckWinner from './CheckWinner';
 /**
  * Funksjonen som er ansvarlig for å spille spillet. Sjekker hvem som har vunnet via CheckWinner.
  * @param {String} playerSelectedWeapon Valgt spillervåpen
- * @returns {String} Returnerer en string med den som har vunnet ("Spiller 1" | "CPU" | "Uavgjort")
+ * @returns {Object} Returnerer et objekt med resultatet og hva motstanderen valgte
  */
 
 function PlayGame(playerSelectedWeapon) {
   const playerSelected = WEAPONS.find(
     (weapon) => weapon.name === playerSelectedWeapon,
   );
-  const computerSelected = RandomWeapon();
 
+  const computerSelected = RandomWeapon();
   const youWin = CheckWinner(playerSelected, computerSelected);
 
-  /* console.log('Selected: ');
-  console.log(playerSelected.name);
-  console.log(computerSelected.name); */
-
-  if (playerSelectedWeapon === computerSelected.name) {
-    return 'Uavgjort';
+  if (playerSelected.name === computerSelected.name) {
+    return {
+      winner: 'Uavgjort',
+      computerSelected: computerSelected.name,
+    };
   }
 
   if (youWin) {
-    return 'Spiller 1';
+    return {
+      winner: 'Spiller 1',
+      computerSelected: computerSelected.name,
+    };
   }
 
-  return 'CPU';
+  return {
+    winner: 'CPU',
+    computerSelected: computerSelected.name,
+  };
 }
 
 export default PlayGame;
