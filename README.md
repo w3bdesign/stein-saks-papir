@@ -11,6 +11,8 @@ Live URL: <a href="https://hungry-shockley-392371.netlify.app/">https://hungry-s
 
 Prosjekt/hjemmeoppgave av Daniel for NovaCare.
 
+Se gjerne `TODO med fremtidige potensielle/mulige forbedringer for refaktorering` punktet lenger ned i README hvor jeg har listet opp en rekke idèer og tanker for refaktorering av kode og forbedringer.
+
 ## Prosjektbeskrivelse
 
 Lag en interaktiv side der man kan spille stein-saks-papir (reglene finner du her: http://agilekatas.co.uk/katas/RockPaperScissors-Kata) og en tilleggsregel er at vinneren er den som er «best av 3».
@@ -51,10 +53,12 @@ Lag en interaktiv side der man kan spille stein-saks-papir (reglene finner du he
 - Jeg har implementert animasjoner med Animate.css fordi det er lettvint å implementere og jeg har brukt det før.
 - Jeg har forsøkt å holde state "ren" ved å bare ha score, increaseScore og reset der. Ulempen er at jeg bruker prop drilling der hvor jeg trenger å videresende variabler i state (useState).
 
-### TODO med potensielle/mulige forbedringer
+### TODO med fremtidige potensielle/mulige forbedringer for refaktorering
 
-- Refaktorere kode med skalering i bakhodet. Dette kan enklest gjøre ved å lagre hardkodet data i state og loope over feks våpen/spillere med forEach eller map slik at vi kan legge til flere spillere/våpen enkelt i fremtiden. Altså, gjøre data som skal skaleres dynamisk  fremfor statisk. Det gjør skalering og fremtidig oppdatering enklere ved å holde alt på ett sted.
-- Vurder Suspense og dynamisk rendering av komponenter ved behov.
+- Refaktorere kode med skalering i bakhodet. Dette kan enklest gjøre ved å lagre hardkodet data i state og loope over feks våpen/spillere med forEach eller map slik at vi kan legge til flere spillere/våpen enkelt i fremtiden. Altså, gjøre data som skal skaleres dynamisk fremfor statisk og lagre denne i state. Det gjør skalering og fremtidig oppdatering enklere ved å holde alt på ett sted.
+- Fullfør arbeid med å separare ut state og actions i mindre filer i `/state/model` og slå de sammen. Gjør skalering og struktur bedre.
+- Bytte ut useState med https://easy-peasy.now.sh/docs/api/create-component-store.html
+- Vurder om Suspense og dynamisk rendering av komponenter ved behov bør implementeres.
 - Lagre finalWinner via `computed` i state og hente ut denne senere? Vil cache verdien og gi oss en performance fordel (https://easy-peasy.now.sh/docs/api/computed.html).
 - Se på muligheten for å erstatte setTimeOut i ListWeapons med actionOn thunk/async listener. (https://easy-peasy.now.sh/docs/tutorial/using-listeners.html)
 - Erstatte Animate.css med GSAP eller React-spring? Tillater mer kompliserte animasjoner men krever mer koding.
