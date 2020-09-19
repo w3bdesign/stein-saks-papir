@@ -1,20 +1,27 @@
-version: 2
+version: 2.1
+
+default_steps: &default_steps
+  steps:
+    - checkout
+    - run: npm ci
+    - run: npm test
+
 jobs:
-  build:
-    working_directory: ~/stein-saks-papir
+  node_latest:
     docker:
       - image: circleci/node:latest
-    steps:
-      - checkout
-      - restore_cache:
-          key: npm-cache-v1-{{ checksum "package-lock.json" }}
-      - run:
-          name: Install Dependencies
-          command: npm ci
-      - save_cache:
-          key: npm-cache-v1-{{ checksum "package-lock.json" }}
-          paths:
-            - /home/circleci/.npm
-      - run:
-          name: Run Tests
-          command: npm test
+    environment:
+      PERCY_ENABLE: 0
+    <<: *default_steps
+  node_10_with_percy:
+    # We've opted this node version to be the one that runs and reports Percy's status
+    docker:
+      - image: circleci/node:10-browsers
+    <<: *default_steps
+
+workflows:
+  version: 2
+  test:
+    jobs:
+      - node_latest
+      - node_10_with_percy
