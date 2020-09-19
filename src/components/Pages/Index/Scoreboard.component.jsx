@@ -19,14 +19,14 @@ function Scoreboard() {
         </Card.Header>
         <CardDeck className="m-4">
           {Player
-            && Player.map((player) => (
-              <Card>
+            && Player.map((player, index) => (
+              <Card key={player.Name}>
                 <Card.Body>
                   <Card.Title>
                     <span style={{ fontSize: '1.25rem' }}>{player.Name}</span>
                   </Card.Title>
                   <Card.Text>
-                    <span id="score-p1" className="display-3">
+                    <span id={`score-p${index}`} className="display-3">
                       {player.Score}
                     </span>
                   </Card.Text>
