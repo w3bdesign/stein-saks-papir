@@ -53,14 +53,13 @@ Lag en interaktiv side der man kan spille stein-saks-papir (reglene finner du he
 
 ### TODO med potensielle/mulige forbedringer
 
-- Erstatte useState med useReducer i ListWeapons for å forenkle kodebasen (ettersom jeg bruker flere useState kall her).
+- Refaktorere kode med skalering i bakhodet. Dette kan enklest gjøre ved å lagre hardkodet data i state og loope over feks våpen/spillere med forEach eller map slik at vi kan legge til flere spillere/våpen enkelt i fremtiden. Altså, gjøre data som skal skaleres dynamisk  fremfor statisk. Det gjør skalering og fremtidig oppdatering enklere ved å holde alt på ett sted.
 - Vurder Suspense og dynamisk rendering av komponenter ved behov.
 - Lagre finalWinner via `computed` i state og hente ut denne senere? Vil cache verdien og gi oss en performance fordel (https://easy-peasy.now.sh/docs/api/computed.html).
 - Se på muligheten for å erstatte setTimeOut i ListWeapons med actionOn thunk/async listener. (https://easy-peasy.now.sh/docs/tutorial/using-listeners.html)
 - Erstatte Animate.css med GSAP eller React-spring? Tillater mer kompliserte animasjoner men krever mer koding.
 - Oppgradere kodebasen til Typescript?
-- Erstatte hardkodet spillernavn ved å lagre det dynamisk i state. Det gjør skalering og fremtidig oppdatering enklere ved å holde alt på ett sted.
-- Se om jeg kan redusere prop drilling i komponenter ved å lagre mer informasjon i state (eller om jeg bør beholde prop drilling?).
+- Se om jeg kan redusere prop drilling i komponenter ved å lagre mer informasjon i state.
 - Vurder å erstatte useEffect med useCallback for å forhindre at den kalles flere ganger. (Ser ikke ut som at det vil ha noen stor fordel i performance)
 - Se om jeg kan separere mer kode i enda mindre komponenter for å gjøre koden ryddigere og enklere å vedlikeholde/oppdatere? (Allerede påbegynt).
 - Se om jeg kan erstatte visning av våpen i ListWeapons med map() sånn at vi kan enklere legge til flere våpen i fremtiden (skalering).
