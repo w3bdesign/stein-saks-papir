@@ -64,3 +64,4 @@ Lag en interaktiv side der man kan spille stein-saks-papir (reglene finner du he
 - Vurder å erstatte useEffect med useCallback for å forhindre at den kalles flere ganger. (Ser ikke ut som at det vil ha noen stor fordel i performance)
 - Se om jeg kan separere mer kode i enda mindre komponenter for å gjøre koden ryddigere og enklere å vedlikeholde/oppdatere? (Allerede påbegynt).
 - Se om jeg kan erstatte visning av våpen i ListWeapons med map() sånn at vi kan enklere legge til flere våpen i fremtiden (skalering).
+- Skrive flere tester og sjekke for flere omstendigheter i koden. 

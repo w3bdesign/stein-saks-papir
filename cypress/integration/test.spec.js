@@ -3,6 +3,7 @@
 describe('Besøk hjemmesiden', () => {
   beforeEach(() => {
     cy.visit('/');
+    // Debug: cy.visit('http://localhost:3000');
   });
 
   it('Vi kan se Stein Saks Papir i navbar', () => {
@@ -28,14 +29,7 @@ describe('Besøk hjemmesiden', () => {
     cy.get('.modal-body').should('not.be.visible');
   });
 
-  it('Vi klikker på Saks 10 ganger og sjekker at vi til slutt ser vi har en vinner', () => {
-    // Vi lager en array som går til 10 og looper over denne i Cypress
-    const genArr = Array.from({ length: 10 }, (v, k) => k + 1);
-    cy.wrap(genArr).each(() => {
-      cy.get('[data-testid=saks]').click();
-      cy.get('.close').click();
-      cy.wait(1000);
-    });
-    cy.get('.fade').should('be.visible');
+  it('Vi sjekker at score er 0 fra begynnelsen av', () => {
+    cy.get('#score-p1').invoke('text').should('eq', ' 0');
   });
 });
