@@ -16,6 +16,7 @@ import ListWeapons from './ListWeapons.component';
  * @returns void
  */
 function Game() {
+  // TODO Flytt dette over til https://easy-peasy.now.sh/docs/api/use-store-state.html
   const [showWinnerModal, setShowWinnerModal] = useState(false);
   const [winner, setWinner] = useState(null);
   const [shouldCheckWinner, setshouldCheckWinner] = useState(false);
@@ -64,7 +65,7 @@ function Game() {
       {havewonThreeRounds && (
         <>
           <Alert
-            className="animate__animated animate__zoomInUp animate__slow mt-4"
+            className="mt-4 animate__animated animate__zoomInUp animate__slow"
             variant="success"
           >
             {havewonThreeRounds}
