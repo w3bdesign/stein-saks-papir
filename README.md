@@ -1,4 +1,5 @@
 [![CircleCI](https://circleci.com/gh/w3bdesign/stein-saks-papir.svg?style=svg)](https://circleci.com/gh/w3bdesign/stein-saks-papir)
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=w3bdesign_stein-saks-papir&metric=alert_status)](https://sonarcloud.io/dashboard?id=w3bdesign_stein-saks-papir)
 
 <img src="https://github.com/w3bdesign/stein-saks-papir/blob/master/screenshot/screenshot.jpg" alt="screenshot">
 
@@ -6,7 +7,7 @@ Live URL: <a href="https://nova.dfweb.no/">https://nova.dfweb.no/</a>
 
 # Stein Saks Papir
 
-Prosjekt av Daniel laget for NovaCare.
+Prosjekt/hjemmeoppgave av Daniel for NovaCare.
 
 ## Prosjektbeskrivelse
 
