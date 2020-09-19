@@ -7,9 +7,9 @@ default_steps: &default_steps
     - run: npm test
 
 jobs:
-  node_8:
+  node_latest:
     docker:
-      - image: circleci/node:8-browsers
+      - image: circleci/node:latest
     environment:
       PERCY_ENABLE: 0
     <<: *default_steps
@@ -23,5 +23,5 @@ workflows:
   version: 2
   test:
     jobs:
-      - node_8
+      - node_latest
       - node_10_with_percy
