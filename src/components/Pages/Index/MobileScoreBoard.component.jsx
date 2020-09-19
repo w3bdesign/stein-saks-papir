@@ -2,9 +2,6 @@ import React from 'react';
 import { useStoreState } from 'easy-peasy';
 
 import Card from 'react-bootstrap/Card';
-// import Alert from 'react-bootstrap/Alert';
-/* import ListGroup from 'react-bootstrap/ListGroup';
-import Alert from 'react-bootstrap/Alert'; */
 
 /**
  * Funksjonen som viser selve poengtavlen. Henter spillernavn og poeng dynamisk fra state.
@@ -25,7 +22,7 @@ function MobileScoreboard() {
               && Player.map((player) => (
                 <div key={player.Name} className="m-2">
                   <Card.Header bg="secondary">{player.Name}</Card.Header>
-                  {player.Score}
+                  <h5 className="font-weight-bold mt-2">{player.Score}</h5>
                 </div>
               ))}
           </Card.Body>
