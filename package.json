@@ -19,7 +19,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "test": "percy exec -- react-scripts test",
     "cypress:open": "cypress open",
     "test:cypress": "cypress run",
     "dev": "start-test develop 3000 cy:open"
