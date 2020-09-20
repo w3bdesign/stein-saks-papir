@@ -18,8 +18,7 @@ function Main() {
       <Col>
         <MobileScoreboard />
         <Card
-          style={{ display: 'block' }}
-          className="block mx-auto mt-4 text-center"
+          className="d-block mx-auto mt-4 text-center"
         >
           <Card.Header>
             <h6>Velg ditt våpen under for å starte spillet</h6>
