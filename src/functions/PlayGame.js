@@ -17,6 +17,9 @@ function PlayGame(playerSelectedWeapon) {
   const computerSelected = RandomWeapon();
   const youWin = CheckWinner(playerSelected, computerSelected);
 
+  // TODO Endre spillernavn til dynamiske verdier istedenfor å hardkode de
+  // TODO Bruk en map eller forEach og sett spillernavn
+
   if (playerSelected.name === computerSelected.name) {
     return {
       winner: 'Uavgjort',
