@@ -1,3 +1,8 @@
+/* 
+Vi bruker bare denne for å gjøre knappene større på PC 
+Denne løsningen bør endres om vi skal legge til flere knapper
+*/
+
 @media only screen and (min-width: 768px) {
   .fa-hand-scissors,
   .fa-hand-rock,
