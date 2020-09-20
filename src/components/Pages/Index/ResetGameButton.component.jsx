@@ -10,6 +10,9 @@ import Button from 'react-bootstrap/Button';
  * @param {Function} sethavewonThreeRounds Funksjon som setter hvem som har vunnet 3 runder
  * @returns {JSXElement} Returnerer knappen som beskrevet over
  */
+
+// TODO Bytt ut prop drilling med createComponentStore
+
 function ResetGameButton({ sethavewonThreeRounds }) {
   const resetGame = useStoreActions((actions) => actions.reset);
 
