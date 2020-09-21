@@ -33,7 +33,7 @@ function Game() {
       sethavewonThreeRounds(haveFinalWinner.Name);
       setshouldCheckWinner(false);
     }
-  }, [shouldCheckWinner]);
+  }, [shouldCheckWinner, getScore]);
 
   const handlePlayGameClick = (Weapon) => {
     const resultOfGame = PlayGame(Weapon);
