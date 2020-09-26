@@ -23,4 +23,22 @@ describe('Velg et våpen og se at spillet fungerer', () => {
       screen.getByRole('heading', { name: /motstander valgte:/i }),
     ).toBeVisible();
   });
+
+  test('Sjekk at "Motstander valgte" er synlig hvis vi klikker stein', () => {
+    render(<App />);
+
+    userEvent.click(screen.getByRole('button', { name: /stein/i }));
+    expect(
+      screen.getByRole('heading', { name: /motstander valgte:/i }),
+    ).toBeVisible();
+  });
+
+  test('Sjekk at "Motstander valgte" er synlig hvis vi klikker papir', () => {
+    render(<App />);
+
+    userEvent.click(screen.getByRole('button', { name: /papir/i }));
+    expect(
+      screen.getByRole('heading', { name: /motstander valgte:/i }),
+    ).toBeVisible();
+  });
 });
