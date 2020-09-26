@@ -7,7 +7,7 @@
 
 <img src="https://github.com/w3bdesign/stein-saks-papir/blob/master/screenshot/screenshot.jpg" alt="screenshot">
 
-Live URL: <a href="https:/nova.dfweb.no/">https:/nova.dfweb.no/</a>
+Live URL: [https:/nova.dfweb.no](https:/nova.dfweb.no)
 
 # Stein Saks Papir
 
@@ -36,7 +36,7 @@ Lag en interaktiv side der man kan spille stein-saks-papir (reglene finner du he
 - Prop types validering
 - Scanning av koden via SonarCloud quality cloud
 
-## Hva jeg ville gjort annerledes i en profesjonell setting 
+## Hva jeg ville gjort annerledes i en profesjonell setting
 
 - Jeg ville brukt god tid på planleggingsfasen. Hatt et lengre møte hvor målet er å få utarbeidet en detaljert kravspesifikasjon, diskutere budsjett, tidsramme, valg av teknologier, langsiktige mål med siden. Det vil gjøre at man kan velge riktig teknologi for i dag og for fremtiden.
 - Jeg ville også satt opp `branch protection` på master og krevd minimum 1 code review fra en annen.
@@ -50,7 +50,7 @@ Lag en interaktiv side der man kan spille stein-saks-papir (reglene finner du he
 - Jeg valgte React Bootstrap for UI ettersom det er et populært bibliotek som er enkelt å bruke.
 - Jeg har brukt ESLint og Airbnb for å opprettholde kodekvaliteten og gjøre utvikling enklere. Det fungerer også bra med integrert IDE støtte i VSCode. Det vil også gjøre videreutvikling og "maintainability" enklere på sikt. Jeg vurderte Typescript, men føler jeg må få mer erfaring med det først.
 - Jeg har brukt JSDoc for å dokumentere koden etter best mulig evne. Dette har jeg også gjort fordi jeg ikke har brukt Typescript.
-- Jeg har brukt SVG bilder fra FontAwesome for å sørge for at bildene ser bra ut uavhengig av oppløsning. 
+- Jeg har brukt SVG bilder fra FontAwesome for å sørge for at bildene ser bra ut uavhengig av oppløsning.
 - Jeg har satt opp testing foreløpig med Jest, React-testing-library. Har også satt opp testing med Cypress. Alt er koblet oppimot CircleCI.
 - Jeg bruker hooks med Easy Peasy ettersom det er enkelt å bruke og jeg har erfaring med det fra før av. I tillegg bruker det Redux "under the hood" så jeg har tilgang til Redux dev tools.
 - Jeg har implementert animasjoner med Animate.css fordi det er lettvint å implementere og jeg har brukt det før.
@@ -67,7 +67,7 @@ Lag en interaktiv side der man kan spille stein-saks-papir (reglene finner du he
 - Se på muligheten for å erstatte setTimeOut i ListWeapons med actionOn thunk/async listener. (https://easy-peasy.now.sh/docs/tutorial/using-listeners.html)
 - Erstatte Animate.css med GSAP eller React-spring? Tillater mer kompliserte animasjoner men krever mer koding.
 - Oppgradere kodebasen til Typescript?
-- Se om jeg kan redusere prop drilling i komponenter ved å lagre mer informasjon i global state. Fordel er at komponenter blir "renere" fordi de ikke er avhengig av props. Ulempe er at det går imot det å holde state så "lavt" som mulig. 
+- Se om jeg kan redusere prop drilling i komponenter ved å lagre mer informasjon i global state. Fordel er at komponenter blir "renere" fordi de ikke er avhengig av props. Ulempe er at det går imot det å holde state så "lavt" som mulig.
 - Se om jeg kan separere mer kode i enda mindre komponenter for å gjøre koden ryddigere og enklere å vedlikeholde/oppdatere? (Allerede påbegynt).
 - Se om jeg kan erstatte visning av våpen i ListWeapons med map() sånn at vi kan enklere legge til flere våpen i fremtiden (skalering).
-- Skrive flere tester og sjekke for flere omstendigheter i koden. 
+- Skrive flere tester og sjekke for flere omstendigheter i koden.
