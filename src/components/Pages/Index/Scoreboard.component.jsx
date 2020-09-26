@@ -26,7 +26,11 @@ function Scoreboard() {
                     <span>{player.Name}</span>
                   </Card.Title>
                   <Card.Text>
-                    <span id={`score-p${index}`} className="display-3">
+                    <span
+                      data-testid={index}
+                      id={`score-p${index}`}
+                      className="display-3"
+                    >
                       {player.Score}
                     </span>
                   </Card.Text>
