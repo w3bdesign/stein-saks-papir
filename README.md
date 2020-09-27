@@ -7,7 +7,7 @@
 
 <img src="https://github.com/w3bdesign/stein-saks-papir/blob/master/screenshot/screenshot.jpg" alt="screenshot">
 
-Live URL: [https:/nova.dfweb.no](https:/nova.dfweb.no)
+Live URL: [https://nova.dfweb.no](https://nova.dfweb.no)
 
 # Stein Saks Papir
 
