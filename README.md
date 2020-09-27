@@ -60,7 +60,7 @@ Lag en interaktiv side der man kan spille stein-saks-papir (reglene finner du he
 
 - Refaktorere kode med skalering i bakhodet. Dette kan enklest gjøre ved å lagre hardkodet data i state og loope over feks våpen/spillere med forEach eller map slik at vi kan legge til flere spillere/våpen enkelt i fremtiden. Altså, gjøre data som skal skaleres dynamisk fremfor statisk og lagre denne i state. Det gjør skalering og fremtidig oppdatering enklere ved å holde alt på ett sted.
 - Fullfør arbeid med å separare ut state og actions i mindre filer i `/state/model` og slå de sammen. Gjør skalering og struktur bedre.
-- Øke testdekning til et bedre nivå. Ta utgangspunkt i rapporten(e) fra CodeCov.io.
+- Implementere beskrivelse av reglene. Bruk https://react-bootstrap.github.io/components/accordion/
 - Vurder å bytte ut Bytte ut useState med https://easy-peasy.now.sh/docs/api/create-component-store.html
 - Vurder om Suspense og dynamisk rendering av komponenter ved behov bør implementeres.
 - Lagre finalWinner via `computed` i state og hente ut denne senere? Vil cache verdien og gi oss en performance fordel (https://easy-peasy.now.sh/docs/api/computed.html)?
