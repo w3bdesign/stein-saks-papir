@@ -2,7 +2,7 @@
 [![Codecov](https://codecov.io/gh/w3bdesign/stein-saks-papir/branch/master/graph/badge.svg)](https://codecov.io/gh/w3bdesign/stein-saks-papir)
 [![CircleCI](https://circleci.com/gh/w3bdesign/stein-saks-papir.svg?style=svg)](https://circleci.com/gh/w3bdesign/stein-saks-papir)
 [![Cypress.io](https://img.shields.io/badge/tested%20with-Cypress-04C38E.svg)](https://www.cypress.io/)
-[![React-Testing-Library](https://img.shields.io/badge/unit%20testing-React--Testing--Library-purple)](https://testing-library.com/)
+[![React-Testing-Library](https://img.shields.io/badge/tested%20with-React--Testing--Library-purple)](https://testing-library.com/)
 [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=w3bdesign_stein-saks-papir&metric=alert_status)](https://sonarcloud.io/dashboard?id=w3bdesign_stein-saks-papir)
 
 <img src="https://github.com/w3bdesign/stein-saks-papir/blob/master/screenshot/screenshot.jpg" alt="screenshot">
@@ -22,19 +22,30 @@ Lag en interaktiv side der man kan spille stein-saks-papir (reglene finner du he
 ## Teknologier / verktøy brukt
 
 - React med hooks (useState og useEffect)
-- Jest og React testing library for unit testing
+
+ ### UI / design
+
 - React Bootstrap
-- Cypress for E2E testing
 - Animate.css for animasjoner
-- Easy Peasy for state management
-- JSDoc for kode-dokumentering
 - Responsivt design
-- CircleCI integrasjon
-- ESLint med AirBnB
 - Vektorbilder (SVG) fra FontAwesome
 - Aria-label på nødvendige elementer (WCAG standard)
+
+### Testing / kodekvalitet
+
+- Cypress for E2E testing
+- Testdekninganalyse via CodeCov
+- Jest og React Testing Library
+- Scanning av koden via SonarCloud og DeepScan
 - Prop types validering
-- Scanning av koden via SonarCloud quality cloud
+- ESLint med AirBnB
+- CircleCI som er integrert med CodeCov for opplasting av testdekningsrapport
+- JSDoc for kode-dokumentering
+
+### State management
+
+- Easy Peasy for å håndtere global state
+- useState med prop drilling (holde state så lokal som mulig)
 
 ## Hva jeg ville gjort annerledes i en profesjonell setting
 
@@ -54,7 +65,8 @@ Lag en interaktiv side der man kan spille stein-saks-papir (reglene finner du he
 - Jeg har satt opp testing foreløpig med Jest, React-testing-library. Har også satt opp testing med Cypress. Alt er koblet oppimot CircleCI.
 - Jeg bruker hooks med Easy Peasy ettersom det er enkelt å bruke og jeg har erfaring med det fra før av. I tillegg bruker det Redux "under the hood" så jeg har tilgang til Redux dev tools.
 - Jeg har implementert animasjoner med Animate.css fordi det er lettvint å implementere og jeg har brukt det før.
-- Jeg har forsøkt å holde state "ren" ved å bare ha score, increaseScore og reset der. Jeg planlegger å refaktorere koden til å bruke Easy Peasy state for å eliminere propdrilling.
+- Jeg har forsøkt å holde state "ren" ved å bare ha score, increaseScore og reset der. Jeg vurderer å refaktorere koden til å bruke Easy Peasy state for å eliminere propdrilling.
+- Jeg har 
 
 ### <a id="todo">TODO med fremtidige potensielle/mulige forbedringer for refaktorering</a>
 
