@@ -1,4 +1,4 @@
-[![Netlify Status](https://api.netlify.com/api/v1/badges/624893fd-0198-4b2b-af4c-62bf9c47b56b/deploy-status)](https://app.netlify.com/sites/hungry-shockley-392371/deploys)
+[![DeepScan grade](https://deepscan.io/api/teams/11080/projects/13991/branches/249862/badge/grade.svg)](https://deepscan.io/dashboard#view=project&tid=11080&pid=13991&bid=249862)
 [![Codecov](https://codecov.io/gh/w3bdesign/stein-saks-papir/branch/master/graph/badge.svg)](https://codecov.io/gh/w3bdesign/stein-saks-papir)
 [![CircleCI](https://circleci.com/gh/w3bdesign/stein-saks-papir.svg?style=svg)](https://circleci.com/gh/w3bdesign/stein-saks-papir)
 [![Cypress.io](https://img.shields.io/badge/tested%20with-Cypress-04C38E.svg)](https://www.cypress.io/)
