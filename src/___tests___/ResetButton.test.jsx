@@ -7,6 +7,10 @@ import '@testing-library/jest-dom';
 
 import App from '../App';
 
+/**
+ * Her tester vi at reset knappen nullstiller score til 0 på spillerne
+ */
+
 describe('Klikk reset knappen og se at spillet resettes', () => {
   test('Klikk "Resett spill" og se at score for spiller 1 er 0', () => {
     render(<App />);
