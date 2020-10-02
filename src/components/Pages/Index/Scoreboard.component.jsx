@@ -29,6 +29,7 @@ function Scoreboard() {
                     <span
                       id={`score-p${index}`}
                       data-testid={`score-p${index}`}
+                      data-cy={`score-p${index}`}
                       className="display-3"
                     >
                       {player.Score}
