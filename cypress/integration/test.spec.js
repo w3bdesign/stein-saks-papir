@@ -2,8 +2,8 @@
 
 describe('Besøk hjemmesiden, se at elementer eksisterer i DOM og at knappene fungerer', () => {
   beforeEach(() => {
-    cy.visit('/');
-    // cy.visit('http://localhost:3000');
+    // cy.visit('/');
+    cy.visit('http://localhost:3000');
   });
 
   it('Se at nødvendige elementer er på plass', () => {
