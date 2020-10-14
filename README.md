@@ -66,7 +66,6 @@ Lag en interaktiv side der man kan spille stein-saks-papir (reglene finner du he
 - Jeg bruker hooks med Easy Peasy ettersom det er enkelt å bruke og jeg har erfaring med det fra før av. I tillegg bruker det Redux "under the hood" så jeg har tilgang til Redux dev tools.
 - Jeg har implementert animasjoner med Animate.css fordi det er lettvint å implementere og jeg har brukt det før.
 - Jeg har forsøkt å holde state "ren" ved å bare ha score, increaseScore og reset der. Jeg vurderer å refaktorere koden til å bruke Easy Peasy state for å eliminere propdrilling.
-- Jeg har 
 
 ### <a id="todo">TODO med fremtidige potensielle/mulige forbedringer for refaktorering</a>
 
