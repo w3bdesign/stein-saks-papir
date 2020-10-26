@@ -7,11 +7,11 @@
 
 <img src="https://github.com/w3bdesign/stein-saks-papir/blob/master/screenshot/screenshot.jpg" alt="screenshot">
 
-Live URL: [https://nova.dfweb.no](https://nova.dfweb.no)
+Live URL: [https://nova.dfweb.no](https://steinsakspapir.dfweb.no)
 
 # Stein Saks Papir
 
-Prosjekt/hjemmeoppgave av Daniel for NovaCare.
+Prosjekt/hjemmeoppgave av Daniel.
 
 Se gjerne [TODO](#todo) punktet lenger ned i README hvor jeg har listet opp en rekke idèer og tanker for refaktorering av kode og forbedringer.
 
@@ -21,7 +21,7 @@ Lag en interaktiv side der man kan spille stein-saks-papir (reglene finner du he
 
 ## Teknologier / verktøy brukt
 
-- React med hooks (useState og useEffect)
+- React 17 med hooks (useState og useEffect)
 
  ### UI / design
 
