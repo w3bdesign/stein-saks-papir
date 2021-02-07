@@ -1,3 +1,4 @@
+/** global: cy */
 describe('Test Redux store og se at state fungerer', () => {
   beforeEach(() => {
     cy.visit('/');
