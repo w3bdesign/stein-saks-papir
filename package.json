@@ -53,7 +53,7 @@
     "install": "^0.13.0",
     "jest-environment-jsdom-sixteen": "^1.0.3",
     "netlify-plugin-cypress": "^1.11.1",
-    "npm": "^7.5.3",
+    "npm": "^7.5.4",
     "start-server-and-test": "^1.12.0"
   }
 }
