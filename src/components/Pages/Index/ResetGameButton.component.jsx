@@ -11,8 +11,6 @@ import Button from 'react-bootstrap/Button';
  * @returns {JSXElement} Returnerer knappen som beskrevet over
  */
 
-// TODO Bytt ut prop drilling med createComponentStore
-
 function ResetGameButton({ sethavewonThreeRounds }) {
   const resetGame = useStoreActions((actions) => actions.reset);
 
