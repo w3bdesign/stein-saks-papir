@@ -9,8 +9,6 @@ import ScoreBoardStore from './state/ScoreBoardStore';
  * Hovedapplikasjonen. Her bringer vi inn Easy Peasy store provider slik at alt har tilgang til den.
  */
 
-// TODO http://davecooper.org/mocking-the-window-object-in-unit-tests
-
 if (window.Cypress) {
   window.store = ScoreBoardStore;
 }
