@@ -51,7 +51,7 @@
     "eslint-plugin-react": "^7.23.2",
     "eslint-plugin-react-hooks": "^4.2.0",
     "eslint-plugin-testing-library": "^3.10.2",
-    "jest-environment-jsdom-sixteen": "^1.0.3",
+    "jest-environment-jsdom-sixteen": "^2.0.0",
     "netlify-plugin-cypress": "^2.2.0",
     "start-server-and-test": "^1.12.1",
     "stylelint": "^13.12.0",
