@@ -2,7 +2,6 @@
 [![DeepScan grade](https://deepscan.io/api/teams/11080/projects/13991/branches/249862/badge/grade.svg)](https://deepscan.io/dashboard#view=project&tid=11080&pid=13991&bid=249862)
 [![Codecov](https://codecov.io/gh/w3bdesign/stein-saks-papir/branch/master/graph/badge.svg)](https://codecov.io/gh/w3bdesign/stein-saks-papir)
 [![CircleCI](https://circleci.com/gh/w3bdesign/stein-saks-papir.svg?style=svg)](https://circleci.com/gh/w3bdesign/stein-saks-papir)
-[![Cypress.io](https://img.shields.io/badge/tested%20with-Cypress-04C38E.svg)](https://www.cypress.io/)
 [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=w3bdesign_stein-saks-papir&metric=alert_status)](https://sonarcloud.io/dashboard?id=w3bdesign_stein-saks-papir)
 [![Maintainability](https://api.codeclimate.com/v1/badges/b47c7e7226d07b29018b/maintainability)](https://codeclimate.com/github/w3bdesign/stein-saks-papir/maintainability)
 
