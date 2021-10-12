@@ -23,7 +23,7 @@ Lag en interaktiv side der man kan spille stein-saks-papir (reglene finner du he
 
 - React 17 med hooks (useState og useEffect)
 
- ### UI / design
+### UI / design
 
 - React Bootstrap
 - Animate.css for animasjoner
