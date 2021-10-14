@@ -1,8 +1,7 @@
 import React from 'react';
 
-import PropTypes from 'prop-types';
-
 import Modal from 'react-bootstrap/Modal';
+import PropTypes from 'prop-types';
 
 import { ReactComponent as HandScissors } from '../../../assets/hand-scissors-solid.svg';
 import { ReactComponent as HandRock } from '../../../assets/hand-rock-solid.svg';

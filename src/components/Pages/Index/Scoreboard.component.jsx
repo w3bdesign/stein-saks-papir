@@ -1,8 +1,8 @@
 import React from 'react';
 import { useStoreState } from 'easy-peasy';
 
-import CardDeck from 'react-bootstrap/CardDeck';
 import Card from 'react-bootstrap/Card';
+import CardDeck from 'react-bootstrap/CardDeck';
 
 /**
  * Funksjonen som viser selve poengtavlen. Henter spillernavn og poeng dynamisk fra state.
@@ -17,8 +17,8 @@ function Scoreboard() {
         <h6>Poengtavle</h6>
       </Card.Header>
       <CardDeck className="m-4">
-        {Player &&
-          Player.map((player, index) => (
+        {Player
+          && Player.map((player, index) => (
             <Card key={player.Name}>
               <Card.Body>
                 <Card.Title>
