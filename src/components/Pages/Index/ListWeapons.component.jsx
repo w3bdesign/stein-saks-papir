@@ -1,12 +1,10 @@
-import React from 'react';
-
 import PropTypes from 'prop-types';
-
+import React from 'react';
 import Button from 'react-bootstrap/Button';
 
-import { ReactComponent as HandScissors } from '../../../assets/hand-scissors-solid.svg';
-import { ReactComponent as HandRock } from '../../../assets/hand-rock-solid.svg';
 import { ReactComponent as HandPaper } from '../../../assets/hand-paper-solid.svg';
+import { ReactComponent as HandRock } from '../../../assets/hand-rock-solid.svg';
+import { ReactComponent as HandScissors } from '../../../assets/hand-scissors-solid.svg';
 
 /**
  * Viser knapper med våpnene som vi kan velge
