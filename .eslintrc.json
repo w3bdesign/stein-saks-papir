@@ -21,6 +21,6 @@
     "no-param-reassign": "off",
     "no-undef": "warn",
     "no-unused-vars": "warn",
-    "react/jsx-max-depth" : 0
+    "react/jsx-max-depth" : [2, { "max": 3 }]
   }
 }
