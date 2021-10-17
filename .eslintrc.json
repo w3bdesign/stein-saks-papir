@@ -15,12 +15,17 @@
     "ecmaVersion": 12,
     "sourceType": "module"
   },
-  "plugins": ["react", "testing-library", "cypress", "jsx-a11y"],
+  "plugins": [
+    "react",
+    "testing-library",
+    "cypress",
+    "jsx-a11y"
+  ],
   "rules": {
     "no-return-assign": "off",
     "no-param-reassign": "off",
     "no-undef": "warn",
     "no-unused-vars": "warn",
-    "react/jsx-max-depth" : [2, { "max": 3 }]
+    "react/jsx-max-depth": "off"
   }
 }
