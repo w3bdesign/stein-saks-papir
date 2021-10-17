@@ -1,4 +1,3 @@
-[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/w3bdesign/stein-saks-papir/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/w3bdesign/stein-saks-papir/?branch=master)
 [![DeepScan grade](https://deepscan.io/api/teams/11080/projects/13991/branches/249862/badge/grade.svg)](https://deepscan.io/dashboard#view=project&tid=11080&pid=13991&bid=249862)
 [![Codecov](https://codecov.io/gh/w3bdesign/stein-saks-papir/branch/master/graph/badge.svg)](https://codecov.io/gh/w3bdesign/stein-saks-papir)
 [![CircleCI](https://circleci.com/gh/w3bdesign/stein-saks-papir.svg?style=svg)](https://circleci.com/gh/w3bdesign/stein-saks-papir)
