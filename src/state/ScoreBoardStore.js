@@ -15,6 +15,7 @@ const ScoreBoardStore = createStore({
     const playerIndex = state.score.findIndex(
       (element) => element.Name === payload,
     );
+
     state.score[playerIndex].Score += 1;
   }),
   reset: action((state) => {
