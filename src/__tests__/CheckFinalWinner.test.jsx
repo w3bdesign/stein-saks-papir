@@ -32,7 +32,6 @@ describe('Velg et våpen og se at noen vinner til slutt', () => {
       repeatClickTenTimes.forEach(() => userEvent.click(screen.queryByRole('button', { name: /stein/i })));
     });
     const steinKnapp = screen.queryByRole('button', { name: /stein/i });
-    // expect(screen.queryByRole('button', { name: /stein/i })).toBeNull();
     expect(steinKnapp).toHaveClass('d-none');
   });
 
