@@ -3,10 +3,6 @@ import PropTypes from 'prop-types';
 
 import Button from 'react-bootstrap/Button';
 
-// import { ReactComponent as HandScissors } from '../../../assets/hand-scissors-solid.svg';
-// import { ReactComponent as HandRock } from '../../../assets/hand-rock-solid.svg';
-// import { ReactComponent as HandPaper } from '../../../assets/hand-paper-solid.svg';
-
 import WEAPONS from '../../../const/WEAPONS';
 
 /**
