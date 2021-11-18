@@ -1,5 +1,6 @@
-import React, { useState, useEffect, useCallback } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useStoreActions, useStoreState } from 'easy-peasy';
+import { useDebouncedCallback } from 'use-debounce';
 
 import Alert from 'react-bootstrap/Alert';
 
@@ -34,7 +35,7 @@ function Game() {
     }
   }, [shouldCheckWinner, getScore]);
 
-  const handlePlayGameClick = useCallback((Weapon) => {
+  const handlePlayGameClick = useDebouncedCallback((Weapon) => {
     const resultOfGame = PlayGame(Weapon);
 
     setshouldCheckWinner(false);
@@ -51,7 +52,7 @@ function Game() {
         setshouldCheckWinner(true);
       }, 500);
     }
-  });
+  }, 100);
 
   return (
     <>
