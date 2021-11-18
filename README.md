@@ -72,7 +72,7 @@ Lag en interaktiv side der man kan spille stein-saks-papir (reglene finner du he
 - Fullfør arbeid med å separare ut state og actions i mindre filer i `/state/model` og slå de sammen. Gjør skalering og struktur bedre.
 - Implementere tester for hver enkelt komponent (med React Testing Library) separat istedenfor sånn som vi har de nå?
 - Implementere beskrivelse av reglene. Bruk https://react-bootstrap.github.io/components/accordion/
-- Vurder å bytte ut Bytte ut useState med https://easy-peasy.now.sh/docs/api/create-component-store.html
+- Vurder å bytte ut useState med https://easy-peasy.now.sh/docs/api/create-component-store.html
 - Vurder om Suspense og dynamisk rendering av komponenter ved behov bør implementeres.
 - Lagre finalWinner via `computed` i state og hente ut denne senere? Vil cache verdien og gi oss en performance fordel (https://easy-peasy.now.sh/docs/api/computed.html)?
 - Se på muligheten for å erstatte setTimeOut i ListWeapons med actionOn thunk/async listener. (https://easy-peasy.now.sh/docs/tutorial/using-listeners.html)
