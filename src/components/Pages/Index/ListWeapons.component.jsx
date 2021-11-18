@@ -15,9 +15,10 @@ import { ReactComponent as HandPaper } from '../../../assets/hand-paper-solid.sv
 
 function ListWeapons({ handlePlayGameClick, havewonThreeRounds }) {
   // Refaktorer onClick senere om hastighet blir et problem
+  const weaponClass = `m-4 d-inline ${havewonThreeRounds && 'd-none'}`
   return (
     <div className="m-4">
-      <div className={`m-4 d-inline ${havewonThreeRounds && 'd-none'}`}>
+      <div className={weaponClass}>
         <Button
           data-testid="saks"
           data-cy="saks"
@@ -30,7 +31,7 @@ function ListWeapons({ handlePlayGameClick, havewonThreeRounds }) {
       </div>
       <div
         data-testid="steinDiv"
-        className={`m-4 d-inline ${havewonThreeRounds && 'd-none'}`}
+        className={weaponClass}
       >
         <Button
           data-testid="stein"
@@ -42,7 +43,7 @@ function ListWeapons({ handlePlayGameClick, havewonThreeRounds }) {
           <HandRock />
         </Button>
       </div>
-      <div className={`m-4 d-inline ${havewonThreeRounds && 'd-none'}`}>
+      <div className={weaponClass}>
         <Button
           data-testid="papir"
           data-cy="papir"
