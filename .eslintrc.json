@@ -1,17 +1,20 @@
 {
   "env": {
-    "browser": true
+    "browser": true,
+    "es6": true,
+    "jest": true
   },
   "extends": [
-    "plugin:testing-library/react",
     "airbnb",
-    "plugin:jsx-a11y/recommended"
+    "plugin:cypress/recommended",
+    "plugin:jsx-a11y/recommended",
+    "plugin:react/recommended"
   ],
   "parserOptions": {
     "ecmaFeatures": {
       "jsx": true
     },
-    "ecmaVersion": 11,
+    "ecmaVersion": 2018,
     "sourceType": "module"
   },
   "plugins": ["react", "cypress", "jsx-a11y"],
