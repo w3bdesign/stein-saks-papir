@@ -80,4 +80,4 @@ Lag en interaktiv side der man kan spille stein-saks-papir (reglene finner du he
 - Oppgradere kodebasen til Typescript?
 - Se om jeg kan redusere prop drilling i komponenter ved å lagre mer informasjon i global state. Fordel er at komponenter blir "renere" fordi de ikke er avhengig av props. Ulempe er at det går imot det å holde state så "lavt" som mulig.
 - Se om jeg kan separere mer kode i enda mindre komponenter for å gjøre koden ryddigere og enklere å vedlikeholde/oppdatere? (Allerede påbegynt).
-- Se om jeg kan erstatte visning av våpen i ListWeapons med map() sånn at vi kan enklere legge til flere våpen i fremtiden (skalering).
+- Se 
