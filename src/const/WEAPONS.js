@@ -27,6 +27,4 @@ const WEAPONS = [
   },
 ];
 
-export const LISTWEAPONS = ['Saks', 'Stein', 'Papir'];
-
 export default WEAPONS;

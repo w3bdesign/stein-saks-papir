@@ -27,6 +27,7 @@ function ShowWinner({
 
   return (
     <Modal
+      data-testid="modalId"
       show={showWinnerModal}
       onClick={handleClose}
       onHide={handleClose}

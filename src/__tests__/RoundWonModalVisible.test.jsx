@@ -18,7 +18,7 @@ describe('Sjekk at "Motstander valgte" er synlig når vi velger et våpen', () =
     render(<App />);
 
     expect(
-      screen.queryByRole('heading', { name: /motstander valgte:/i })
+      screen.queryByRole('heading', { name: /motstander valgte:/i }),
     ).toBeNull();
   });
 
@@ -27,7 +27,7 @@ describe('Sjekk at "Motstander valgte" er synlig når vi velger et våpen', () =
 
     userEvent.click(screen.getByRole('button', { name: /saks/i }));
     expect(
-      screen.getByRole('heading', { name: /motstander valgte:/i })
+      screen.getByRole('heading', { name: /motstander valgte:/i }),
     ).toBeVisible();
   });
 
@@ -36,7 +36,7 @@ describe('Sjekk at "Motstander valgte" er synlig når vi velger et våpen', () =
 
     userEvent.click(screen.getByRole('button', { name: /stein/i }));
     expect(
-      screen.getByRole('heading', { name: /motstander valgte:/i })
+      screen.getByRole('heading', { name: /motstander valgte:/i }),
     ).toBeVisible();
   });
 
@@ -45,7 +45,29 @@ describe('Sjekk at "Motstander valgte" er synlig når vi velger et våpen', () =
 
     userEvent.click(screen.getByRole('button', { name: /papir/i }));
     expect(
-      screen.getByRole('heading', { name: /motstander valgte:/i })
+      screen.getByRole('heading', { name: /motstander valgte:/i }),
     ).toBeVisible();
+  });
+
+  test('Sjekk at lukkeknappen er synlig i vinnermodalen', () => {
+    render(<App />);
+
+    userEvent.click(screen.getByRole('button', { name: /papir/i }));
+
+    expect(
+      screen.getByRole('button', { name: /close/i }).toBeVisible,
+    );
+  });
+
+  test('Trykk lukkeknappen og sjekk at den ikke lenger eksisterer', () => {
+    render(<App />);
+
+    userEvent.click(screen.getByRole('button', { name: /papir/i }));
+
+    userEvent.click(screen.getByRole('button', { name: /close/i }));
+
+    expect(
+      screen.getByRole('button', { name: /close/i }).toBeNull,
+    );
   });
 });
