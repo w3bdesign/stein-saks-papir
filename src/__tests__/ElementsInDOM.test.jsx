@@ -60,10 +60,4 @@ describe('Sjekk at alle nødvendige elementer er på plass i dokumentet', () => 
     const Poengoversikt = getByRole('heading', { name: /poengoversikt/i });
     expect(Poengoversikt).toBeInTheDocument();
   });
-
-  test('Sjekk at poengoversikt er på plass', () => {
-    const { getByRole } = render(<App />);
-    const Poengoversikt = getByRole('heading', { name: /poengoversikt/i });
-    expect(Poengoversikt).toBeInTheDocument();
-  });
 });
