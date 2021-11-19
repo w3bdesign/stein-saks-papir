@@ -3,9 +3,7 @@ import PropTypes from 'prop-types';
 
 import Button from 'react-bootstrap/Button';
 
-import { ReactComponent as HandScissors } from '../../../assets/hand-scissors-solid.svg';
-import { ReactComponent as HandRock } from '../../../assets/hand-rock-solid.svg';
-import { ReactComponent as HandPaper } from '../../../assets/hand-paper-solid.svg';
+import WEAPONS from '../../../const/WEAPONS';
 
 /**
  * Viser knapper med våpnene som vi kan velge
@@ -15,44 +13,25 @@ import { ReactComponent as HandPaper } from '../../../assets/hand-paper-solid.sv
 
 function ListWeapons({ handlePlayGameClick, havewonThreeRounds }) {
   // Refaktorer onClick senere om hastighet blir et problem
+  const weaponClass = `m-4 d-inline ${havewonThreeRounds && 'd-none'}`;
+
   return (
     <div className="m-4">
-      <div className={`m-4 d-inline ${havewonThreeRounds && 'd-none'}`}>
-        <Button
-          data-testid="saks"
-          data-cy="saks"
-          variant="outline-dark"
-          aria-label="Saks"
-          onClick={() => handlePlayGameClick('Saks')}
-        >
-          <HandScissors />
-        </Button>
-      </div>
-      <div
-        data-testid="steinDiv"
-        className={`m-4 d-inline ${havewonThreeRounds && 'd-none'}`}
-      >
-        <Button
-          data-testid="stein"
-          data-cy="stein"
-          variant="outline-dark"
-          aria-label="Stein"
-          onClick={() => handlePlayGameClick('Stein')}
-        >
-          <HandRock />
-        </Button>
-      </div>
-      <div className={`m-4 d-inline ${havewonThreeRounds && 'd-none'}`}>
-        <Button
-          data-testid="papir"
-          data-cy="papir"
-          variant="outline-dark"
-          aria-label="Papir"
-          onClick={() => handlePlayGameClick('Papir')}
-        >
-          <HandPaper />
-        </Button>
-      </div>
+      {WEAPONS.map(({ name, id, component }) => (
+        <React.Fragment key={id}>
+          <div className={weaponClass} data-testid={`${name}Div`}>
+            <Button
+              data-testid={name}
+              data-cy={name}
+              variant="outline-dark"
+              aria-label={name}
+              onClick={() => handlePlayGameClick(name)}
+            >
+              {React.createElement(component)}
+            </Button>
+          </div>
+        </React.Fragment>
+      ))}
     </div>
   );
 }
