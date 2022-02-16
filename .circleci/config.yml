@@ -1,9 +1,9 @@
-version: 2
+version: 2.1
 jobs:
   build:
     working_directory: ~/stein-saks-papir
     docker:
-      - image: circleci/node:latest
+      - image: cimg/node:current-browsers
     steps:
       - checkout
       - restore_cache:
