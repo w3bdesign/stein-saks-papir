@@ -51,7 +51,7 @@
   "devDependencies": {
     "@jest/globals": "^27.5.1",
     "cypress": "^9.5.0",
-    "eslint": "^8.9.0",
+    "eslint": "^8.10.0",
     "eslint-config-airbnb": "^19.0.4",
     "eslint-plugin-cypress": "^2.12.1",
     "eslint-plugin-import": "^2.25.4",
