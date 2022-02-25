@@ -56,7 +56,11 @@
     "eslint-plugin-cypress": "^2.12.1",
     "eslint-plugin-import": "^2.25.4",
     "eslint-plugin-jsx-a11y": "^6.5.1",
+<<<<<<< HEAD
+    "eslint-plugin-react": "7.29.1",
+=======
     "eslint-plugin-react": "^7.29.1",
+>>>>>>> refs/rewritten/Eslint-4
     "eslint-plugin-react-hooks": "^4.3.0",
     "netlify-plugin-cypress": "^2.2.0",
     "start-server-and-test": "^1.14.0",
