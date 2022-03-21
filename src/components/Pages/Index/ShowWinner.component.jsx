@@ -36,7 +36,6 @@ function ShowWinner({
       <Modal.Title>
         <h4 data-cy="winnermodaltext" className="text-center mt-2">
           Vinner:
-          {' '}
           {winner && winner.toString()}
         </h4>
       </Modal.Title>
