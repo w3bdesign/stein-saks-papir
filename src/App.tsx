@@ -6,7 +6,7 @@ import Main from './components/Main/Main.component';
 function App() {
   return (
     <div className="root">
-      <Container fluid>
+      <Container fluid="md">
         <Main />
       </Container>
     </div>

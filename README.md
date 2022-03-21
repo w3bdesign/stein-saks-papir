@@ -1,3 +1,5 @@
+[![CircleCI](https://circleci.com/gh/w3bdesign/stein-saks-papir.svg?style=svg)](https://circleci.com/gh/w3bdesign/stein-saks-papir)
+
 # Stein Saks Papir
 
 Prosjekt av Daniel laget for NovaCare.
@@ -12,9 +14,14 @@ Lag en interaktiv side der man kan spille stein-saks-papir (reglene finner du he
 - Typescript
 - Jest 
 - React testing library
+- React Bootstrap
 - CircleCI integrasjon
 - ESLint med AirBnB
+- Vektorbilder (SVG)
 
-## Resonnering rundt teknologier/verktøy som er brukt
+## Resonnering og tanker rundt teknologier/verktøy som er brukt og prosessen
 
-Her kommer detaljert beskrivelse og forklaring av hva jeg har valgt og hvorfor.
+- React ble brukt pga enkelheten i integrasjon med verktøy (Typescript, Jest osv). Det forenkler også utviklingsprosessen.
+- Typescript pga økt kodekvalitet, VSCode støtte, lettere å unngå bugs, og enklere å vedlikeholde kodebasen.
+- React Bootstrap ble brukt fordi det er et svært populært rammeverk for UI og man slipper å finne opp hjulet på nytt
+- CircleCI 
