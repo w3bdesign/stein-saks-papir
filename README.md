@@ -28,6 +28,7 @@ Lag en interaktiv side der man kan spille stein-saks-papir (reglene finner du he
 - Jeg ville brukt god tid på planleggingsfasen. Hatt et lengre møte hvor målet er å få utarbeidet en detaljert kravspesifikasjon, diskutere budsjett, tidsramme, valg av teknologier, langsiktige mål med siden. Det vil gjøre at man kan velge riktig teknologi for i dag og for fremtiden.
 - Jeg ville også satt opp `branch protection` på master og krevd minimum 1 code review fra en annen.
 - Enighet om felles Git commit message template innad for kunden.
+- Hadde dette vært et større prosjekt hvor flere andre skulle samarbeidet ville jeg sannsynligvis implementert Typescript.
 
 ### Resonnering og tanker
 - Jeg har valgt React ettersom jeg ikke så noe stort behov for å bruke Gatsby eller NextJS i dette prosjektet.
