@@ -42,7 +42,6 @@ Lag en interaktiv side der man kan spille stein-saks-papir (reglene finner du he
 - Enighet om felles Git commit message template innad for kunden.
 - Implementert React-Helmet for bedre kontroll over SEO
 - Hadde dette vært et større prosjekt hvor flere andre skulle samarbeidet ville jeg sannsynligvis implementert Typescript.
-- Implementert React-helmet for bedre kontroll over SEO
 
 ### Resonnering og tanker
 
