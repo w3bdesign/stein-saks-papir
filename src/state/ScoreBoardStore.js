@@ -12,7 +12,6 @@ import DEFAULT_SCORE from '../const/DEFAULT_SCORE';
 
 const ScoreBoardStore = createStore({
   score: DEFAULT_SCORE,
-  finalWinner: null,
   increaseScore: action((state, payload) => {
     const playerIndex = state.score.findIndex(
       (element) => element.Name === payload,
