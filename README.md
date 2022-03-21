@@ -14,12 +14,13 @@ Lag en interaktiv side der man kan spille stein-saks-papir (reglene finner du he
 
 ## Teknologier / verktøy brukt
 
-- React
+- React med hooks (useState og useEffect)
 - Jest 
 - React testing library
 - React Bootstrap
-- Easy Peasy
-- JSDoc
+- Animate.css for animasjoner
+- Easy Peasy for state management
+- JSDoc for kode-dokumentering
 - CircleCI integrasjon
 - ESLint med AirBnB
 - Vektorbilder (SVG) fra FontAwesome
@@ -34,10 +35,23 @@ Lag en interaktiv side der man kan spille stein-saks-papir (reglene finner du he
 - Hadde dette vært et større prosjekt hvor flere andre skulle samarbeidet ville jeg sannsynligvis implementert Typescript.
 
 ### Resonnering og tanker
+
 - Jeg har valgt React ettersom jeg ikke så noe stort behov for å bruke Gatsby eller NextJS i dette prosjektet.
 - Jeg valgte React Bootstrap for UI ettersom det er et populært bibliotek som er enkelt å bruke.
 - Jeg har brukt ESLint og Airbnb for å opprettholde kodekvaliteten og gjøre utvikling enklere. Det fungerer også bra med integrert IDE støtte i VSCode. Det vil også gjøre videreutvikling og "maintainability" enklere på sikt. Jeg vurderte Typescript, men føler jeg må få mer erfaring med det først.
 - Jeg har brukt JSDoc for å dokumentere koden etter best mulig evne. Dette har jeg også gjort fordi jeg ikke har brukt Typescript.
 - Jeg har brukt SVG bilder fra FontAwesome for å sørge for at bildene ser bra ut uavhengig av oppløsning. 
 - Jeg har satt opp testing foreløpig med Jest, React-testing-library og integrasjon overfor CircleCI. Får jeg tid skal jeg også sette opp Cypress. 
-- Jeg bruker hooks med Easy Peasy ettersom det er enkelt å bruke og jeg har erfaring med det og Typescript fra før av. Redux er unødvendig (overkill) i dette prosjektet. 
+- Jeg bruker hooks med Easy Peasy ettersom det er enkelt å bruke og jeg har erfaring med det fra før av. I tillegg bruker det Redux "under the hood" så jeg har tilgang til Redux dev tools.
+- Jeg har implementert animasjoner med Animate.css fordi det er lettvint å implementere og jeg har brukt det før.
+- Jeg har forsøkt å holde state "ren" ved å bare ha score, increaseScore og reset der. Ulempen er at jeg bruker prop drilling der hvor jeg trenger å videresende variabler i state (useState).
+
+### TODO med potensielle forbedringer
+
+- Erstatte useState med useReducer i ListWeapons for å forenkle kodebasen.
+- Sett på muligheten for å erstatte setTimeOut i ListWeapons med actionOn thunk/async listener.
+- Erstattet Animate.css med GSAP eller React-spring.
+- Oppgradert kodebasen til Typescript.
+- Erstatte hardkodet spillernavn ved å lagre det dynamisk i state. Det gjør skalering og fremtidig oppdatering enklere ved å holde alt på ett sted.
+- Se om jeg kan redusere prop drilling i komponenter ved å lagre mer informasjon i state (eller om jeg bør beholde prop drilling?).
+- Vurder å erstatte useEffect med useCallback for å forhindre at den kalles flere ganger
