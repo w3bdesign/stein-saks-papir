@@ -1,12 +1,12 @@
-import React from "react";
+import React from 'react';
 
-import PropTypes from "prop-types";
+import PropTypes from 'prop-types';
 
-import Button from "react-bootstrap/Button";
+import Button from 'react-bootstrap/Button';
 
-import { ReactComponent as HandScissors } from "../../../assets/hand-scissors-solid.svg";
-import { ReactComponent as HandRock } from "../../../assets/hand-rock-solid.svg";
-import { ReactComponent as HandPaper } from "../../../assets/hand-paper-solid.svg";
+import { ReactComponent as HandScissors } from '../../../assets/hand-scissors-solid.svg';
+import { ReactComponent as HandRock } from '../../../assets/hand-rock-solid.svg';
+import { ReactComponent as HandPaper } from '../../../assets/hand-paper-solid.svg';
 
 /**
  * Viser knapper med våpnene som vi kan velge
@@ -23,7 +23,7 @@ function ListWeapons({ handlePlayGameClick }) {
         variant="outline-dark"
         aria-label="Saks"
         onClick={() => {
-          handlePlayGameClick("Saks");
+          handlePlayGameClick('Saks');
         }}
       >
         <HandScissors />
@@ -35,7 +35,7 @@ function ListWeapons({ handlePlayGameClick }) {
         variant="outline-dark"
         aria-label="Stein"
         onClick={() => {
-          handlePlayGameClick("Stein");
+          handlePlayGameClick('Stein');
         }}
       >
         <HandRock />
@@ -47,7 +47,7 @@ function ListWeapons({ handlePlayGameClick }) {
         variant="outline-dark"
         aria-label="Papir"
         onClick={() => {
-          handlePlayGameClick("Papir");
+          handlePlayGameClick('Papir');
         }}
       >
         <HandPaper />
