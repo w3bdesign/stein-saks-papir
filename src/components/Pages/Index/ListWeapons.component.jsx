@@ -13,10 +13,6 @@ import { ReactComponent as HandPaper } from '../../../assets/hand-paper-solid.sv
  * @param {Function} handlePlayGameClick Funksjon som setter spillet i gang
  */
 
-// TODO Endre dette til dynamisk data fremfor hardkodede verdier
-// TODO Vi kan hente dette ut fra \src\const\WEAPONS.js
-// TODO Vurder å bytte ut prop drilling med createComponentStore eller gjøre state global?
-
 function ListWeapons({ handlePlayGameClick }) {
   return (
     <>
