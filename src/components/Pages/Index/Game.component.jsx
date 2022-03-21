@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import { useStoreActions, useStoreState } from 'easy-peasy';
 
 import Alert from 'react-bootstrap/Alert';
@@ -34,7 +34,7 @@ function Game() {
     }
   }, [shouldCheckWinner, getScore]);
 
-  const handlePlayGameClick = (Weapon) => {
+  const handlePlayGameClick = useCallback((Weapon) => {
     const resultOfGame = PlayGame(Weapon);
 
     setshouldCheckWinner(false);
@@ -51,7 +51,7 @@ function Game() {
         setshouldCheckWinner(true);
       }, 500);
     }
-  };
+  });
 
   return (
     <>
