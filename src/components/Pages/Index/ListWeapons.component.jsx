@@ -15,7 +15,7 @@ import { ReactComponent as HandPaper } from '../../../assets/hand-paper-solid.sv
 
 function ListWeapons({ handlePlayGameClick, havewonThreeRounds }) {
   // Refaktorer onClick senere om hastighet blir et problem
-  const weaponClass = `m-4 d-inline ${havewonThreeRounds && 'd-none'}`
+  const weaponClass = `m-4 d-inline ${havewonThreeRounds && 'd-none'}`;
   return (
     <div className="m-4">
       <div className={weaponClass}>
