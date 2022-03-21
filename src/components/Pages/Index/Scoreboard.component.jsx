@@ -5,7 +5,7 @@ import CardDeck from 'react-bootstrap/CardDeck';
 import Card from 'react-bootstrap/Card';
 
 function Scoreboard() {
-  const Player = useStoreState((player) => player.scores.score);
+  const Player = useStoreState((player) => player.score);
   return (
     <>
       <Card className="mx-auto mt-5 text-center">

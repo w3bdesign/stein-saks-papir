@@ -1,6 +1,6 @@
 // import WEAPONS from '../const/WEAPONS';
 
-function CheckWinner(Weapon: string) {
+function CheckWinner(Weapon) {
   console.log('Checking winner ...');
   console.log(Weapon);
 }
