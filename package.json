@@ -1,8 +1,9 @@
 {
   "name": "stein-saks-papir",
-  "version": "0.1.7",
+  "version": "0.2.1",
   "private": true,
   "dependencies": {
+    "postcss": "7.0.34",
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.0.4",
     "@testing-library/user-event": "^12.1.5",
@@ -16,8 +17,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "test": "react-scripts test"
   },
   "eslintConfig": {
     "extends": "react-app"
