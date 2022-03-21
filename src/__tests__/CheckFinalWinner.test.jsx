@@ -31,7 +31,8 @@ describe('Velg et våpen og se at noen vinner til slutt', () => {
     await waitFor(() => {
       repeatClickTenTimes.forEach(() => userEvent.click(screen.queryByRole('button', { name: /stein/i })));
     });
-    expect(screen.queryByRole('button', { name: /stein/i })).toBeNull();
+    const steinDiv = screen.getByTestId('steinDiv');
+    expect(steinDiv).toHaveClass('d-none');
   });
 
   test('Velg et våpen flere ganger og se at vinner-boksen vises', async () => {

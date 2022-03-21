@@ -49,7 +49,7 @@ function Game() {
       increaseScore(resultOfGame.winner);
       setTimeout(() => {
         setshouldCheckWinner(true);
-      }, 500);
+      });
     }
   };
 
@@ -69,14 +69,17 @@ function Game() {
           variant="success"
         >
           {havewonThreeRounds}
+          {' '}
           har vunnet! Hurra!
-          <br />
         </Alert>
       )}
-      <div className={`${havewonThreeRounds && 'd-none'}`}>
-        <ListWeapons handlePlayGameClick={handlePlayGameClick} />
+      <ListWeapons
+        handlePlayGameClick={handlePlayGameClick}
+        havewonThreeRounds={havewonThreeRounds}
+      />
+      <div className="mt-2">
+        <ResetGameButton sethavewonThreeRounds={sethavewonThreeRounds} />
       </div>
-      <ResetGameButton sethavewonThreeRounds={sethavewonThreeRounds} />
     </>
   );
 }
