@@ -1,7 +1,6 @@
 {
   "env": {
-    "browser": true,
-    "es2020": true
+    "browser": true
   },
   "extends": [
     "plugin:testing-library/react",
@@ -15,7 +14,7 @@
     "ecmaVersion": 11,
     "sourceType": "module"
   },
-  "plugins": ["react", "testing-library", "cypress", "jsx-a11y"],
+  "plugins": ["react", "cypress", "jsx-a11y"],
   "rules": {
     "no-return-assign": "off",
     "no-param-reassign": "off",
