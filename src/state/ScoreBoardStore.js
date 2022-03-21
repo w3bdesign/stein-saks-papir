@@ -4,7 +4,7 @@ import DEFAULT_SCORE from '../const/DEFAULT_SCORE';
 
 /**
  * Easy peasy store med poengstatus (score)
- * og increaseScore for å øke score og reset for å nullstille poengstatus
+ * increaseScore for å øke score og reset for å nullstille poengstatus
  */
 
 const ScoreBoardStore = createStore({
@@ -13,7 +13,6 @@ const ScoreBoardStore = createStore({
     const playerIndex = state.score.findIndex(
       (element) => element.Name === payload,
     );
-
     state.score[playerIndex].Score += 1;
   }),
   reset: action((state) => {
