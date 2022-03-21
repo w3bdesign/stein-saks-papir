@@ -27,7 +27,6 @@ function Scoreboard() {
                   </Card.Title>
                   <Card.Text>
                     <span
-                      data-testid={index}
                       id={`score-p${index}`}
                       className="display-3"
                     >
