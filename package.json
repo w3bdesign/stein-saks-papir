@@ -18,8 +18,8 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test --watchAll=false --coverage",
-    "test:regular": "react-scripts test",
+    "test": "react-scripts test --watchAll=false --coverage --env=jest-environment-jsdom-sixteen",
+    "test:regular": "react-scripts test --env=jest-environment-jsdom-sixteen",
     "cypress:open": "cypress open",
     "test:cypress": "cypress run",
     "dev": "start-test develop 3000 cy:open"
@@ -49,6 +49,7 @@
     "eslint-plugin-react": "^7.21.2",
     "eslint-plugin-react-hooks": "^4.1.2",
     "install": "^0.13.0",
+    "jest-environment-jsdom-sixteen": "^1.0.3",
     "netlify-plugin-cypress": "^1.4.1",
     "npm": "^6.14.8",
     "start-server-and-test": "^1.11.4"
