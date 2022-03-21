@@ -1,4 +1,3 @@
-/* eslint-disable no-undef */
 import React from 'react';
 
 import { render, screen } from '@testing-library/react';
@@ -6,6 +5,11 @@ import userEvent from '@testing-library/user-event';
 import '@testing-library/jest-dom';
 
 import App from '../App';
+
+/**
+ * Her tester vi at modal som dukker opp når vi har valgt et våpen fungerer som det skal
+ * Vi klikker på hver enkelt knapp (stein, saks og papir) og kjører en test
+ */
 
 describe('Sjekk at "Motstander valgte" er synlig når vi velger et våpen', () => {
   test('Sjekk at "Motstander valgte" ikke er synlig hvis vi ikke har klikket noen knapp', () => {
