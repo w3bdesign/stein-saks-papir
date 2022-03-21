@@ -23,9 +23,7 @@ function ListWeapons({ handlePlayGameClick, havewonThreeRounds }) {
           data-cy="saks"
           variant="outline-dark"
           aria-label="Saks"
-          onClick={() => {
-            handlePlayGameClick('Saks');
-          }}
+          onClick={() => handlePlayGameClick('Saks')}
         >
           <HandScissors />
         </Button>
@@ -39,9 +37,7 @@ function ListWeapons({ handlePlayGameClick, havewonThreeRounds }) {
           data-cy="stein"
           variant="outline-dark"
           aria-label="Stein"
-          onClick={() => {
-            handlePlayGameClick('Stein');
-          }}
+          onClick={() => handlePlayGameClick('Stein')}
         >
           <HandRock />
         </Button>
@@ -52,9 +48,7 @@ function ListWeapons({ handlePlayGameClick, havewonThreeRounds }) {
           data-cy="papir"
           variant="outline-dark"
           aria-label="Papir"
-          onClick={() => {
-            handlePlayGameClick('Papir');
-          }}
+          onClick={() => handlePlayGameClick('Papir')}
         >
           <HandPaper />
         </Button>
