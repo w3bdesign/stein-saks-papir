@@ -1,8 +1,8 @@
-import React from "react";
+import React from 'react';
 
-import Button from "react-bootstrap/Button";
-import PropTypes from "prop-types";
-import { useStoreActions } from "easy-peasy";
+import Button from 'react-bootstrap/Button';
+import PropTypes from 'prop-types';
+import { useStoreActions } from 'easy-peasy';
 
 /**
  * Funksjon for å nullstille spillet og sette score for spillerne til 0.

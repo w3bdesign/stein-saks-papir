@@ -1,12 +1,12 @@
-import React from "react";
+import React from 'react';
 
-import Col from "react-bootstrap/Col";
-import Row from "react-bootstrap/Row";
-import Card from "react-bootstrap/Card";
+import Col from 'react-bootstrap/Col';
+import Row from 'react-bootstrap/Row';
+import Card from 'react-bootstrap/Card';
 
-import Scoreboard from "./Scoreboard.component";
-import MobileScoreboard from "./MobileScoreBoard.component";
-import Game from "./Game.component";
+import Scoreboard from './Scoreboard.component';
+import MobileScoreboard from './MobileScoreBoard.component';
+import Game from './Game.component';
 
 /**
  * Hovedkomponenten som viser våpnene, resetknapp og poengtavle.
