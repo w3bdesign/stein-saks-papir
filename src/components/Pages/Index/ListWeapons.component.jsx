@@ -12,6 +12,10 @@ import { ReactComponent as HandPaper } from '../../../assets/hand-paper-solid.sv
  * Viser knapper med våpnene som vi kan velge
  * @param {Function} handlePlayGameClick Funksjon som setter spillet i gang
  */
+
+// TODO Endre dette til dynamisk data fremfor hardkodede verdier
+// TODO Vi kan hente dette ut fra \src\const\WEAPONS.js
+
 function ListWeapons({ handlePlayGameClick }) {
   return (
     <>

@@ -3,7 +3,7 @@
 describe('Besøk hjemmesiden', () => {
   beforeEach(() => {
     cy.visit('/');
-    // Debug: cy.visit('http://localhost:3000');
+    // DEBUG: cy.visit('http://localhost:3000');
   });
 
   it('Vi kan se Stein Saks Papir i navbar', () => {
@@ -30,6 +30,6 @@ describe('Besøk hjemmesiden', () => {
   });
 
   it('Vi sjekker at score er 0 fra begynnelsen av', () => {
-    cy.get('#score-p1').invoke('text').should('eq', ' 0');
+    cy.get('#score-p0').invoke('text').should('eq', '0');
   });
 });
