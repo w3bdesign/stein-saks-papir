@@ -1,4 +1,5 @@
 import React from 'react';
+import { useStoreActions } from 'easy-peasy';
 
 import Button from 'react-bootstrap/Button';
 import OverlayTrigger from 'react-bootstrap/OverlayTrigger';
@@ -11,6 +12,13 @@ import { ReactComponent as HandRock } from '../../../assets/hand-rock-solid.svg'
 import { ReactComponent as HandPaper } from '../../../assets/hand-paper-solid.svg';
 
 function ListWeapons() {
+  const increaseScore = useStoreActions((actions) => actions.increaseScore);
+
+  const handlePlayGameClick = (Weapon) => {
+    PlayGame(Weapon);
+    increaseScore('Player 1');
+  };
+
   return (
     <>
       <OverlayTrigger
@@ -26,7 +34,8 @@ function ListWeapons() {
           data-testid="saks"
           variant="outline-dark"
           onClick={() => {
-            PlayGame('Saks');
+            // PlayGame('Saks');
+            handlePlayGameClick('Saks');
           }}
         >
           <HandScissors />
