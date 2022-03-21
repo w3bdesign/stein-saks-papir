@@ -1,31 +1,30 @@
 {
-    "env": {
-      "browser": true,
-      "es6": true,
-      "jest": true
+  "env": {
+    "browser": true,
+    "es6": true,
+    "jest": true
+  },
+  "extends": [
+    "airbnb",
+    "plugin:cypress/recommended",
+    "plugin:jsx-a11y/recommended"
+  ],
+  "globals": {
+    "Atomics": "readonly",
+    "SharedArrayBuffer": "readonly"
+  },
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
     },
-    "extends": [
-      "airbnb",
-      "plugin:cypress/recommended",
-      "plugin:jsx-a11y/recommended"
-    ],
-    "globals": {
-      "Atomics": "readonly",
-      "SharedArrayBuffer": "readonly"
-    },
-    "parserOptions": {
-      "ecmaFeatures": {
-        "jsx": true
-      },
-      "ecmaVersion": 2018,
-      "sourceType": "module"
-    },
-    "plugins": ["react", "testing-library", "cypress", "jsx-a11y"],
-    "rules": {
-      "no-return-assign": "off",
-      "no-param-reassign": "off",
-      "no-undef": "warn",
-      "no-unused-vars": "warn"
-    }
+    "ecmaVersion": 2018,
+    "sourceType": "module"
+  },
+  "plugins": ["react", "testing-library", "cypress", "jsx-a11y"],
+  "rules": {
+    "no-return-assign": "off",
+    "no-param-reassign": "off",
+    "no-undef": "warn",
+    "no-unused-vars": "warn"
   }
-  
+}
