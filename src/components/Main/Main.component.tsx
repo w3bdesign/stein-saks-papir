@@ -3,6 +3,7 @@ import React from 'react';
 import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
 
+import Scoreboard from './Scoreboard.component';
 import Weapons from './Weapons.component';
 
 function Main() {
@@ -14,9 +15,9 @@ function Main() {
         <br />
         <h4>Velg ditt våpen under for å starte spillet</h4>
         <br />
-        <p>
-          <Weapons />
-        </p>
+        <br />
+        <Weapons />
+        <Scoreboard />
       </Col>
     </Row>
   );
