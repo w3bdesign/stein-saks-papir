@@ -8,6 +8,10 @@ import { ReactComponent as HandScissors } from '../../../assets/hand-scissors-so
 import { ReactComponent as HandRock } from '../../../assets/hand-rock-solid.svg';
 import { ReactComponent as HandPaper } from '../../../assets/hand-paper-solid.svg';
 
+/**
+ * Viser knapper med våpnene som vi kan velge
+ * @param {Function} handlePlayGameClick Funksjon som setter spillet i gang
+ */
 function ListWeapons({ handlePlayGameClick }) {
   return (
     <>
@@ -22,7 +26,6 @@ function ListWeapons({ handlePlayGameClick }) {
       >
         <HandScissors />
       </Button>
-
       <Button
         className="m-4"
         data-testid="stein"
@@ -34,7 +37,6 @@ function ListWeapons({ handlePlayGameClick }) {
       >
         <HandRock />
       </Button>
-
       <Button
         className="m-4"
         data-testid="papir"

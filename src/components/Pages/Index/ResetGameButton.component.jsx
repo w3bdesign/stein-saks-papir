@@ -7,6 +7,7 @@ import Button from 'react-bootstrap/Button';
 /**
  * Funksjon for å nullstille spillet og sette score for spillerne til 0.
  * Kaller reset funksjonen fra Easy Peasy store.
+ * @param {Function} sethavewonThreeRounds Funksjon som setter hvem som har vunnet 3 runder
  * @returns {JSXElement} Returnerer knappen som beskrevet over
  */
 function ResetGameButton({ sethavewonThreeRounds }) {
