@@ -23,6 +23,7 @@ function ListWeapons({ handlePlayGameClick }) {
       <Button
         className="m-4"
         data-testid="saks"
+        data-cy="saks"
         variant="outline-dark"
         aria-label="Saks"
         onClick={() => {
@@ -34,6 +35,7 @@ function ListWeapons({ handlePlayGameClick }) {
       <Button
         className="m-4"
         data-testid="stein"
+        data-cy="stein"
         variant="outline-dark"
         aria-label="Stein"
         onClick={() => {
@@ -45,6 +47,7 @@ function ListWeapons({ handlePlayGameClick }) {
       <Button
         className="m-4"
         data-testid="papir"
+        data-cy="papir"
         variant="outline-dark"
         aria-label="Papir"
         onClick={() => {
