@@ -64,7 +64,7 @@ function Game() {
       {havewonThreeRounds && (
         <>
           <Alert
-            className="animate__animated animate__zoomInUp mt-4"
+            className="animate__animated animate__zoomInUp animate__slow mt-4"
             variant="success"
           >
             {havewonThreeRounds}
@@ -76,7 +76,7 @@ function Game() {
       )}
       <div
         className={`animate__animated ${
-          havewonThreeRounds && 'animate__zoomOutUp position-absolute'
+          havewonThreeRounds && 'animate__zoomOutUp animate__slow position-absolute'
         }`}
       >
         <ListWeapons handlePlayGameClick={handlePlayGameClick} />
