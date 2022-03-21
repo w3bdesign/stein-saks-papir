@@ -31,7 +31,7 @@ function ListWeapons() {
   const handlePlayGameClick = (Weapon) => {
     // console.log(getScore);
 
-    switch (PlayGame(Weapon)) {
+    switch (PlayGame(Weapon).winner) {
       case 'Spiller 1':
         setWinner('Spiller 1');
         setShowWinnerModal(true);
