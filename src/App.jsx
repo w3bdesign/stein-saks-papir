@@ -1,5 +1,5 @@
-import React from 'react';
 import { StoreProvider } from 'easy-peasy';
+import React from 'react';
 import Container from 'react-bootstrap/Container';
 
 import Main from './components/Pages/Index/Main.component';
