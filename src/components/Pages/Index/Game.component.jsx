@@ -17,6 +17,7 @@ import ListWeapons from './ListWeapons.component';
  */
 function Game() {
   // TODO Flytt dette over til https://easy-peasy.now.sh/docs/api/create-component-store.html
+  // TODO eller over til ScoreBoardStore
   const [showWinnerModal, setShowWinnerModal] = useState(false);
   const [winner, setWinner] = useState(null);
   const [shouldCheckWinner, setshouldCheckWinner] = useState(false);
