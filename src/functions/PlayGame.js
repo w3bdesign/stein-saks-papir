@@ -6,7 +6,7 @@ import CheckWinner from './CheckWinner';
 /**
  * Funksjonen som er ansvarlig for å spille spillet. Sjekker hvem som har vunnet via CheckWinner.
  * @param {String} playerSelectedWeapon Valgt spillervåpen
- * @returns {String} Returnerer en string med den som har vunnet ("Player 1" | "CPU" | "Uavgjort")
+ * @returns {String} Returnerer en string med den som har vunnet ("Spiller 1" | "CPU" | "Uavgjort")
  */
 
 function PlayGame(playerSelectedWeapon) {
@@ -21,8 +21,11 @@ function PlayGame(playerSelectedWeapon) {
     return 'Uavgjort';
   }
 
-  if (youWin) { return 'Player 1'; } // console.log(`Du vant! Computer valgte ${computerSelected.name} `);
-  if (!youWin) { return 'CPU'; } // console.log(`Du vant ikke! Computer valgte ${computerSelected.name} `);
+  if (youWin) {
+    return 'Spiller 1';
+  }
+  return 'CPU'; // console.log(`Du vant! Computer valgte ${computerSelected.name} `);
+  // console.log(`Du vant ikke! Computer valgte ${computerSelected.name} `);
 }
 
 export default PlayGame;

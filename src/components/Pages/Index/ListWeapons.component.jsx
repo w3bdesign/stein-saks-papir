@@ -32,10 +32,10 @@ function ListWeapons() {
     // console.log(getScore);
 
     switch (PlayGame(Weapon)) {
-      case 'Player 1':
-        setWinner('Player 1');
+      case 'Spiller 1':
+        setWinner('Spiller 1');
         setShowWinnerModal(true);
-        increaseScore('Player 1');
+        increaseScore('Spiller 1');
         // console.log(haveFinalWinner);
         break;
       case 'CPU':
