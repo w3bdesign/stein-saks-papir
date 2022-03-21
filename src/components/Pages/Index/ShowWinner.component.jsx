@@ -37,7 +37,6 @@ function ShowWinner({
         <h3 className="text-center">
           Vinner:
           {' '}
-          {' '}
           {winner && winner.toString()}
         </h3>
       </Modal.Title>
