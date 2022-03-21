@@ -30,7 +30,6 @@ function ListWeapons() {
           <HandScissors />
         </Button>
       </OverlayTrigger>
-
       <OverlayTrigger
         placement="bottom"
         overlay={(
@@ -43,7 +42,6 @@ function ListWeapons() {
           <HandRock />
         </Button>
       </OverlayTrigger>
-
       <OverlayTrigger
         placement="bottom"
         overlay={(
