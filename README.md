@@ -2,6 +2,8 @@
 
 <img src="https://github.com/w3bdesign/stein-saks-papir/blob/master/screenshot/screenshot.jpg" alt="screenshot">
 
+Live URL: <a href="https://hungry-shockley-392371.netlify.app/">https://hungry-shockley-392371.netlify.app/</a>
+
 # Stein Saks Papir
 
 Prosjekt av Daniel laget for NovaCare.
@@ -17,7 +19,7 @@ Lag en interaktiv side der man kan spille stein-saks-papir (reglene finner du he
 - Jest 
 - React testing library
 - React Bootstrap
-- Context og Reducer
+- Easy Peasy
 - CircleCI integrasjon
 - ESLint med AirBnB
 - Vektorbilder (SVG) fra FontAwesome
@@ -34,5 +36,4 @@ Lag en interaktiv side der man kan spille stein-saks-papir (reglene finner du he
 - Jeg valgte å bruke Typescript med ESLint og Airbnb for å opprettholde kodekvaliteten og gjøre utvikling enklere. Det fungerer også bra med integrert IDE støtte i VSCode. Det vil også gjøre videreutvikling og "maintainability" enklere på sikt.
 - Jeg har brukt SVG bilder fra FontAwesome for å sørge for at bildene ser bra ut uavhengig av oppløsning. 
 - Jeg har satt opp testing foreløpig med Jest, React-testing-library og integrasjon overfor CircleCI. Får jeg tid skal jeg også sette opp Cypress. 
-- Jeg bruker hooks med Context og Reducer ettersom det er innebygd i React og er et bra verktøy for state management i React. Redux er unødvendig (overkill) i dette prosjektet. 
-
+- Jeg bruker hooks med Easy Peasy ettersom det er enkelt å bruke og jeg har erfaring med det og Typescript fra før av. Redux er unødvendig (overkill) i dette prosjektet. 
