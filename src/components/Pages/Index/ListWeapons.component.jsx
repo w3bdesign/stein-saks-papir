@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useStoreActions } from 'easy-peasy';
 
 import Button from 'react-bootstrap/Button';
@@ -6,6 +6,8 @@ import OverlayTrigger from 'react-bootstrap/OverlayTrigger';
 import Tooltip from 'react-bootstrap/Tooltip';
 
 import PlayGame from '../../../functions/PlayGame';
+
+import ShowWinner from './ShowWinner.component';
 
 import { ReactComponent as HandScissors } from '../../../assets/hand-scissors-solid.svg';
 import { ReactComponent as HandRock } from '../../../assets/hand-rock-solid.svg';
@@ -18,15 +20,29 @@ import { ReactComponent as HandPaper } from '../../../assets/hand-paper-solid.sv
  * @returns void
  */
 function ListWeapons() {
+  // eslint-disable-next-line no-unused-vars
+  const [show, setShow] = useState(false);
+  const [winner, setWinner] = useState(false);
+
   const increaseScore = useStoreActions((actions) => actions.increaseScore);
 
   const handlePlayGameClick = (Weapon) => {
-    PlayGame(Weapon);
-    increaseScore('Player 1');
+    if (PlayGame(Weapon) === 'Player 1') {
+      setWinner('Player 1');
+      setShow(true);
+      // ShowWinner('Player 1');
+      increaseScore('Player 1');
+    } else if (PlayGame(Weapon) === 'CPU') {
+      setWinner('CPU');
+      setShow(true);
+      // ShowWinner('CPU');
+      increaseScore('CPU');
+    }
   };
 
   return (
     <>
+      <ShowWinner show={false} winner={winner} />
       <OverlayTrigger
         placement="bottom"
         overlay={(
