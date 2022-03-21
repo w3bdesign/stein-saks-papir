@@ -15,8 +15,3 @@
 /**
  * @type {Cypress.PluginConfig}
  */
-// In cypress/plugins/index.js
-
-module.exports = () => {
-
-};
