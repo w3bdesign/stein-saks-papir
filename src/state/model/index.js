@@ -1,5 +1,5 @@
-import gameModel from './gameModel';
-import scoreModel from './scoreModel';
+import gameModel from "./gameModel";
+import scoreModel from "./scoreModel";
 
 const gameScoreModel = {
   game: gameModel,
