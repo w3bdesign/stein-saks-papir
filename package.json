@@ -7,7 +7,7 @@
     "@testing-library/react": "^11.2.5",
     "@testing-library/user-event": "^12.7.3",
     "bootstrap": "^4.6.0",
-    "easy-peasy": "^5.0.0",
+    "easy-peasy": "^5.0.1",
     "postcss": "^8.2.6",
     "prop-types": "^15.7.2",
     "react": "^17.0.1",
