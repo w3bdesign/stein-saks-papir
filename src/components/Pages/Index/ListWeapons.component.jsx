@@ -1,7 +1,6 @@
-/* eslint-disable react/prop-types */
 import React from 'react';
 
-// import PropTypes from 'prop-types';
+import PropTypes from 'prop-types';
 
 import Button from 'react-bootstrap/Button';
 
@@ -53,13 +52,12 @@ function ListWeapons({ handlePlayGameClick }) {
   );
 }
 
-/*
 ListWeapons.defaultProps = {
   handlePlayGameClick: PropTypes.func,
 };
 
 ListWeapons.propTypes = {
   handlePlayGameClick: PropTypes.func,
-}; */
+};
 
 export default ListWeapons;
