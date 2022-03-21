@@ -1,6 +1,5 @@
 [![CircleCI](https://circleci.com/gh/w3bdesign/stein-saks-papir.svg?style=svg)](https://circleci.com/gh/w3bdesign/stein-saks-papir)
 [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=w3bdesign_stein-saks-papir&metric=alert_status)](https://sonarcloud.io/dashboard?id=w3bdesign_stein-saks-papir)
-[![Percy](https://percy.io/static/images/percy-badge.svg)](https://percy.io/45702547/Dfweb)
 
 <img src="https://github.com/w3bdesign/stein-saks-papir/blob/master/screenshot/screenshot.jpg" alt="screenshot">
 
@@ -20,7 +19,6 @@ Lag en interaktiv side der man kan spille stein-saks-papir (reglene finner du he
 - Jest og React testing library for unit testing
 - React Bootstrap
 - Cypress for E2E testing
-- Percy for visuell testing
 - Animate.css for animasjoner
 - Easy Peasy for state management
 - JSDoc for kode-dokumentering
@@ -46,8 +44,7 @@ Lag en interaktiv side der man kan spille stein-saks-papir (reglene finner du he
 - Jeg har brukt ESLint og Airbnb for å opprettholde kodekvaliteten og gjøre utvikling enklere. Det fungerer også bra med integrert IDE støtte i VSCode. Det vil også gjøre videreutvikling og "maintainability" enklere på sikt. Jeg vurderte Typescript, men føler jeg må få mer erfaring med det først.
 - Jeg har brukt JSDoc for å dokumentere koden etter best mulig evne. Dette har jeg også gjort fordi jeg ikke har brukt Typescript.
 - Jeg har brukt SVG bilder fra FontAwesome for å sørge for at bildene ser bra ut uavhengig av oppløsning. 
-- Jeg har satt opp testing foreløpig med Jest, React-testing-library og integrasjon overfor CircleCI. Har også satt opp testing med Cypress og Percy.
-Alt er koblet oppimot CircleCI.
+- Jeg har satt opp testing foreløpig med Jest, React-testing-library. Har også satt opp testing med Cypress. Alt er koblet oppimot CircleCI.
 - Jeg bruker hooks med Easy Peasy ettersom det er enkelt å bruke og jeg har erfaring med det fra før av. I tillegg bruker det Redux "under the hood" så jeg har tilgang til Redux dev tools.
 - Jeg har implementert animasjoner med Animate.css fordi det er lettvint å implementere og jeg har brukt det før.
 - Jeg har forsøkt å holde state "ren" ved å bare ha score, increaseScore og reset der. Ulempen er at jeg bruker prop drilling der hvor jeg trenger å videresende variabler i state (useState).
