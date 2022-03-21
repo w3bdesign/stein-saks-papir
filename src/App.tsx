@@ -1,10 +1,16 @@
 import React from 'react';
+import Container from 'react-bootstrap/Container';
+
+import Main from './components/Main/Main.component';
 
 function App() {
   return (
-    <div className="App">
-      Stein Saks Papir
+    <div className="root">
+      <Container fluid>
+        <Main />
+      </Container>
     </div>
+
   );
 }
 

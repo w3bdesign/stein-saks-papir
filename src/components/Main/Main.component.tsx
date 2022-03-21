@@ -1,0 +1,27 @@
+import React from 'react';
+
+import Jumbotron from 'react-bootstrap/Jumbotron';
+import Col from 'react-bootstrap/Col';
+import Row from 'react-bootstrap/Row';
+
+import Weapons from './Weapons.component';
+
+function Main() {
+  return (
+    <Row className="text-center justify-content-center">
+      <Col>
+        <Jumbotron>
+          <h1>Velkommen til Stein, Saks og Papir</h1>
+          <br />
+          <h4>Velg ditt våpen under for å starte spillet</h4>
+          <br />
+          <p>
+            <Weapons />
+          </p>
+        </Jumbotron>
+      </Col>
+    </Row>
+  );
+}
+
+export default Main;
