@@ -19,10 +19,22 @@ describe('Sjekk at alle nødvendige elementer er på plass i dokumentet', () => 
     expect(Saks).toBeInTheDocument();
   });
 
+  test('Sjekk at saksDiv er på plass', () => {
+    const { getByTestId } = render(<App />);
+    const SaksDiv = getByTestId('SaksDiv');
+    expect(SaksDiv).toBeInTheDocument();
+  });
+
   test('Sjekk at stein er på plass', () => {
     const { getByRole } = render(<App />);
     const Stein = getByRole('button', { name: /stein/i });
     expect(Stein).toBeInTheDocument();
+  });
+
+  test('Sjekk at steinDiv er på plass', () => {
+    const { getByTestId } = render(<App />);
+    const SteinDiv = getByTestId('SteinDiv');
+    expect(SteinDiv).toBeInTheDocument();
   });
 
   test('Sjekk at papir er på plass', () => {
@@ -31,10 +43,22 @@ describe('Sjekk at alle nødvendige elementer er på plass i dokumentet', () => 
     expect(Papir).toBeInTheDocument();
   });
 
+  test('Sjekk at papirDiv er på plass', () => {
+    const { getByTestId } = render(<App />);
+    const PapirDiv = getByTestId('PapirDiv');
+    expect(PapirDiv).toBeInTheDocument();
+  });
+
   test('Sjekk at poengtavle er på plass', () => {
     const { getByRole } = render(<App />);
     const Poengtavle = getByRole('heading', { name: /poengtavle/i });
     expect(Poengtavle).toBeInTheDocument();
+  });
+
+  test('Sjekk at poengoversikt er på plass', () => {
+    const { getByRole } = render(<App />);
+    const Poengoversikt = getByRole('heading', { name: /poengoversikt/i });
+    expect(Poengoversikt).toBeInTheDocument();
   });
 
   test('Sjekk at poengoversikt er på plass', () => {
