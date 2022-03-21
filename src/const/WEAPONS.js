@@ -4,16 +4,16 @@
 
 const WEAPONS = [
   {
-    name: "Stein",
-    beats: "Saks",
+    name: 'Stein',
+    beats: 'Saks',
   },
   {
-    name: "Papir",
-    beats: "Stein",
+    name: 'Papir',
+    beats: 'Stein',
   },
   {
-    name: "Saks",
-    beats: "Papir",
+    name: 'Saks',
+    beats: 'Papir',
   },
 ];
 

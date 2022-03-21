@@ -23,7 +23,8 @@
     "cypress:open": "cypress open",
     "test:cypress": "cypress run",
     "dev": "start-test develop 3000 cy:open",
-    "stylelint": "stylelint **/*.css"
+    "stylelint": "stylelint **/*.css",
+    "lint": "eslint --fix --ext .js,.jsx ."
   },
   "eslintConfig": {
     "extends": "react-app"
