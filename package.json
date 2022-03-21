@@ -52,7 +52,7 @@
     "eslint-plugin-testing-library": "^3.10.1",
     "install": "^0.13.0",
     "jest-environment-jsdom-sixteen": "^1.0.3",
-    "netlify-plugin-cypress": "^1.7.0",
+    "netlify-plugin-cypress": "^1.8.1",
     "npm": "^7.5.2",
     "start-server-and-test": "^1.12.0"
   }
