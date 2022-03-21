@@ -1,9 +1,9 @@
 {
   "name": "stein-saks-papir",
-  "version": "0.1.9",
+  "version": "0.2.1",
   "private": true,
   "dependencies": {
-    "postcss": "7.0.32",
+    "postcss": "7.0.34",
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.0.4",
     "@testing-library/user-event": "^12.1.5",
