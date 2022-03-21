@@ -4,7 +4,7 @@
     "es6": true,
     "jest": true
   },
-  "extends": ["airbnb"],
+  "extends": ["airbnb", "plugin:cypress/recommended"],
   "globals": {
     "Atomics": "readonly",
     "SharedArrayBuffer": "readonly"
@@ -16,7 +16,7 @@
     "ecmaVersion": 2018,
     "sourceType": "module"
   },
-  "plugins": ["react", "testing-library"],
+  "plugins": ["react", "testing-library", "cypress"],
   "rules": {
     "no-return-assign": "off",
     "no-param-reassign": "off",
