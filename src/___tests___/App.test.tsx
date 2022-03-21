@@ -4,7 +4,7 @@ import React from 'react';
 import { render, screen } from '@testing-library/react';
 
 import App from '../App';
-import Header from '../components/Header/Header.component';
+import Header from '../components/Layout/Header/Header.component';
 
 describe('Sjekk at alle nødvendige elementer er på plass i dokumentet', () => {
   test('Sjekk at navbar er på plass', () => {
