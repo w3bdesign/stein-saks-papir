@@ -39,7 +39,9 @@ Lag en interaktiv side der man kan spille stein-saks-papir (reglene finner du he
 - Jeg ville brukt god tid på planleggingsfasen. Hatt et lengre møte hvor målet er å få utarbeidet en detaljert kravspesifikasjon, diskutere budsjett, tidsramme, valg av teknologier, langsiktige mål med siden. Det vil gjøre at man kan velge riktig teknologi for i dag og for fremtiden.
 - Jeg ville også satt opp `branch protection` på master og krevd minimum 1 code review fra en annen.
 - Enighet om felles Git commit message template innad for kunden.
+- Implementert React-Helmet for bedre kontroll over SEO
 - Hadde dette vært et større prosjekt hvor flere andre skulle samarbeidet ville jeg sannsynligvis implementert Typescript.
+- Implementert React-helmet for bedre kontroll over SEO
 
 ### Resonnering og tanker
 
@@ -51,7 +53,7 @@ Lag en interaktiv side der man kan spille stein-saks-papir (reglene finner du he
 - Jeg har satt opp testing foreløpig med Jest, React-testing-library. Har også satt opp testing med Cypress. Alt er koblet oppimot CircleCI.
 - Jeg bruker hooks med Easy Peasy ettersom det er enkelt å bruke og jeg har erfaring med det fra før av. I tillegg bruker det Redux "under the hood" så jeg har tilgang til Redux dev tools.
 - Jeg har implementert animasjoner med Animate.css fordi det er lettvint å implementere og jeg har brukt det før.
-- Jeg har forsøkt å holde state "ren" ved å bare ha score, increaseScore og reset der. Ulempen er at jeg bruker prop drilling der hvor jeg trenger å videresende variabler i state (useState).
+- Jeg har forsøkt å holde state "ren" ved å bare ha score, increaseScore og reset der. Jeg planlegger å refaktorere koden til å bruke Easy Peasy state for å eliminere propdrilling.
 
 ### TODO med fremtidige potensielle/mulige forbedringer for refaktorering
 
