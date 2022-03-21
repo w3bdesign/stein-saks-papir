@@ -27,6 +27,7 @@ function Game() {
   const increaseScore = useStoreActions((actions) => actions.increaseScore);
   const getScore = useStoreState((score) => score.score);
 
+  // TODO Legg til cleanup funksjon her
   useEffect(() => {
     const haveFinalWinner = getScore.find((score) => score.Score > 2);
 
@@ -66,7 +67,7 @@ function Game() {
       {havewonThreeRounds && (
         <>
           <Alert
-            // className="mt-4 animate__animated animate__zoomInUp animate__slow"
+            className="mt-4 animate__animated animate__zoomInUp animate__slow"
             name="gamewinner"
             aria-label="gamewinner"
             variant="success"
