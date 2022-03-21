@@ -19,8 +19,5 @@ jobs:
           name: Run Tests
           command: npm test
       - run:
-          name: Run Test Coverage
-          command: npm test:coverage
-      - run:
           name: Codecov
           command: bash <(curl -s https://codecov.io/bash)
