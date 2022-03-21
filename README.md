@@ -17,9 +17,10 @@ Lag en interaktiv side der man kan spille stein-saks-papir (reglene finner du he
 ## Teknologier / verktøy brukt
 
 - React med hooks (useState og useEffect)
-- Jest 
-- React testing library
+- Jest og React testing library for unit testing
 - React Bootstrap
+- Cypress for E2E testing
+- Percy for visuell testing
 - Animate.css for animasjoner
 - Easy Peasy for state management
 - JSDoc for kode-dokumentering
@@ -30,7 +31,6 @@ Lag en interaktiv side der man kan spille stein-saks-papir (reglene finner du he
 - Aria-label på nødvendige elementer (WCAG standard)
 - Prop types validering
 - Scanning av koden via SonarCloud quality cloud
-- Percy for visuell testing
 
 ## Hva jeg ville gjort annerledes i en profesjonell setting 
 
