@@ -15,19 +15,11 @@
     "ecmaVersion": 12,
     "sourceType": "module"
   },
-  "plugins": [
-    "react",
-    "testing-library",
-    "cypress",
-    "jsx-a11y",
-    "simple-import-sort"
-  ],
+  "plugins": ["react", "testing-library", "cypress", "jsx-a11y"],
   "rules": {
     "no-return-assign": "off",
     "no-param-reassign": "off",
     "no-undef": "warn",
-    "no-unused-vars": "warn",
-    "simple-import-sort/imports": "error",
-    "simple-import-sort/exports": "error"
+    "no-unused-vars": "warn"
   }
 }
