@@ -1,6 +1,6 @@
-import React from "react";
+import React from 'react';
 
-import Navbar from "react-bootstrap/Navbar";
+import Navbar from 'react-bootstrap/Navbar';
 
 function Header() {
   return (
