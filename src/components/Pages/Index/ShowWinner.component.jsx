@@ -27,6 +27,8 @@ function ShowWinner({ showWinnerModal, setShowWinnerModal, winner }) {
       <Modal.Body>
         <h3 className="text-center">
           Vinner:
+          {' '}
+          {' '}
           {winner && winner.toString()}
         </h3>
       </Modal.Body>
