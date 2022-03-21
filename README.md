@@ -42,18 +42,19 @@ Lag en interaktiv side der man kan spille stein-saks-papir (reglene finner du he
 - Jeg har brukt ESLint og Airbnb for å opprettholde kodekvaliteten og gjøre utvikling enklere. Det fungerer også bra med integrert IDE støtte i VSCode. Det vil også gjøre videreutvikling og "maintainability" enklere på sikt. Jeg vurderte Typescript, men føler jeg må få mer erfaring med det først.
 - Jeg har brukt JSDoc for å dokumentere koden etter best mulig evne. Dette har jeg også gjort fordi jeg ikke har brukt Typescript.
 - Jeg har brukt SVG bilder fra FontAwesome for å sørge for at bildene ser bra ut uavhengig av oppløsning. 
-- Jeg har satt opp testing foreløpig med Jest, React-testing-library og integrasjon overfor CircleCI. Får jeg tid skal jeg også sette opp Cypress. 
+- Jeg har satt opp testing foreløpig med Jest, React-testing-library og integrasjon overfor CircleCI. 
 - Jeg bruker hooks med Easy Peasy ettersom det er enkelt å bruke og jeg har erfaring med det fra før av. I tillegg bruker det Redux "under the hood" så jeg har tilgang til Redux dev tools.
 - Jeg har implementert animasjoner med Animate.css fordi det er lettvint å implementere og jeg har brukt det før.
 - Jeg har forsøkt å holde state "ren" ved å bare ha score, increaseScore og reset der. Ulempen er at jeg bruker prop drilling der hvor jeg trenger å videresende variabler i state (useState).
 
 ### TODO med potensielle/mulige forbedringer
 
-- Erstatte useState med useReducer i ListWeapons for å forenkle kodebasen.
+- Erstatte useState med useReducer i ListWeapons for å forenkle kodebasen (ettersom jeg bruker en del useState kall her).
+- Vurder Suspense og dynamisk rendering av komponenter ved behov.
 - Lagre finalWinner via `computed` i state og hente ut denne senere? Vil cache verdien og gi oss en performance fordel (https://easy-peasy.now.sh/docs/api/computed.html).
 - Se på muligheten for å erstatte setTimeOut i ListWeapons med actionOn thunk/async listener. (https://easy-peasy.now.sh/docs/tutorial/using-listeners.html)
-- Erstatte Animate.css med GSAP eller React-spring.
-- Oppgradere kodebasen til Typescript.
+- Erstatte Animate.css med GSAP eller React-spring? Tillater mer kompliserte animasjoner men krever mer koding.
+- Oppgradere kodebasen til Typescript?
 - Erstatte hardkodet spillernavn ved å lagre det dynamisk i state. Det gjør skalering og fremtidig oppdatering enklere ved å holde alt på ett sted.
 - Se om jeg kan redusere prop drilling i komponenter ved å lagre mer informasjon i state (eller om jeg bør beholde prop drilling?).
 - Vurder å erstatte useEffect med useCallback for å forhindre at den kalles flere ganger. (Ser ikke ut som at det vil ha noen stor fordel i performance)
