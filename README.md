@@ -1,5 +1,6 @@
 [![CircleCI](https://circleci.com/gh/w3bdesign/stein-saks-papir.svg?style=svg)](https://circleci.com/gh/w3bdesign/stein-saks-papir)
 [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=w3bdesign_stein-saks-papir&metric=alert_status)](https://sonarcloud.io/dashboard?id=w3bdesign_stein-saks-papir)
+[![Percy](https://percy.io/static/images/percy-badge.svg)](https://percy.io/45702547/Dfweb)
 
 <img src="https://github.com/w3bdesign/stein-saks-papir/blob/master/screenshot/screenshot.jpg" alt="screenshot">
 
@@ -29,6 +30,7 @@ Lag en interaktiv side der man kan spille stein-saks-papir (reglene finner du he
 - Aria-label på nødvendige elementer (WCAG standard)
 - Prop types validering
 - Scanning av koden via SonarCloud quality cloud
+- Percy for visuell testing
 
 ## Hva jeg ville gjort annerledes i en profesjonell setting 
 
@@ -51,7 +53,7 @@ Lag en interaktiv side der man kan spille stein-saks-papir (reglene finner du he
 
 ### TODO med potensielle/mulige forbedringer
 
-- Erstatte useState med useReducer i ListWeapons for å forenkle kodebasen (ettersom jeg bruker en del useState kall her).
+- Erstatte useState med useReducer i ListWeapons for å forenkle kodebasen (ettersom jeg bruker flere useState kall her).
 - Vurder Suspense og dynamisk rendering av komponenter ved behov.
 - Lagre finalWinner via `computed` i state og hente ut denne senere? Vil cache verdien og gi oss en performance fordel (https://easy-peasy.now.sh/docs/api/computed.html).
 - Se på muligheten for å erstatte setTimeOut i ListWeapons med actionOn thunk/async listener. (https://easy-peasy.now.sh/docs/tutorial/using-listeners.html)
