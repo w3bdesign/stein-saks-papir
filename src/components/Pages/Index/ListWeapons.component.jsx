@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { createElement, Fragment } from 'react';
 import PropTypes from 'prop-types';
 
 import Button from 'react-bootstrap/Button';
@@ -18,7 +18,7 @@ function ListWeapons({ handlePlayGameClick, havewonThreeRounds }) {
   return (
     <div className="m-4">
       {WEAPONS.map(({ name, id, component }) => (
-        <React.Fragment key={id}>
+        <Fragment key={id}>
           <div className={weaponClass} data-testid={`${name}Div`}>
             <Button
               data-testid={name}
@@ -27,10 +27,10 @@ function ListWeapons({ handlePlayGameClick, havewonThreeRounds }) {
               aria-label={name}
               onClick={() => handlePlayGameClick(name)}
             >
-              {React.createElement(component)}
+              {createElement(component)}
             </Button>
           </div>
-        </React.Fragment>
+        </Fragment>
       ))}
     </div>
   );
