@@ -28,6 +28,7 @@ Lag en interaktiv side der man kan spille stein-saks-papir (reglene finner du he
 - Vektorbilder (SVG) fra FontAwesome
 - Aria-label på nødvendige elementer (WCAG standard)
 - Prop types validering
+- Scanning av koden via SonarCloud quality cloud
 
 ## Hva jeg ville gjort annerledes i en profesjonell setting 
 
