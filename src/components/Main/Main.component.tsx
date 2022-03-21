@@ -10,7 +10,7 @@ function Main() {
   return (
     <Row className="text-center justify-content-center">
       <Col>
-        <Jumbotron>
+      <br />
           <h1>Velkommen til Stein, Saks og Papir</h1>
           <br />
           <h4>Velg ditt våpen under for å starte spillet</h4>
@@ -18,7 +18,7 @@ function Main() {
           <p>
             <Weapons />
           </p>
-        </Jumbotron>
+       
       </Col>
     </Row>
   );
