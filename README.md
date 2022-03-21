@@ -30,6 +30,7 @@ Lag en interaktiv side der man kan spille stein-saks-papir (reglene finner du he
 - JSDoc for kode-dokumentering
 - Responsivt design
 - CircleCI integrasjon
+- CodeCov for testing coverage (testdekning) med Jest og CircleCI
 - ESLint med AirBnB
 - Vektorbilder (SVG) fra FontAwesome
 - Aria-label på nødvendige elementer (WCAG standard)
