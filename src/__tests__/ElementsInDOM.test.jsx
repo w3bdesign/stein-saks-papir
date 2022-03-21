@@ -1,7 +1,6 @@
-import React from 'react';
-
-import { render } from '@testing-library/react';
 import { describe, expect, test } from '@jest/globals';
+import { render } from '@testing-library/react';
+import React from 'react';
 
 import App from '../App';
 import Header from '../components/Layout/Header/Header.component';
