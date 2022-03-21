@@ -1,5 +1,6 @@
-import { useStoreState } from 'easy-peasy';
 import React from 'react';
+import { useStoreState } from 'easy-peasy';
+
 import Card from 'react-bootstrap/Card';
 import CardDeck from 'react-bootstrap/CardDeck';
 
