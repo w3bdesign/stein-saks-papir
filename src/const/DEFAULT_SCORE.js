@@ -1,6 +1,6 @@
 /**
- * Konstant med default score for spiller 1 og CPU
- */
+ * Konstant med standard score og spillernavn
+ *  */
 
 const DEFAULT_SCORE = [
   { Name: 'Spiller 1', Score: 0 },
