@@ -1,13 +1,11 @@
-import React, { useState, useEffect } from 'react';
 import { useStoreActions, useStoreState } from 'easy-peasy';
-
+import React, { useEffect, useState } from 'react';
 import Alert from 'react-bootstrap/Alert';
 
 import PlayGame from '../../../functions/PlayGame';
-
-import ShowWinner from './ShowWinner.component';
-import ResetGameButton from './ResetGameButton.component';
 import ListWeapons from './ListWeapons.component';
+import ResetGameButton from './ResetGameButton.component';
+import ShowWinner from './ShowWinner.component';
 
 /**
  * Generer knappene som viser våpnene

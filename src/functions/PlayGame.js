@@ -1,7 +1,6 @@
 import WEAPONS from '../const/WEAPONS';
-
-import RandomWeapon from './RandomWeapon';
 import CheckWinner from './CheckWinner';
+import RandomWeapon from './RandomWeapon';
 
 /**
  * Funksjonen som er ansvarlig for å spille spillet. Sjekker hvem som har vunnet via CheckWinner.

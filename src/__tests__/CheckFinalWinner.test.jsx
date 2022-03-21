@@ -1,12 +1,12 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-
-import { render, screen, waitFor } from '@testing-library/react';
-import userEvent from '@testing-library/user-event';
 import '@testing-library/jest-dom';
+
 import {
   beforeAll, describe, expect, jest, test,
 } from '@jest/globals';
+import { render, screen, waitFor } from '@testing-library/react';
+import userEvent from '@testing-library/user-event';
+import React from 'react';
+import ReactDOM from 'react-dom';
 
 import App from '../App';
 
