@@ -17,9 +17,9 @@ function PlayGame(playerSelectedWeapon) {
 
   const youWin = CheckWinner(playerSelected, computerSelected);
 
-  console.log('Selected: ');
+  /* console.log('Selected: ');
   console.log(playerSelected.name);
-  console.log(computerSelected.name);
+  console.log(computerSelected.name); */
 
   if (playerSelectedWeapon === computerSelected.name) {
     return 'Uavgjort';
