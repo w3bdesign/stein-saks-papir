@@ -2,21 +2,22 @@ import { action, createStore } from 'easy-peasy';
 
 import DEFAULT_SCORE from '../const/DEFAULT_SCORE';
 
+/**
+ * Easy peasy store med poengstatus (score)
+ * og increaseScore for å øke score og reset for å nullstille poengstatus
+ */
+
 const ScoreBoardStore = createStore({
   score: DEFAULT_SCORE,
-  play: action(() => {
-  // play: action((state, payload) => {
-    /* const player1Index = state.score.findIndex(
-      (element) => element.Name === 'Player 1',
+  increaseScore: action((state, payload) => {
+    const playerIndex = state.score.findIndex(
+      (element) => element.Name === payload,
     );
-    const CPUIndex = state.score.findIndex(
-      (element) => element.Name === 'CPU',
-    ); */
-  }),
 
+    state.score[playerIndex].Score += 1;
+  }),
   reset: action((state) => {
-    // Reset score for every player
-    state.score.forEach((player) => player.Score = 0);
+    state.score.forEach((player) => (player.Score = 0));
   }),
   devTools: process.env.NODE_ENV === 'development',
 });

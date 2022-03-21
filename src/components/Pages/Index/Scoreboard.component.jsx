@@ -4,6 +4,11 @@ import { useStoreState } from 'easy-peasy';
 import CardDeck from 'react-bootstrap/CardDeck';
 import Card from 'react-bootstrap/Card';
 
+/**
+ * Funksjonen som viser selve poengtavlen. Henter spillernavn og poeng dynamisk fra state.
+ * Viser bare navn og score hvis verdiene er definerte og eksisterer.
+ * @returns {JSXElement} Returnerer JSX elementer med poengtavle
+ */
 function Scoreboard() {
   const Player = useStoreState((player) => player.score);
   return (

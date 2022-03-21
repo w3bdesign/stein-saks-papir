@@ -1,3 +1,7 @@
+/**
+ * Konstant med våpnene som brukes og hva som vinner over hva
+ */
+
 const WEAPONS = [
   {
     name: 'Stein',
