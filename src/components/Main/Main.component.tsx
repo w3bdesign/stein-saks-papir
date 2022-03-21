@@ -11,9 +11,14 @@ function Main() {
   return (
     <Row className="text-center justify-content-center">
       <Col>
-        <Card style={{ display: 'block' }} className="block mx-auto mt-4 text-center">
-          <Card.Header><h5>Velg ditt våpen under for å starte spillet</h5></Card.Header>
-          <br />
+        <Card
+          style={{ display: 'block' }}
+          className="block mx-auto mt-4 text-center"
+        >
+          <Card.Header>
+            <h5>Velg ditt våpen under for å starte spillet</h5>
+          </Card.Header>
+
           <Weapons />
         </Card>
         <Scoreboard />
