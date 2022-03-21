@@ -1,13 +1,13 @@
-import React, { useState, useEffect } from "react";
-import { useStoreActions, useStoreState } from "easy-peasy";
+import React, { useState, useEffect } from 'react';
+import { useStoreActions, useStoreState } from 'easy-peasy';
 
-import Alert from "react-bootstrap/Alert";
+import Alert from 'react-bootstrap/Alert';
 
-import PlayGame from "../../../functions/PlayGame";
+import PlayGame from '../../../functions/PlayGame';
 
-import ShowWinner from "./ShowWinner.component";
-import ResetGameButton from "./ResetGameButton.component";
-import ListWeapons from "./ListWeapons.component";
+import ShowWinner from './ShowWinner.component';
+import ResetGameButton from './ResetGameButton.component';
+import ListWeapons from './ListWeapons.component';
 
 /**
  * Generer knappene som viser våpnene
@@ -40,8 +40,8 @@ function Game() {
     setshouldCheckWinner(false);
     setcomputerSelected(resultOfGame.computerSelected);
 
-    if (resultOfGame.winner === "Uavgjort") {
-      setWinner("Uavgjort");
+    if (resultOfGame.winner === 'Uavgjort') {
+      setWinner('Uavgjort');
       setShowWinnerModal(true);
     } else {
       setWinner(resultOfGame.winner);
@@ -62,19 +62,18 @@ function Game() {
         winner={winner}
       />
       {havewonThreeRounds && (
-        <>
-          <Alert
-            className="mt-4 animate__animated animate__zoomInUp"
-            name="gamewinner"
-            aria-label="gamewinner"
-            variant="success"
-          >
-            {havewonThreeRounds} har vunnet! Hurra!
-            <br />
-          </Alert>
-        </>
+        <Alert
+          className="mt-4 animate__animated animate__zoomInUp"
+          name="gamewinner"
+          aria-label="gamewinner"
+          variant="success"
+        >
+          {havewonThreeRounds}
+          har vunnet! Hurra!
+          <br />
+        </Alert>
       )}
-      <div className={`${havewonThreeRounds && "d-none"}`}>
+      <div className={`${havewonThreeRounds && 'd-none'}`}>
         <ListWeapons handlePlayGameClick={handlePlayGameClick} />
       </div>
       <ResetGameButton sethavewonThreeRounds={sethavewonThreeRounds} />

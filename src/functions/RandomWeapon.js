@@ -1,4 +1,4 @@
-import WEAPONS from "../const/WEAPONS";
+import WEAPONS from '../const/WEAPONS';
 
 /**
  * Genererer et tilfeldig valgt våpen
