@@ -25,12 +25,6 @@ describe('Sjekk at alle nødvendige elementer er på plass i dokumentet', () => 
     expect(Stein).toBeInTheDocument();
   });
 
-  test('Sjekk at steinDiv er på plass', () => {
-    const { getByTestId } = render(<App />);
-    const SteinDiv = getByTestId('SteinDiv');
-    expect(SteinDiv).toBeInTheDocument();
-  });
-
   test('Sjekk at papir er på plass', () => {
     const { getByRole } = render(<App />);
     const Papir = getByRole('button', { name: /papir/i });
