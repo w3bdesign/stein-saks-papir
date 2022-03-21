@@ -4,6 +4,7 @@
 [![Cypress.io](https://img.shields.io/badge/tested%20with-Cypress-04C38E.svg)](https://www.cypress.io/)
 [![React-Testing-Library](https://img.shields.io/badge/tested%20with-React%20Testing%20Library-purple)](https://testing-library.com/)
 [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=w3bdesign_stein-saks-papir&metric=alert_status)](https://sonarcloud.io/dashboard?id=w3bdesign_stein-saks-papir)
+[![Maintainability](https://api.codeclimate.com/v1/badges/b47c7e7226d07b29018b/maintainability)](https://codeclimate.com/github/w3bdesign/stein-saks-papir/maintainability)
 
 <img src="https://github.com/w3bdesign/stein-saks-papir/blob/master/screenshot/screenshot.jpg" alt="screenshot">
 
