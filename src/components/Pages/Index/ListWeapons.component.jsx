@@ -11,13 +11,14 @@ import { ReactComponent as HandPaper } from '../../../assets/hand-paper-solid.sv
 /**
  * Viser knapper med våpnene som vi kan velge
  * @param {Function} handlePlayGameClick Funksjon som setter spillet i gang
+ * @param {String} havewonThreeRounds Hvem som har vunnet tre runder
  */
 
-function ListWeapons({ handlePlayGameClick }) {
+function ListWeapons({ handlePlayGameClick, havewonThreeRounds }) {
   return (
     <>
       <Button
-        className="m-4"
+        className={`m-4 ${havewonThreeRounds && 'd-none'}`}
         data-testid="saks"
         data-cy="saks"
         variant="outline-dark"
@@ -29,7 +30,7 @@ function ListWeapons({ handlePlayGameClick }) {
         <HandScissors />
       </Button>
       <Button
-        className="m-4"
+        className={`m-4 ${havewonThreeRounds && 'd-none'}`}
         data-testid="stein"
         data-cy="stein"
         variant="outline-dark"
@@ -41,7 +42,7 @@ function ListWeapons({ handlePlayGameClick }) {
         <HandRock />
       </Button>
       <Button
-        className="m-4"
+        className={`m-4 ${havewonThreeRounds && 'd-none'}`}
         data-testid="papir"
         data-cy="papir"
         variant="outline-dark"
@@ -58,10 +59,12 @@ function ListWeapons({ handlePlayGameClick }) {
 
 ListWeapons.defaultProps = {
   handlePlayGameClick: PropTypes.func,
+  havewonThreeRounds: PropTypes.string,
 };
 
 ListWeapons.propTypes = {
   handlePlayGameClick: PropTypes.func,
+  havewonThreeRounds: PropTypes.string,
 };
 
 export default ListWeapons;
