@@ -9,7 +9,7 @@ import Weapons from './ListWeapons.component';
 
 function Main() {
   return (
-    <Row className="text-center justify-content-center">
+    <Row className="mt-2 text-center justify-content-center">
       <Col>
         <Card
           style={{ display: 'block' }}
