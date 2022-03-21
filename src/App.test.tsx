@@ -38,4 +38,10 @@ describe('Sjekk at alle nødvendige elementer er på plass i dokumentet', () => 
     const Papir = getByTestId('stein');
     expect(Papir).toBeInTheDocument();
   });
+
+  test('Sjekk at poengtavle er på plass', () => {
+    const { getByRole } = render(<App />);
+    const Poengtavle = getByRole('heading', { name: /poengtavle/i });
+    expect(Poengtavle).toBeInTheDocument();
+  });
 });
