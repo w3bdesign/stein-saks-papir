@@ -16,44 +16,50 @@ import { ReactComponent as HandPaper } from '../../../assets/hand-paper-solid.sv
 
 function ListWeapons({ handlePlayGameClick, havewonThreeRounds }) {
   return (
-    <>
-      <Button
-        className={`m-4 ${havewonThreeRounds && 'd-none'}`}
-        data-testid="saks"
-        data-cy="saks"
-        variant="outline-dark"
-        aria-label="Saks"
-        onClick={() => {
-          handlePlayGameClick('Saks');
-        }}
+    <div className="m-4">
+      <div className={`m-4 d-inline ${havewonThreeRounds && 'd-none'}`}>
+        <Button
+          data-testid="saks"
+          data-cy="saks"
+          variant="outline-dark"
+          aria-label="Saks"
+          onClick={() => {
+            handlePlayGameClick('Saks');
+          }}
+        >
+          <HandScissors />
+        </Button>
+      </div>
+      <div
+        data-testid="steinDiv"
+        className={`m-4 d-inline ${havewonThreeRounds && 'd-none'}`}
       >
-        <HandScissors />
-      </Button>
-      <Button
-        className={`m-4 ${havewonThreeRounds && 'd-none'}`}
-        data-testid="stein"
-        data-cy="stein"
-        variant="outline-dark"
-        aria-label="Stein"
-        onClick={() => {
-          handlePlayGameClick('Stein');
-        }}
-      >
-        <HandRock />
-      </Button>
-      <Button
-        className={`m-4 ${havewonThreeRounds && 'd-none'}`}
-        data-testid="papir"
-        data-cy="papir"
-        variant="outline-dark"
-        aria-label="Papir"
-        onClick={() => {
-          handlePlayGameClick('Papir');
-        }}
-      >
-        <HandPaper />
-      </Button>
-    </>
+        <Button
+          data-testid="stein"
+          data-cy="stein"
+          variant="outline-dark"
+          aria-label="Stein"
+          onClick={() => {
+            handlePlayGameClick('Stein');
+          }}
+        >
+          <HandRock />
+        </Button>
+      </div>
+      <div className={`m-4 d-inline ${havewonThreeRounds && 'd-none'}`}>
+        <Button
+          data-testid="papir"
+          data-cy="papir"
+          variant="outline-dark"
+          aria-label="Papir"
+          onClick={() => {
+            handlePlayGameClick('Papir');
+          }}
+        >
+          <HandPaper />
+        </Button>
+      </div>
+    </div>
   );
 }
 
