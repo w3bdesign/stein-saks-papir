@@ -6,7 +6,7 @@ import Card from 'react-bootstrap/Card';
 
 import Scoreboard from './Scoreboard.component';
 import ListWeapons from './ListWeapons.component';
-import ResetGame from './ResetGame.component';
+import ResetGameButton from './ResetGameButton.component';
 
 function Main() {
   return (
@@ -21,7 +21,7 @@ function Main() {
           </Card.Header>
           <ListWeapons />
           <br />
-          <ResetGame />
+          <ResetGameButton />
         </Card>
         <Scoreboard />
       </Col>
