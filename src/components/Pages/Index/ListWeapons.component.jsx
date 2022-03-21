@@ -56,7 +56,7 @@ function ListWeapons() {
 
       setTimeout(() => {
         setshouldCheckWinner(true);
-      }, 2000);
+      }, 1000);
     }
   };
 
