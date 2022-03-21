@@ -20,11 +20,9 @@ function ResetGameButton({ sethavewonThreeRounds }) {
   };
 
   return (
-    <>
-      <Button variant="danger" className="mt-0 mb-4" onClick={handleResetClick}>
-        Restart spill
-      </Button>
-    </>
+    <Button variant="danger" className="mt-0 mb-4" onClick={handleResetClick}>
+      Restart spill
+    </Button>
   );
 }
 
