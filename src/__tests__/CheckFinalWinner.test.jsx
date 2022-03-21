@@ -4,7 +4,7 @@ import ReactDOM from 'react-dom';
 import { render, screen, waitFor } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import '@testing-library/jest-dom';
-import { jest, describe, beforeAll, test, expect } from '@jest/globals';
+import { beforeAll, describe, expect, jest, test } from '@jest/globals';
 
 import App from '../App';
 
