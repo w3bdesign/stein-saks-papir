@@ -13,7 +13,7 @@ import WEAPONS from '../../../const/WEAPONS';
 
 function ListWeapons({ handlePlayGameClick, havewonThreeRounds }) {
   // Refaktorer onClick senere om hastighet blir et problem
-  const weaponClass = `m-4 d-inline ${havewonThreeRounds && 'd-none'}`;
+  const weaponClass = `m-4 d-inline-block ${havewonThreeRounds && 'd-none'}`;
 
   return (
     <div className="m-4">
