@@ -24,8 +24,8 @@ function PlayGame(playerSelectedWeapon) {
   if (youWin) {
     return 'Spiller 1';
   }
-  return 'CPU'; // console.log(`Du vant! Computer valgte ${computerSelected.name} `);
-  // console.log(`Du vant ikke! Computer valgte ${computerSelected.name} `);
+
+  return 'CPU';
 }
 
 export default PlayGame;
