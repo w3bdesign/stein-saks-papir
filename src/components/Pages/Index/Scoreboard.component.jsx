@@ -23,7 +23,7 @@ function Scoreboard() {
               <Card key={player.Name}>
                 <Card.Body>
                   <Card.Title>
-                    <span style={{ fontSize: '1.25rem' }}>{player.Name}</span>
+                    <span>{player.Name}</span>
                   </Card.Title>
                   <Card.Text>
                     <span id={`score-p${index}`} className="display-3">
