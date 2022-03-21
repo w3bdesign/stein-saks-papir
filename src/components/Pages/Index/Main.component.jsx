@@ -5,6 +5,7 @@ import Row from 'react-bootstrap/Row';
 import Card from 'react-bootstrap/Card';
 
 import Scoreboard from './Scoreboard.component';
+import MobileScoreboard from './MobileScoreBoard.component';
 import ListWeapons from './ListWeapons.component';
 
 /**
@@ -15,12 +16,13 @@ function Main() {
   return (
     <Row className="mt-2 text-center justify-content-center">
       <Col>
+        <MobileScoreboard />
         <Card
           style={{ display: 'block' }}
           className="block mx-auto mt-4 text-center"
         >
           <Card.Header>
-            <h5>Velg ditt våpen under for å starte spillet</h5>
+            <h6>Velg ditt våpen under for å starte spillet</h6>
           </Card.Header>
           <ListWeapons />
         </Card>

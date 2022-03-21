@@ -46,13 +46,14 @@ Lag en interaktiv side der man kan spille stein-saks-papir (reglene finner du he
 - Jeg har implementert animasjoner med Animate.css fordi det er lettvint å implementere og jeg har brukt det før.
 - Jeg har forsøkt å holde state "ren" ved å bare ha score, increaseScore og reset der. Ulempen er at jeg bruker prop drilling der hvor jeg trenger å videresende variabler i state (useState).
 
-### TODO med potensielle forbedringer
+### TODO med potensielle/mulige forbedringer
 
 - Erstatte useState med useReducer i ListWeapons for å forenkle kodebasen.
-- Sett på muligheten for å erstatte setTimeOut i ListWeapons med actionOn thunk/async listener.
-- Erstattet Animate.css med GSAP eller React-spring.
-- Oppgradert kodebasen til Typescript.
+- Lagre finalWinner via `computed` i state og hente ut denne senere? Vil cache verdien og gi oss en performance fordel (https://easy-peasy.now.sh/docs/api/computed.html).
+- Se på muligheten for å erstatte setTimeOut i ListWeapons med actionOn thunk/async listener. (https://easy-peasy.now.sh/docs/tutorial/using-listeners.html)
+- Erstatte Animate.css med GSAP eller React-spring.
+- Oppgradere kodebasen til Typescript.
 - Erstatte hardkodet spillernavn ved å lagre det dynamisk i state. Det gjør skalering og fremtidig oppdatering enklere ved å holde alt på ett sted.
 - Se om jeg kan redusere prop drilling i komponenter ved å lagre mer informasjon i state (eller om jeg bør beholde prop drilling?).
-- Vurder å erstatte useEffect med useCallback for å forhindre at den kalles flere ganger.
-- Separere mer kode i separate komponenter for å gjøre koden ryddigere og enklere å vedlikeholde/oppdatere.
+- Vurder å erstatte useEffect med useCallback for å forhindre at den kalles flere ganger. (Ser ikke ut som at det vil ha noen stor fordel i performance)
+- Se om jeg kan separere mer kode i enda mindre komponenter for å gjøre koden ryddigere og enklere å vedlikeholde/oppdatere?
