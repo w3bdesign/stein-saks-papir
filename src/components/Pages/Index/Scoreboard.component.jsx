@@ -18,32 +18,21 @@ function Scoreboard() {
           <h6>Poengtavle</h6>
         </Card.Header>
         <CardDeck className="m-4">
-          <Card>
-            <Card.Body>
-              <Card.Title>
-                <span style={{ fontSize: '1.25rem' }}>{Player && Player[0].Name}</span>
-              </Card.Title>
-              <Card.Text>
-                <span id="score-p1" className="display-3">
-                  {' '}
-                  {Player && Player[0].Score}
-                </span>
-              </Card.Text>
-            </Card.Body>
-          </Card>
-          <Card>
-            <Card.Body>
-              <Card.Title>
-                <span style={{ fontSize: '1.25rem' }}>{Player && Player[1].Name}</span>
-              </Card.Title>
-              <Card.Text>
-                <span id="score-p2" className="display-3">
-                  {' '}
-                  {Player && Player[1].Score}
-                </span>
-              </Card.Text>
-            </Card.Body>
-          </Card>
+          {Player
+            && Player.map((player) => (
+              <Card>
+                <Card.Body>
+                  <Card.Title>
+                    <span style={{ fontSize: '1.25rem' }}>{player.Name}</span>
+                  </Card.Title>
+                  <Card.Text>
+                    <span id="score-p1" className="display-3">
+                      {player.Score}
+                    </span>
+                  </Card.Text>
+                </Card.Body>
+              </Card>
+            ))}
         </CardDeck>
       </Card>
     </>
