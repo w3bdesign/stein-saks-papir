@@ -16,8 +16,6 @@ import ListWeapons from './ListWeapons.component';
  * @returns void
  */
 function Game() {
-  // TODO Flytt dette over til https://easy-peasy.now.sh/docs/api/create-component-store.html
-  // TODO eller over til ScoreBoardStore
   const [showWinnerModal, setShowWinnerModal] = useState(false);
   const [winner, setWinner] = useState(null);
   const [shouldCheckWinner, setshouldCheckWinner] = useState(false);
@@ -27,7 +25,6 @@ function Game() {
   const increaseScore = useStoreActions((actions) => actions.increaseScore);
   const getScore = useStoreState((score) => score.score);
 
-  // TODO Legg til cleanup funksjon her?
   useEffect(() => {
     const haveFinalWinner = getScore.find((score) => score.Score > 2);
 
