@@ -2,7 +2,7 @@
 [![Codecov](https://codecov.io/gh/w3bdesign/stein-saks-papir/branch/master/graph/badge.svg)](https://codecov.io/gh/w3bdesign/stein-saks-papir)
 [![CircleCI](https://circleci.com/gh/w3bdesign/stein-saks-papir.svg?style=svg)](https://circleci.com/gh/w3bdesign/stein-saks-papir)
 [![Cypress.io](https://img.shields.io/badge/tested%20with-Cypress-04C38E.svg)](https://www.cypress.io/)
-[![React-Testing-Library](https://img.shields.io/badge/unit%20testing-React--Testing--Library-purple)](https://testing-library.com/)
+[![React-Testing-Library](https://img.shields.io/badge/tested%20with-React%20Testing%20Library-purple)](https://testing-library.com/)
 [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=w3bdesign_stein-saks-papir&metric=alert_status)](https://sonarcloud.io/dashboard?id=w3bdesign_stein-saks-papir)
 
 <img src="https://github.com/w3bdesign/stein-saks-papir/blob/master/screenshot/screenshot.jpg" alt="screenshot">
@@ -30,6 +30,7 @@ Lag en interaktiv side der man kan spille stein-saks-papir (reglene finner du he
 - JSDoc for kode-dokumentering
 - Responsivt design
 - CircleCI integrasjon
+- CodeCov for testing coverage (testdekning) med Jest og CircleCI
 - ESLint med AirBnB
 - Vektorbilder (SVG) fra FontAwesome
 - Aria-label på nødvendige elementer (WCAG standard)
@@ -59,6 +60,7 @@ Lag en interaktiv side der man kan spille stein-saks-papir (reglene finner du he
 ### TODO med fremtidige potensielle/mulige forbedringer for refaktorering
 
 - Refaktorere kode med skalering i bakhodet. Dette kan enklest gjøre ved å lagre hardkodet data i state og loope over feks våpen/spillere med forEach eller map slik at vi kan legge til flere spillere/våpen enkelt i fremtiden. Altså, gjøre data som skal skaleres dynamisk fremfor statisk og lagre denne i state. Det gjør skalering og fremtidig oppdatering enklere ved å holde alt på ett sted.
+- Øke test coverage med flere tester. Ta utgangspunkt i rapporten fra CodeCov.
 - Fullfør arbeid med å separare ut state og actions i mindre filer i `/state/model` og slå de sammen. Gjør skalering og struktur bedre.
 - Øke testdekning til et bedre nivå. Ta utgangspunkt i rapporten(e) fra CodeCov.io.
 - Vurder å bytte ut Bytte ut useState med https://easy-peasy.now.sh/docs/api/create-component-store.html
