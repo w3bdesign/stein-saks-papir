@@ -13,9 +13,9 @@ function Scoreboard() {
   const Player = useStoreState((player) => player.score);
   return (
     <>
-      <Card className="mx-auto mt-5 text-center">
+      <Card className="mx-auto mt-5 text-center d-none d-xl-block d-lg-block d-md-block">
         <Card.Header>
-          <h5>Poengtavle</h5>
+          <h6>Poengtavle</h6>
         </Card.Header>
         <CardDeck className="m-4">
           <Card>
