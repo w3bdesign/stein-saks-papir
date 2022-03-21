@@ -3,6 +3,7 @@
 [![CircleCI](https://circleci.com/gh/w3bdesign/stein-saks-papir.svg?style=svg)](https://circleci.com/gh/w3bdesign/stein-saks-papir)
 [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=w3bdesign_stein-saks-papir&metric=alert_status)](https://sonarcloud.io/dashboard?id=w3bdesign_stein-saks-papir)
 [![Maintainability](https://api.codeclimate.com/v1/badges/b47c7e7226d07b29018b/maintainability)](https://codeclimate.com/github/w3bdesign/stein-saks-papir/maintainability)
+[![Codacy Badge](https://app.codacy.com/project/badge/Grade/9c211fd2414342fba90652a01aa15377)](https://www.codacy.com/gh/w3bdesign/stein-saks-papir/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=w3bdesign/stein-saks-papir&amp;utm_campaign=Badge_Grade)
 
 <img src="https://github.com/w3bdesign/stein-saks-papir/blob/master/screenshot/screenshot.jpg" alt="screenshot">
 
