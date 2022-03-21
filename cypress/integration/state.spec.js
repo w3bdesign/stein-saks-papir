@@ -1,7 +1,7 @@
 describe('Test Redux store og se at state fungerer', () => {
   beforeEach(() => {
-    // cy.visit('/');
-    cy.visit('http://localhost:3000');
+    cy.visit('/');
+    // cy.visit('http://localhost:3000');
   });
 
   it('Sjekk at state inneholder default data', () => {
