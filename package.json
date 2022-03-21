@@ -1,6 +1,6 @@
 {
   "name": "stein-saks-papir",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.4",
@@ -48,6 +48,7 @@
     "eslint-plugin-jsx-a11y": "^6.3.1",
     "eslint-plugin-react": "^7.21.2",
     "eslint-plugin-react-hooks": "^4.1.2",
+    "eslint-plugin-testing-library": "^3.9.0",
     "install": "^0.13.0",
     "jest-environment-jsdom-sixteen": "^1.0.3",
     "netlify-plugin-cypress": "^1.4.1",
