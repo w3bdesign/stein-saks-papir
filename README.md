@@ -54,4 +54,5 @@ Lag en interaktiv side der man kan spille stein-saks-papir (reglene finner du he
 - Oppgradert kodebasen til Typescript.
 - Erstatte hardkodet spillernavn ved å lagre det dynamisk i state. Det gjør skalering og fremtidig oppdatering enklere ved å holde alt på ett sted.
 - Se om jeg kan redusere prop drilling i komponenter ved å lagre mer informasjon i state (eller om jeg bør beholde prop drilling?).
-- Vurder å erstatte useEffect med useCallback for å forhindre at den kalles flere ganger
+- Vurder å erstatte useEffect med useCallback for å forhindre at den kalles flere ganger.
+- Separere mer kode i separate komponenter for å gjøre koden ryddigere og enklere å vedlikeholde/oppdatere.

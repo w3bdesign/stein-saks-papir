@@ -23,7 +23,6 @@ function Main() {
             <h5>Velg ditt våpen under for å starte spillet</h5>
           </Card.Header>
           <ListWeapons />
-
         </Card>
         <Scoreboard />
       </Col>

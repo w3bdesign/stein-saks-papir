@@ -31,9 +31,9 @@ function ListWeapons() {
   const increaseScore = useStoreActions((actions) => actions.increaseScore);
   const getScore = useStoreState((score) => score.score);
 
-  const haveFinalWinner = getScore.find((score) => score.Score === 1);
-
   useEffect(() => {
+    const haveFinalWinner = getScore.find((score) => score.Score === 3);
+
     if (haveFinalWinner) {
       sethavewonThreeRounds(haveFinalWinner.Name);
       setshouldCheckWinner(false);
@@ -43,32 +43,20 @@ function ListWeapons() {
   const handlePlayGameClick = (Weapon) => {
     const resultOfGame = PlayGame(Weapon);
 
+    setshouldCheckWinner(false);
     setcomputerSelected(resultOfGame.computerSelected);
 
-    switch (resultOfGame.winner) {
-      case 'Spiller 1':
-        setWinner('Spiller 1');
-        setShowWinnerModal(true);
-        increaseScore('Spiller 1');
-        setTimeout(() => {
-          setshouldCheckWinner(true);
-        }, 2000);
+    if (resultOfGame.winner === 'Uavgjort') {
+      setWinner('Uavgjort');
+      setShowWinnerModal(true);
+    } else {
+      setWinner(resultOfGame.winner);
+      setShowWinnerModal(true);
+      increaseScore(resultOfGame.winner);
 
-        break;
-      case 'CPU':
-        setWinner('CPU');
-        setShowWinnerModal(true);
-        increaseScore('CPU');
-        setTimeout(() => {
-          setshouldCheckWinner(true);
-        }, 2000);
-        break;
-      case 'Uavgjort':
-        setWinner('Uavgjort');
-        setShowWinnerModal(true);
-        break;
-      default:
-        break;
+      setTimeout(() => {
+        setshouldCheckWinner(true);
+      }, 2000);
     }
   };
 
