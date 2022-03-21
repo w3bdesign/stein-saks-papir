@@ -17,6 +17,7 @@ Lag en interaktiv side der man kan spille stein-saks-papir (reglene finner du he
 - Jest 
 - React testing library
 - React Bootstrap
+- Context og useContext
 - CircleCI integrasjon
 - ESLint med AirBnB
 - Vektorbilder (SVG)
