@@ -1,11 +1,11 @@
-import React from "react";
+import React from 'react';
 
-import Modal from "react-bootstrap/Modal";
-import PropTypes from "prop-types";
+import Modal from 'react-bootstrap/Modal';
+import PropTypes from 'prop-types';
 
-import { ReactComponent as HandScissors } from "../../../assets/hand-scissors-solid.svg";
-import { ReactComponent as HandRock } from "../../../assets/hand-rock-solid.svg";
-import { ReactComponent as HandPaper } from "../../../assets/hand-paper-solid.svg";
+import { ReactComponent as HandScissors } from '../../../assets/hand-scissors-solid.svg';
+import { ReactComponent as HandRock } from '../../../assets/hand-rock-solid.svg';
+import { ReactComponent as HandPaper } from '../../../assets/hand-paper-solid.svg';
 
 /**
  * Viser hvem som har vunnet hver runde med en modal man kan lukke via show
@@ -36,7 +36,9 @@ function ShowWinner({
       <Modal.Header closeButton />
       <Modal.Title>
         <h4 data-cy="winnermodaltext" className="text-center mt-2">
-          Vinner: {winner?.toString()}
+          Vinner:
+          {' '}
+          {winner?.toString()}
         </h4>
       </Modal.Title>
       <Modal.Body>
@@ -44,9 +46,9 @@ function ShowWinner({
           Motstander valgte:
           <br />
           <br />
-          {computerSelected === "Stein" && <HandRock />}
-          {computerSelected === "Saks" && <HandScissors />}
-          {computerSelected === "Papir" && <HandPaper />}
+          {computerSelected === 'Stein' && <HandRock />}
+          {computerSelected === 'Saks' && <HandScissors />}
+          {computerSelected === 'Papir' && <HandPaper />}
         </h4>
       </Modal.Body>
     </Modal>
