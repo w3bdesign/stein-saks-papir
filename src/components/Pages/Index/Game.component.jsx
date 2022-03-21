@@ -76,7 +76,7 @@ function Game() {
       )}
       <div
         className={`animate__animated ${
-          havewonThreeRounds && 'animate__zoomOutUp animate__slow position-absolute'
+          havewonThreeRounds && 'animate__zoomOutUp animate__slow d-none'
         }`}
       >
         <ListWeapons handlePlayGameClick={handlePlayGameClick} />
