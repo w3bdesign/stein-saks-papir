@@ -1,6 +1,6 @@
-import React from 'react';
-import Card from 'react-bootstrap/Card';
-import { useStoreState } from 'easy-peasy';
+import React from "react";
+import Card from "react-bootstrap/Card";
+import { useStoreState } from "easy-peasy";
 
 /**
  * Funksjonen som viser selve poengtavlen. Henter spillernavn og poeng dynamisk fra state.
