@@ -22,7 +22,8 @@
     "test:regular": "react-scripts test --env=jest-environment-jsdom-sixteen",
     "cypress:open": "cypress open",
     "test:cypress": "cypress run",
-    "dev": "start-test develop 3000 cy:open"
+    "dev": "start-test develop 3000 cy:open",
+    "stylelint": "stylelint **/*.css"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -52,6 +53,8 @@
     "eslint-plugin-testing-library": "^3.10.1",
     "jest-environment-jsdom-sixteen": "^1.0.3",
     "netlify-plugin-cypress": "^1.11.1",
-    "start-server-and-test": "^1.12.0"
+    "start-server-and-test": "^1.12.0",
+    "stylelint": "^13.11.0",
+    "stylelint-config-standard": "^20.0.0"
   }
 }
