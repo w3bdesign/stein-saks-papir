@@ -1,6 +1,6 @@
 {
   "name": "stein-saks-papir",
-  "version": "0.4.3",
+  "version": "0.4.4",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.1",
@@ -29,12 +29,18 @@
   "eslintConfig": {
     "extends": "react-app"
   },
+  "jest": {
+    "collectCoverageFrom": [
+      "src/**/*.{js,jsx,ts,tsx}",
+      "!src/index.jsx",
+      "!src/App.jsx"
+    ]
+  },
   "browserslist": {
     "production": [
       "defaults",
       "not IE 11",
-      "not IE_Mob 11",
-      "maintained node versions"
+      "not IE_Mob 11"
     ],
     "development": [
       "last 1 chrome version",
@@ -51,7 +57,7 @@
     "eslint-plugin-import": "^2.25.3",
     "eslint-plugin-jsx-a11y": "^6.5.1",
     "eslint-plugin-react": "^7.27.1",
-    "eslint-plugin-react-hooks": "^4.3.0",    
+    "eslint-plugin-react-hooks": "^4.3.0",
     "netlify-plugin-cypress": "^2.2.0",
     "start-server-and-test": "^1.14.0",
     "stylelint": "^14.1.0",
