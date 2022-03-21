@@ -1,6 +1,6 @@
 {
   "name": "stein-saks-papir",
-  "version": "0.4.7",
+  "version": "0.4.8",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.2",
@@ -24,7 +24,9 @@
     "test:cypress": "cypress run",
     "dev": "start-test develop 3000 cy:open",
     "stylelint": "stylelint **/*.css",
-    "lint": "eslint --fix --ext .js,.jsx ."
+    "lint": "eslint --fix --ext .js,.jsx .",
+    "format": "prettier --write \"**/*.{js,jsx,json}\"",
+    "refresh": "rm -rf node_modules && rm package-lock.json && npm i && npm run format"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -59,6 +61,7 @@
     "eslint-plugin-react": "^7.29.4",
     "eslint-plugin-react-hooks": "^4.3.0",
     "netlify-plugin-cypress": "^2.2.0",
+    "prettier": "^2.6.0",
     "start-server-and-test": "^1.14.0",
     "stylelint": "^14.6.0",
     "stylelint-config-standard": "^25.0.0"
