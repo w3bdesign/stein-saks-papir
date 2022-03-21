@@ -8,6 +8,10 @@ import Scoreboard from './Scoreboard.component';
 import ListWeapons from './ListWeapons.component';
 import ResetGameButton from './ResetGameButton.component';
 
+/**
+ * Hovedkomponenten som viser våpnene, resetknapp og poengtavle.
+ * @returns {JSXElement} Returnerer JSX elementer. Se over for beskrivelse.
+ */
 function Main() {
   return (
     <Row className="mt-2 text-center justify-content-center">

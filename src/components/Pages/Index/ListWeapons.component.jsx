@@ -11,6 +11,12 @@ import { ReactComponent as HandScissors } from '../../../assets/hand-scissors-so
 import { ReactComponent as HandRock } from '../../../assets/hand-rock-solid.svg';
 import { ReactComponent as HandPaper } from '../../../assets/hand-paper-solid.svg';
 
+/**
+ * Generer knappene som viser våpnene
+ * Håndterer det som skjer når knappene trykkes på via handlePlayGameClick()
+ * Kaller increaseScore action fra Easy Peasy state
+ * @returns void
+ */
 function ListWeapons() {
   const increaseScore = useStoreActions((actions) => actions.increaseScore);
 
@@ -34,7 +40,6 @@ function ListWeapons() {
           data-testid="saks"
           variant="outline-dark"
           onClick={() => {
-            // PlayGame('Saks');
             handlePlayGameClick('Saks');
           }}
         >
@@ -54,7 +59,7 @@ function ListWeapons() {
           data-testid="stein"
           variant="outline-dark"
           onClick={() => {
-            PlayGame('Stein');
+            handlePlayGameClick('Stein');
           }}
         >
           <HandRock />
@@ -73,7 +78,7 @@ function ListWeapons() {
           data-testid="papir"
           variant="outline-dark"
           onClick={() => {
-            PlayGame('Papir');
+            handlePlayGameClick('Papir');
           }}
         >
           <HandPaper />
