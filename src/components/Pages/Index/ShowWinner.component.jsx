@@ -1,8 +1,7 @@
 import React from 'react';
 
-import PropTypes from 'prop-types';
-
 import Modal from 'react-bootstrap/Modal';
+import PropTypes from 'prop-types';
 
 import { ReactComponent as HandScissors } from '../../../assets/hand-scissors-solid.svg';
 import { ReactComponent as HandRock } from '../../../assets/hand-rock-solid.svg';
@@ -36,9 +35,7 @@ function ShowWinner({
       <Modal.Header closeButton />
       <Modal.Title>
         <h4 data-cy="winnermodaltext" className="text-center mt-2">
-          Vinner:
-          {' '}
-          {winner && winner.toString()}
+          Vinner: {winner && winner.toString()}
         </h4>
       </Modal.Title>
       <Modal.Body>
