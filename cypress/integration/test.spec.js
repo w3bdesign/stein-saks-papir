@@ -1,35 +1,37 @@
-/* eslint-disable no-undef */
+// https://docs.cypress.io/guides/references/best-practices.html
 
-describe('Besøk hjemmesiden', () => {
+describe('Besøk hjemmesiden, se at elementer eksisterer i DOM og at knappene fungerer', () => {
   beforeEach(() => {
     cy.visit('/');
-    // DEBUG: cy.visit('http://localhost:3000');
+    // cy.visit('http://localhost:3000');
   });
 
-  it('Vi kan se Stein Saks Papir i navbar', () => {
-    cy.get('.navbar > .mx-auto').contains('Stein Saks Papir');
-  });
-
-  it('Vi kan se Saks knappen på siden', () => {
-    cy.get('[data-testid=saks]').should('be.visible');
-  });
-
-  it('Vi klikker ikke på Saks og ser ingen resultatmodal', () => {
-    cy.get('.modal-body').should('not.be.visible');
+  it('Se at nødvendige elementer er på plass', () => {
+    cy.get('[data-cy=navbar]').contains('Stein Saks Papir');
+    cy.get('[data-cy=saks]').should('be.visible');
   });
 
   it('Vi klikker på Saks og vi kan se et resultat', () => {
-    cy.get('[data-testid=saks]').click();
-    cy.get('.modal-body').should('be.visible');
+    cy.get('[data-cy=winnermodaltext]').should('not.be.visible');
+    cy.get('[data-cy=saks]').click();
+    cy.get('[data-cy=winnermodaltext]').should('be.visible');
   });
 
-  it('Vi klikker på Saks og kan lukke modal. Den er ikke synlig lenger', () => {
-    cy.get('[data-testid=saks]').click();
+  it('Vi klikker på alle våpnene, klikker lukk og sjekker at modal ikke er synlig lenger', () => {
+    cy.get('[data-cy=saks]').click();
     cy.get('.close').click();
-    cy.get('.modal-body').should('not.be.visible');
+    cy.get('[data-cy=winnermodaltext]').should('not.be.visible');
+
+    cy.get('[data-cy=stein]').click();
+    cy.get('.close').click();
+    cy.get('[data-cy=winnermodaltext]').should('not.be.visible');
+
+    cy.get('[data-cy=papir]').click();
+    cy.get('.close').click();
+    cy.get('[data-cy=winnermodaltext]').should('not.be.visible');
   });
 
   it('Vi sjekker at score er 0 fra begynnelsen av', () => {
-    cy.get('#score-p0').invoke('text').should('eq', '0');
+    cy.get('[data-cy=score-p0]').invoke('text').should('eq', '0');
   });
 });
