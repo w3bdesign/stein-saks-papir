@@ -7,6 +7,8 @@ import DEFAULT_SCORE from '../const/DEFAULT_SCORE';
  * increaseScore for å øke score og reset for å nullstille poengstatus
  */
 
+const isDevelopmentEnv = process.env.NODE_ENV === 'development';
+
 const ScoreBoardStore = createStore({
   score: DEFAULT_SCORE,
   increaseScore: action((state, payload) => {
@@ -18,7 +20,7 @@ const ScoreBoardStore = createStore({
   reset: action((state) => {
     state.score.forEach((player) => (player.Score = 0));
   }),
-  devTools: process.env.NODE_ENV === 'development',
+  devTools: isDevelopmentEnv,
 });
 
 export default ScoreBoardStore;
