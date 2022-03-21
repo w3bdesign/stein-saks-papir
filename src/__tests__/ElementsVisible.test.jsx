@@ -28,4 +28,10 @@ describe('Sjekk at alle nødvendige elementer er synlige', () => {
     const Papir = getByRole('button', { name: /papir/i });
     expect(Papir).toBeVisible();
   });
+
+  test('Sjekk at steinDiv er synlig', () => {
+    const { getByTestId } = render(<App />);
+    const SteinDiv = getByTestId('SteinDiv');
+    expect(SteinDiv).toBeVisible();
+  });
 });
