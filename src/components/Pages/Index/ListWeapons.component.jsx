@@ -1,5 +1,4 @@
 import React from 'react';
-
 import PropTypes from 'prop-types';
 
 import Button from 'react-bootstrap/Button';
@@ -15,6 +14,7 @@ import { ReactComponent as HandPaper } from '../../../assets/hand-paper-solid.sv
  */
 
 function ListWeapons({ handlePlayGameClick, havewonThreeRounds }) {
+  // Refaktorer onClick senere om hastighet blir et problem
   return (
     <div className="m-4">
       <div className={`m-4 d-inline ${havewonThreeRounds && 'd-none'}`}>
@@ -23,7 +23,7 @@ function ListWeapons({ handlePlayGameClick, havewonThreeRounds }) {
           data-cy="saks"
           variant="outline-dark"
           aria-label="Saks"
-          onClick={handlePlayGameClick('Saks')}
+          onClick={() => handlePlayGameClick('Saks')}
         >
           <HandScissors />
         </Button>
@@ -37,7 +37,7 @@ function ListWeapons({ handlePlayGameClick, havewonThreeRounds }) {
           data-cy="stein"
           variant="outline-dark"
           aria-label="Stein"
-          onClick={handlePlayGameClick('Stein')}
+          onClick={() => handlePlayGameClick('Stein')}
         >
           <HandRock />
         </Button>
@@ -48,7 +48,7 @@ function ListWeapons({ handlePlayGameClick, havewonThreeRounds }) {
           data-cy="papir"
           variant="outline-dark"
           aria-label="Papir"
-          onClick={handlePlayGameClick('Papir')}
+          onClick={() => handlePlayGameClick('Papir')}
         >
           <HandPaper />
         </Button>
