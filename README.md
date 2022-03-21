@@ -24,6 +24,7 @@ Lag en interaktiv side der man kan spille stein-saks-papir (reglene finner du he
 - ESLint med AirBnB
 - Vektorbilder (SVG) fra FontAwesome
 - Aria-label på nødvendige elementer (WCAG standard)
+- Prop types validering
 
 ## Hva jeg ville gjort annerledes i en profesjonell setting 
 
