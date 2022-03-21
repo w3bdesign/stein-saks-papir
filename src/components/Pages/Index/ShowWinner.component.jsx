@@ -16,7 +16,7 @@ import { ReactComponent as HandPaper } from '../../../assets/hand-paper-solid.sv
  * @param {String} winner Hvem som har vunnet
  */
 
-// TODO Bytt ut prop drilling med createComponentStore
+// TODO Bytt ut prop drilling med createComponentStore eller noe lignende?
 
 function ShowWinner({
   showWinnerModal,

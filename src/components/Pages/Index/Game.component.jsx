@@ -66,7 +66,9 @@ function Game() {
       {havewonThreeRounds && (
         <>
           <Alert
-            className="mt-4 animate__animated animate__zoomInUp animate__slow"
+            // className="mt-4 animate__animated animate__zoomInUp animate__slow"
+            name="gamewinner"
+            aria-label="gamewinner"
             variant="success"
           >
             {havewonThreeRounds}
