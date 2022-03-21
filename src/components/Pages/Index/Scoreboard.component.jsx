@@ -24,7 +24,7 @@ function Scoreboard() {
                 <span style={{ fontSize: '1.25rem' }}>{Player && Player[0].Name}</span>
               </Card.Title>
               <Card.Text>
-                <span className="display-3">
+                <span id="score-p1" className="display-3">
                   {' '}
                   {Player && Player[0].Score}
                 </span>
@@ -37,7 +37,7 @@ function Scoreboard() {
                 <span style={{ fontSize: '1.25rem' }}>{Player && Player[1].Name}</span>
               </Card.Title>
               <Card.Text>
-                <span className="display-3">
+                <span id="score-p2" className="display-3">
                   {' '}
                   {Player && Player[1].Score}
                 </span>
