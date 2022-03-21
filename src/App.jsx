@@ -9,6 +9,10 @@ import ScoreBoardStore from './state/ScoreBoardStore';
  * Hovedapplikasjonen. Her bringer vi inn Easy Peasy store provider slik at alt har tilgang til den.
  */
 
+if (window.Cypress) {
+  window.store = ScoreBoardStore;
+}
+
 function App() {
   return (
     <StoreProvider store={ScoreBoardStore}>
