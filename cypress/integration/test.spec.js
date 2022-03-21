@@ -3,6 +3,7 @@
 describe('Besøk hjemmesiden', () => {
   beforeEach(() => {
     cy.visit('/');
+    cy.percySnapshot();
   });
 
   it('Vi kan se Stein Saks Papir i navbar', () => {
