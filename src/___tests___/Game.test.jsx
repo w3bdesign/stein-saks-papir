@@ -12,7 +12,7 @@ describe('Velg et våpen og se at spillet fungerer', () => {
     render(<App />);
 
     expect(
-      screen.queryByRole('heading', { name: /motstander valgte:/i })
+      screen.queryByRole('heading', { name: /motstander valgte:/i }),
     ).toBeNull();
   });
 
@@ -21,7 +21,7 @@ describe('Velg et våpen og se at spillet fungerer', () => {
 
     userEvent.click(screen.getByRole('button', { name: /saks/i }));
     expect(
-      screen.getByRole('heading', { name: /motstander valgte:/i })
+      screen.getByRole('heading', { name: /motstander valgte:/i }),
     ).toBeVisible();
   });
 
@@ -30,7 +30,7 @@ describe('Velg et våpen og se at spillet fungerer', () => {
 
     userEvent.click(screen.getByRole('button', { name: /stein/i }));
     expect(
-      screen.getByRole('heading', { name: /motstander valgte:/i })
+      screen.getByRole('heading', { name: /motstander valgte:/i }),
     ).toBeVisible();
   });
 
@@ -39,7 +39,7 @@ describe('Velg et våpen og se at spillet fungerer', () => {
 
     userEvent.click(screen.getByRole('button', { name: /papir/i }));
     expect(
-      screen.getByRole('heading', { name: /motstander valgte:/i })
+      screen.getByRole('heading', { name: /motstander valgte:/i }),
     ).toBeVisible();
   });
 });
