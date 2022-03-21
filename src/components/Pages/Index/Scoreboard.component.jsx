@@ -17,8 +17,8 @@ function Scoreboard() {
         <h6>Poengtavle</h6>
       </Card.Header>
       <CardDeck className="m-4">
-        {Player &&
-          Player.map((player, index) => (
+        {Player
+          && Player.map((player, index) => (
             <Card key={player.Name}>
               <Card.Body>
                 <Card.Title>
