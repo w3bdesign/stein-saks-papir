@@ -22,47 +22,47 @@ describe('Sjekk at "Motstander valgte" er synlig når vi velger et våpen', () =
     ).toBeNull();
   });
 
-  test('Sjekk at "Motstander valgte" er synlig hvis vi klikker saks', () => {
+  test('Sjekk at "Motstander valgte" er synlig hvis vi klikker saks', async () => {
     render(<App />);
 
-    userEvent.click(screen.getByRole('button', { name: /saks/i }));
+    await userEvent.click(screen.getByRole('button', { name: /saks/i }));
     expect(
       screen.getByRole('heading', { name: /motstander valgte:/i }),
     ).toBeVisible();
   });
 
-  test('Sjekk at "Motstander valgte" er synlig hvis vi klikker stein', () => {
+  test('Sjekk at "Motstander valgte" er synlig hvis vi klikker stein', async () => {
     render(<App />);
 
-    userEvent.click(screen.getByRole('button', { name: /stein/i }));
+    await userEvent.click(screen.getByRole('button', { name: /stein/i }));
     expect(
       screen.getByRole('heading', { name: /motstander valgte:/i }),
     ).toBeVisible();
   });
 
-  test('Sjekk at "Motstander valgte" er synlig hvis vi klikker papir', () => {
+  test('Sjekk at "Motstander valgte" er synlig hvis vi klikker papir', async () => {
     render(<App />);
 
-    userEvent.click(screen.getByRole('button', { name: /papir/i }));
+    await userEvent.click(screen.getByRole('button', { name: /papir/i }));
     expect(
       screen.getByRole('heading', { name: /motstander valgte:/i }),
     ).toBeVisible();
   });
 
-  test('Sjekk at lukkeknappen er synlig i vinnermodalen', () => {
+  test('Sjekk at lukkeknappen er synlig i vinnermodalen', async () => {
     render(<App />);
 
-    userEvent.click(screen.getByRole('button', { name: /papir/i }));
+    await userEvent.click(screen.getByRole('button', { name: /papir/i }));
 
     expect(screen.getByRole('button', { name: /close/i }).toBeVisible);
   });
 
-  test('Trykk lukkeknappen og sjekk at den ikke lenger eksisterer', () => {
+  test('Trykk lukkeknappen og sjekk at den ikke lenger eksisterer', async () => {
     render(<App />);
 
-    userEvent.click(screen.getByRole('button', { name: /papir/i }));
+    await userEvent.click(screen.getByRole('button', { name: /papir/i }));
 
-    userEvent.click(screen.getByRole('button', { name: /close/i }));
+    await userEvent.click(screen.getByRole('button', { name: /close/i }));
 
     expect(screen.getByRole('button', { name: /close/i }).toBeNull);
   });

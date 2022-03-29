@@ -12,17 +12,17 @@ import App from '../App';
  */
 
 describe('Klikk reset knappen og se at spillet resettes', () => {
-  test('Klikk "Resett spill" og se at score for spiller 1 er 0', () => {
+  test('Klikk "Resett spill" og se at score for spiller 1 er 0', async () => {
     render(<App />);
 
-    userEvent.click(screen.getByRole('button', { name: /restart spill/i }));
+    await userEvent.click(screen.getByRole('button', { name: /restart spill/i }));
     expect(screen.getByTestId('score-p0')).toHaveTextContent('0');
   });
 
-  test('Klikk "Resett spill" og se at score for spiller 2 er 0', () => {
+  test('Klikk "Resett spill" og se at score for spiller 2 er 0', async () => {
     render(<App />);
 
-    userEvent.click(screen.getByRole('button', { name: /restart spill/i }));
+    await userEvent.click(screen.getByRole('button', { name: /restart spill/i }));
     expect(screen.getByTestId('score-p1')).toHaveTextContent('0');
   });
 });
