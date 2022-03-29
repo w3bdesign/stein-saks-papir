@@ -1,6 +1,6 @@
 import WEAPONS from '../const/WEAPONS';
 
-import RandomWeapon from './RandomWeapon.js';
+import RandomWeapon from './RandomWeapon';
 import CheckWinner from './CheckWinner';
 
 /**
