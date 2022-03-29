@@ -5,9 +5,9 @@ import Alert from 'react-bootstrap/Alert';
 
 import PlayGame from '../../../functions/PlayGame';
 
-import ShowWinner from './ShowWinner.component';
 import ResetGameButton from './ResetGameButton.component';
 import ListWeapons from './ListWeapons.component';
+import ShowWinner from './ShowWinner.component.jsx';
 
 /**
  * Generer knappene som viser våpnene

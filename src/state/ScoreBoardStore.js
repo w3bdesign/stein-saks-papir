@@ -18,7 +18,7 @@ const ScoreBoardStore = createStore({
     state.score[playerIndex].Score += 1;
   }),
   reset: action((state) => {
-    state.score.forEach((player) => (player.Score = 0));
+    state.score.forEach((player) => { player.Score = 0; });
   }),
   devTools: isDevelopmentEnv,
 });
