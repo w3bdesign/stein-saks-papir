@@ -29,6 +29,7 @@
     "react/jsx-filename-extension": "warn",
     "no-use-before-define": "warn",
     "import/no-unresolved": "warn",
+    "no-param-reassign": "warn",
     "import/extensions": [
       "warn",
       "ignorePackages",
