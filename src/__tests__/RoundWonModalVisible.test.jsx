@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { render, screen } from '@testing-library/react';
+import { render, screen, waitFor } from '@testing-library/react';
 import { describe, expect, test } from '@jest/globals';
 
 import userEvent from '@testing-library/user-event';
@@ -61,9 +61,10 @@ describe('Sjekk at "Motstander valgte" er synlig når vi velger et våpen', () =
     render(<App />);
 
     await userEvent.click(screen.getByRole('button', { name: /papir/i }));
-
     await userEvent.click(screen.getByRole('button', { name: /close/i }));
 
-    expect(screen.getByRole('button', { name: /close/i }).toBeNull);
+    // expect(screen.getByRole('button', { name: /close/i }).toBeNull);
+
+    expect(screen.queryByRole('button', { name: /close/i }).toBeNull);
   });
 });
