@@ -1,4 +1,7 @@
-/** global: cy */
+import {
+  describe, cy, it, beforeEach,
+} from 'cypress';
+
 describe('Test Redux store og se at state fungerer', () => {
   beforeEach(() => {
     cy.visit('/');

@@ -1,5 +1,6 @@
-// https://docs.cypress.io/guides/references/best-practices.html
-/** global: cy */
+import {
+  describe, cy, it, beforeEach,
+} from 'cypress';
 
 describe('Besøk hjemmesiden, se at elementer eksisterer i DOM og at knappene fungerer', () => {
   beforeEach(() => {
