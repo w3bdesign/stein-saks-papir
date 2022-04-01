@@ -21,7 +21,7 @@ Lag en interaktiv side der man kan spille stein-saks-papir (reglene finner du he
 
 ## Teknologier / verktøy brukt
 
--   React 17 med hooks (useState og useEffect)
+-   React 18 med hooks (useState og useEffect)
 
 ### UI / design
 
