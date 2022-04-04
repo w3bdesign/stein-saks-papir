@@ -1,6 +1,5 @@
 [![Language grade: JavaScript](https://img.shields.io/lgtm/grade/javascript/g/w3bdesign/stein-saks-papir.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/w3bdesign/stein-saks-papir/context:javascript)
-[![Codecov](https://codecov.io/gh/w3bdesign/stein-saks-papir/branch/master/graph/badge.svg)](https://codecov.io/gh/w3bdesign/stein-saks-papir)
-[![CircleCI](https://circleci.com/gh/w3bdesign/stein-saks-papir.svg?style=svg)](https://circleci.com/gh/w3bdesign/stein-saks-papir)
+[![CircleCI](https://circleci.com/gh/w3bdesign/stein-saks-papir/tree/master.svg?style=svg)](https://circleci.com/gh/w3bdesign/stein-saks-papir/tree/master)
 [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=w3bdesign_stein-saks-papir&metric=alert_status)](https://sonarcloud.io/dashboard?id=w3bdesign_stein-saks-papir)
 [![Maintainability](https://api.codeclimate.com/v1/badges/b47c7e7226d07b29018b/maintainability)](https://codeclimate.com/github/w3bdesign/stein-saks-papir/maintainability)
 [![Codacy Badge](https://app.codacy.com/project/badge/Grade/9c211fd2414342fba90652a01aa15377)](https://www.codacy.com/gh/w3bdesign/stein-saks-papir/dashboard?utm_source=github.com&utm_medium=referral&utm_content=w3bdesign/stein-saks-papir&utm_campaign=Badge_Grade)
