@@ -1,4 +1,6 @@
-import { describe, cy, it, beforeEach } from 'cypress';
+import {
+  describe, cy, it, beforeEach,
+} from 'cypress';
 
 describe('Test Redux store og se at state fungerer', () => {
   beforeEach(() => {

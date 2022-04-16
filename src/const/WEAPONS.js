@@ -11,20 +11,20 @@ const WEAPONS = [
     id: 0,
     name: 'Stein',
     beats: 'Saks',
-    component: HandRock
+    component: HandRock,
   },
   {
     id: 1,
     name: 'Papir',
     beats: 'Stein',
-    component: HandPaper
+    component: HandPaper,
   },
   {
     id: 2,
     name: 'Saks',
     beats: 'Papir',
-    component: HandScissors
-  }
+    component: HandScissors,
+  },
 ];
 
 export default WEAPONS;

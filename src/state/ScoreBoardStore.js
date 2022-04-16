@@ -20,7 +20,7 @@ const ScoreBoardStore = createStore({
       player.Score = 0;
     });
   }),
-  devTools: isDevelopmentEnv
+  devTools: isDevelopmentEnv,
 });
 
 export default ScoreBoardStore;
