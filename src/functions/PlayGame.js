@@ -10,9 +10,7 @@ import CheckWinner from './CheckWinner';
  */
 
 function PlayGame(playerSelectedWeapon) {
-  const playerSelected = WEAPONS.find(
-    (weapon) => weapon.name === playerSelectedWeapon,
-  );
+  const playerSelected = WEAPONS.find((weapon) => weapon.name === playerSelectedWeapon);
 
   const computerSelected = RandomWeapon();
   const youWin = CheckWinner(playerSelected, computerSelected);

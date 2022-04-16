@@ -16,10 +16,7 @@ import { ReactComponent as HandPaper } from '../../../assets/hand-paper-solid.sv
  */
 
 function ShowWinner({
-  showWinnerModal,
-  setShowWinnerModal,
-  computerSelected,
-  winner,
+  showWinnerModal, setShowWinnerModal, computerSelected, winner,
 }) {
   const handleClose = () => {
     setShowWinnerModal(false);
