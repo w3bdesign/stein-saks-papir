@@ -33,7 +33,7 @@ Lag en interaktiv side der man kan spille stein-saks-papir (reglene finner du he
 
 ### Testing / kodekvalitet
 
--   Cypress for E2E testing
+-   Cypress integrert med CircleCI for E2E testing
 -   Testdekninganalyse via CodeCov
 -   Jest og React Testing Library
 -   Scanning av koden via SonarCloud og DeepScan
