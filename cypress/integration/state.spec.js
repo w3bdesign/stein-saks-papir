@@ -1,16 +1,14 @@
-import {
-  describe, cy, it, beforeEach,
-} from 'cypress';
+import { describe, cy, it, beforeEach } from "cypress";
 
-describe('Test Redux store og se at state fungerer', () => {
+describe("Test Redux store og se at state fungerer", () => {
   beforeEach(() => {
-    cy.visit('/');
+    cy.visit("/");
     // cy.visit('http://localhost:3000');
   });
 
-  it('Sjekk at state inneholder default data', () => {
-    cy.fixture('score.json').then((json) => {
-      cy.window().its('store').invoke('getState').should('deep.equal', json);
+  it("Sjekk at state inneholder default data", () => {
+    cy.fixture("score.json").then((json) => {
+      cy.window().its("store").invoke("getState").should("deep.equal", json);
     });
   });
 });
