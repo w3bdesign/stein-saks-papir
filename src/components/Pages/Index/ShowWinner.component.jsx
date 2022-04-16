@@ -1,11 +1,11 @@
-import React from "react";
+import React from 'react';
 
-import Modal from "react-bootstrap/Modal";
-import PropTypes from "prop-types";
+import Modal from 'react-bootstrap/Modal';
+import PropTypes from 'prop-types';
 
-import { ReactComponent as HandScissors } from "../../../assets/hand-scissors-solid.svg";
-import { ReactComponent as HandRock } from "../../../assets/hand-rock-solid.svg";
-import { ReactComponent as HandPaper } from "../../../assets/hand-paper-solid.svg";
+import { ReactComponent as HandScissors } from '../../../assets/hand-scissors-solid.svg';
+import { ReactComponent as HandRock } from '../../../assets/hand-rock-solid.svg';
+import { ReactComponent as HandPaper } from '../../../assets/hand-paper-solid.svg';
 
 /**
  * Viser hvem som har vunnet hver runde med en modal man kan lukke via show
@@ -15,12 +15,7 @@ import { ReactComponent as HandPaper } from "../../../assets/hand-paper-solid.sv
  * @param {String} winner Hvem som har vunnet
  */
 
-function ShowWinner({
-  showWinnerModal,
-  setShowWinnerModal,
-  computerSelected,
-  winner,
-}) {
+function ShowWinner({ showWinnerModal, setShowWinnerModal, computerSelected, winner }) {
   const handleClose = () => {
     setShowWinnerModal(false);
   };
@@ -44,9 +39,9 @@ function ShowWinner({
           Motstander valgte:
           <br />
           <br />
-          {computerSelected === "Stein" && <HandRock />}
-          {computerSelected === "Saks" && <HandScissors />}
-          {computerSelected === "Papir" && <HandPaper />}
+          {computerSelected === 'Stein' && <HandRock />}
+          {computerSelected === 'Saks' && <HandScissors />}
+          {computerSelected === 'Papir' && <HandPaper />}
         </h4>
       </Modal.Body>
     </Modal>
@@ -57,14 +52,14 @@ ShowWinner.defaultProps = {
   showWinnerModal: PropTypes.bool,
   setShowWinnerModal: PropTypes.func,
   computerSelected: PropTypes.string,
-  winner: PropTypes.string,
+  winner: PropTypes.string
 };
 
 ShowWinner.propTypes = {
   showWinnerModal: PropTypes.bool,
   setShowWinnerModal: PropTypes.func,
   computerSelected: PropTypes.string,
-  winner: PropTypes.string,
+  winner: PropTypes.string
 };
 
 export default ShowWinner;

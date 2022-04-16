@@ -1,9 +1,9 @@
-import React, { createElement, Fragment } from "react";
-import PropTypes from "prop-types";
+import React, { createElement, Fragment } from 'react';
+import PropTypes from 'prop-types';
 
-import Button from "react-bootstrap/Button";
+import Button from 'react-bootstrap/Button';
 
-import WEAPONS from "../../../const/WEAPONS";
+import WEAPONS from '../../../const/WEAPONS';
 
 /**
  * Viser knapper med våpnene som vi kan velge
@@ -13,7 +13,7 @@ import WEAPONS from "../../../const/WEAPONS";
 
 function ListWeapons({ handlePlayGameClick, havewonThreeRounds }) {
   // Refaktorer onClick senere om hastighet blir et problem
-  const weaponClass = `m-4 d-inline-block ${havewonThreeRounds && "d-none"}`;
+  const weaponClass = `m-4 d-inline-block ${havewonThreeRounds && 'd-none'}`;
 
   return (
     <div className="m-4">
@@ -38,12 +38,12 @@ function ListWeapons({ handlePlayGameClick, havewonThreeRounds }) {
 
 ListWeapons.defaultProps = {
   handlePlayGameClick: PropTypes.func,
-  havewonThreeRounds: PropTypes.string,
+  havewonThreeRounds: PropTypes.string
 };
 
 ListWeapons.propTypes = {
   handlePlayGameClick: PropTypes.func,
-  havewonThreeRounds: PropTypes.string,
+  havewonThreeRounds: PropTypes.string
 };
 
 export default ListWeapons;

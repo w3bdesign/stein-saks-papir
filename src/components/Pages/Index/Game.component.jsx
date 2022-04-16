@@ -1,13 +1,13 @@
-import React, { useState, useEffect } from "react";
-import { useStoreActions, useStoreState } from "easy-peasy";
+import React, { useState, useEffect } from 'react';
+import { useStoreActions, useStoreState } from 'easy-peasy';
 
-import Alert from "react-bootstrap/Alert";
+import Alert from 'react-bootstrap/Alert';
 
-import PlayGame from "../../../functions/PlayGame";
+import PlayGame from '../../../functions/PlayGame';
 
-import ResetGameButton from "./ResetGameButton.component";
-import ListWeapons from "./ListWeapons.component";
-import ShowWinner from "./ShowWinner.component.jsx";
+import ResetGameButton from './ResetGameButton.component';
+import ListWeapons from './ListWeapons.component';
+import ShowWinner from './ShowWinner.component.jsx';
 
 /**
  * Generer knappene som viser våpnene
@@ -40,8 +40,8 @@ function Game() {
     setshouldCheckWinner(false);
     setcomputerSelected(resultOfGame.computerSelected);
 
-    if (resultOfGame.winner === "Uavgjort") {
-      setWinner("Uavgjort");
+    if (resultOfGame.winner === 'Uavgjort') {
+      setWinner('Uavgjort');
       setShowWinnerModal(true);
     } else {
       setWinner(resultOfGame.winner);
