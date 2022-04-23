@@ -34,8 +34,7 @@ describe('Velg et våpen og se at noen vinner til slutt', () => {
 
     const steinDiv = screen.getByTestId('SteinDiv');
 
-    // expect(steinDiv).toHaveClass('d-none');
-    expect(steinDiv).toHaveClass('null');
+    expect(steinDiv).toHaveClass('d-none');
   });
 
   test('Velg et våpen flere ganger og se at vinner-boksen vises', async () => {
