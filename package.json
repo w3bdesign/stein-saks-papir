@@ -1,6 +1,6 @@
 {
   "name": "stein-saks-papir",
-  "version": "0.5.2",
+  "version": "0.5.3",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.4",
@@ -53,7 +53,7 @@
   "devDependencies": {
     "@jest/globals": "^27.5.1",
     "cypress": "^9.5.4",
-    "eslint": "^8.13.0",
+    "eslint": "^8.14.0",
     "eslint-config-airbnb": "^19.0.4",
     "eslint-plugin-cypress": "^2.12.1",
     "eslint-plugin-import": "^2.26.0",
