@@ -16,12 +16,13 @@ function MobileScoreboard() {
           <h6>Poengoversikt</h6>
         </Card.Header>
         <Card.Body>
-          {Player && Player.map((player) => (
-            <div key={player.Name} className="m-2">
-              <Card.Header bg="secondary">{player.Name}</Card.Header>
-              <h5 className="font-weight-bold mt-2">{player.Score}</h5>
-            </div>
-          ))}
+          {Player
+            && Player.map((player) => (
+              <div key={player.Name} className="m-2">
+                <Card.Header bg="secondary">{player.Name}</Card.Header>
+                <h5 className="font-weight-bold mt-2">{player.Score}</h5>
+              </div>
+            ))}
         </Card.Body>
       </Card>
     </div>
