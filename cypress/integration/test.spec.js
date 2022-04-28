@@ -1,4 +1,4 @@
-import { describe, it, beforeEach } from 'cypress';
+// import { describe, it, beforeEach } from 'cypress';
 
 describe('Besøk hjemmesiden, se at elementer eksisterer i DOM og at knappene fungerer', () => {
   beforeEach(() => {
