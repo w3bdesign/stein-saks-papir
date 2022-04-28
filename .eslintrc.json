@@ -16,6 +16,7 @@
     "no-use-before-define": "warn",
     "import/no-unresolved": "warn",
     "no-param-reassign": "warn",
+    "no-undef": "warn",
     "import/extensions": [
       "warn",
       "ignorePackages",
