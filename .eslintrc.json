@@ -7,7 +7,7 @@
     "ecmaFeatures": {
       "jsx": true
     },
-    "ecmaVersion": 2018,
+    "ecmaVersion": 13,
     "sourceType": "module"
   },
   "plugins": ["react"],
@@ -16,6 +16,7 @@
     "no-use-before-define": "warn",
     "import/no-unresolved": "warn",
     "no-param-reassign": "warn",
+    "no-undef": "warn",
     "import/extensions": [
       "warn",
       "ignorePackages",

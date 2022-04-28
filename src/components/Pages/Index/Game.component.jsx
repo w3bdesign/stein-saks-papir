@@ -7,7 +7,7 @@ import PlayGame from '../../../functions/PlayGame';
 
 import ResetGameButton from './ResetGameButton.component';
 import ListWeapons from './ListWeapons.component';
-import ShowWinner from './ShowWinner.component.jsx';
+import ShowWinner from './ShowWinner.component';
 
 /**
  * Generer knappene som viser våpnene
