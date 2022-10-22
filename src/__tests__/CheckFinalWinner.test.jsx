@@ -4,9 +4,7 @@ import ReactDOM from 'react-dom';
 import { render, screen, waitFor } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import '@testing-library/jest-dom';
-import {
-  beforeAll, describe, expect, jest, test,
-} from '@jest/globals';
+import { beforeAll, describe, expect, jest, test } from '@jest/globals';
 
 import App from '../App';
 
@@ -22,21 +20,20 @@ describe('Velg et våpen og se at noen vinner til slutt', () => {
     ReactDOM.createPortal = jest.fn((element) => element);
   });
 
-  /*
   test('Velg et våpen flere ganger og se at knappene skjules', async () => {
     render(<App />);
 
     await userEvent.pointer(
       Array(10).fill({
         keys: '[MouseLeft]',
-        target: screen.getByRole('button', { name: /stein/i }),
-      }),
+        target: screen.getByRole('button', { name: /stein/i })
+      })
     );
 
     const steinDiv = screen.getByTestId('SteinDiv');
 
     expect(steinDiv).toHaveClass('d-none');
-  });*/
+  });
 
   test('Velg et våpen flere ganger og se at vinner-boksen vises', async () => {
     // Vi bruker en array og forEach for å klikke 10 ganger
@@ -45,7 +42,9 @@ describe('Velg et våpen og se at noen vinner til slutt', () => {
     render(<App />);
 
     await waitFor(() => {
-      repeatClickTenTimes.forEach(() => userEvent.click(screen.queryByRole('button', { name: /stein/i })));
+      repeatClickTenTimes.forEach(() =>
+        userEvent.click(screen.queryByRole('button', { name: /stein/i }))
+      );
       expect(screen.getByRole('alert', { name: /gamewinner/i })).toBeVisible();
     });
   });
