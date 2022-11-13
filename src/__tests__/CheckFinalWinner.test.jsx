@@ -20,7 +20,7 @@ describe('Velg et våpen og se at noen vinner til slutt', () => {
     ReactDOM.createPortal = jest.fn((element) => element);
   });
 
-  test('Velg et våpen flere ganger og se at knappene skjules', async () => {
+  test('Velg et våpen flere ganger og se at hurra vises', async () => {
     const repeatClickTenTimes = Array.from({ length: 10 }, (_v, i) => i);
 
     render(<App />);
@@ -29,9 +29,9 @@ describe('Velg et våpen og se at noen vinner til slutt', () => {
       repeatClickTenTimes.forEach(() =>
         userEvent.click(screen.queryByRole('button', { name: /stein/i }))
       );
-      const steinDiv = screen.getByTestId('SteinDiv');
 
-      expect(steinDiv).toHaveClass('d-none');
+      const winner = screen.getByRole('alert', { name: /gamewinner/i });
+      expect(winner).toHaveTextContent('Hurra!');
     });
   });
 
