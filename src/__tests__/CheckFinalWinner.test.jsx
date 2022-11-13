@@ -30,8 +30,8 @@ describe('Velg et våpen og se at noen vinner til slutt', () => {
       repeatClickTenTimes.forEach(() =>
         userEvent.click(screen.queryByRole('button', { name: /stein/i }))
       );
-      expect(screen.getByRole('alert', { name: /gamewinner/i })).toBeVisible();
-      expect(screen.getByRole('alert', { name: /gamewinner/i })).toHaveTextContent('Hurra!');
+      expect(screen.queryByRole('alert', { name: /gamewinner/i })).toBeVisible();
+      expect(screen.queryByRole('alert', { name: /gamewinner/i })).toHaveTextContent('Hurra!');
     });
   });
 });
