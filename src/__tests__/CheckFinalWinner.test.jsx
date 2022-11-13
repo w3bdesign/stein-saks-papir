@@ -26,13 +26,13 @@ describe('Velg et våpen og se at noen vinner til slutt', () => {
 
     render(<App />);
 
-    await waitFor(() => {
-      repeatClickTenTimes.forEach(() =>
-        userEvent.click(screen.queryByRole('button', { name: /stein/i }))
-      );
-    });
+    repeatClickTenTimes.forEach(() =>
+      userEvent.click(screen.queryByRole('button', { name: /stein/i }))
+    );
 
-    expect(screen.queryByRole('alert', { name: /gamewinner/i })).toBeVisible();
-    expect(screen.queryByRole('alert', { name: /gamewinner/i })).toHaveTextContent('Hurra!');
+    await waitFor(() => {
+      expect(screen.queryByRole('alert', { name: /gamewinner/i })).toBeVisible();
+      expect(screen.queryByRole('alert', { name: /gamewinner/i })).toHaveTextContent('Hurra!');
+    });
   });
 });
