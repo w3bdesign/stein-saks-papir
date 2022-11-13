@@ -4,7 +4,9 @@ import ReactDOM from 'react-dom';
 import { render, screen, waitFor } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import '@testing-library/jest-dom';
-import { beforeAll, describe, expect, jest, test } from '@jest/globals';
+import {
+  beforeAll, describe, expect, jest, test,
+} from '@jest/globals';
 
 import App from '../App';
 
@@ -26,8 +28,8 @@ describe('Velg et våpen og se at noen vinner til slutt', () => {
     await userEvent.pointer(
       Array(10).fill({
         keys: '[MouseLeft]',
-        target: screen.getByRole('button', { name: /stein/i })
-      })
+        target: screen.getByRole('button', { name: /stein/i }),
+      }),
     );
 
     await waitFor(() => {
@@ -43,9 +45,7 @@ describe('Velg et våpen og se at noen vinner til slutt', () => {
     render(<App />);
 
     await waitFor(() => {
-      repeatClickTenTimes.forEach(() =>
-        userEvent.click(screen.queryByRole('button', { name: /stein/i }))
-      );
+      repeatClickTenTimes.forEach(() => userEvent.click(screen.queryByRole('button', { name: /stein/i })));
       expect(screen.getByRole('alert', { name: /gamewinner/i })).toBeVisible();
     });
   });
