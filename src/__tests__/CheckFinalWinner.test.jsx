@@ -20,21 +20,6 @@ describe('Velg et våpen og se at noen vinner til slutt', () => {
     ReactDOM.createPortal = jest.fn((element) => element);
   });
 
-  test('Velg et våpen flere ganger og se at hurra vises', async () => {
-    const repeatClickTenTimes = Array.from({ length: 10 }, (_v, i) => i);
-
-    render(<App />);
-
-    await waitFor(() => {
-      repeatClickTenTimes.forEach(() =>
-        userEvent.click(screen.queryByRole('button', { name: /stein/i }))
-      );
-
-      const winner = screen.getByRole('alert', { name: /gamewinner/i });
-      expect(winner).toHaveTextContent('Hurra!');
-    });
-  });
-
   test('Velg et våpen flere ganger og se at vinner-boksen vises', async () => {
     // Vi bruker en array og forEach for å klikke 10 ganger
     const repeatClickTenTimes = Array.from({ length: 10 }, (_v, i) => i);
@@ -46,6 +31,7 @@ describe('Velg et våpen og se at noen vinner til slutt', () => {
         userEvent.click(screen.queryByRole('button', { name: /stein/i }))
       );
       expect(screen.getByRole('alert', { name: /gamewinner/i })).toBeVisible();
+      expect(screen.getByRole('alert', { name: /gamewinner/i })).toHaveTextContent('Hurra!');
     });
   });
 });
