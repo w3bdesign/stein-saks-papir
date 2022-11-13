@@ -22,7 +22,7 @@ describe('Velg et våpen og se at noen vinner til slutt', () => {
     ReactDOM.createPortal = jest.fn((element) => element);
   });
 
-  test('Velg et våpen flere ganger og se at knappene skjules', async () => {
+  /*test('Velg et våpen flere ganger og se at knappene skjules', async () => {
     render(<App />);
 
     await userEvent.pointer(
@@ -33,9 +33,8 @@ describe('Velg et våpen og se at noen vinner til slutt', () => {
     );
 
     const steinDiv = screen.getByTestId('SteinDiv');
-
     expect(steinDiv).toHaveClass('d-none');
-  });
+  });*/
 
   test('Velg et våpen flere ganger og se at vinner-boksen vises', async () => {
     // Vi bruker en array og forEach for å klikke 10 ganger
