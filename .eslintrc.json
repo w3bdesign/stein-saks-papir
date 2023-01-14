@@ -16,7 +16,11 @@
     "no-use-before-define": "warn",
     "import/no-unresolved": "warn",
     "no-param-reassign": "warn",
+    "no-multiple-empty-lines": "warn",
+    "padded-blocks": "warn",
+    "no-trailing-spaces": "warn",
     "no-undef": "warn",
+    "comma-dangle": "warn",
     "import/extensions": [
       "warn",
       "ignorePackages",
