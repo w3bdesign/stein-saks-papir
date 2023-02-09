@@ -17,7 +17,7 @@ jobs:
           keys:
             - v2-dependencies-{{ checksum "package.json" }}
             - v2-dependencies-
-      - run: yarn install
+      - run: npm install
   build:
     working_directory: ~/stein-saks-papir
     docker:
