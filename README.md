@@ -11,7 +11,7 @@ Live URL: <https://steinsakspapir.dfweb.no>
 
 # Stein Saks Papir
 
-Prosjekt/hjemmeoppgave av Daniel for Novacare.
+Hjemmeoppgave gitt av Novacare.
 
 Se gjerne [TODO](#todo) punktet lenger ned i README hvor jeg har listet opp en rekke idèer og tanker for refaktorering av kode og forbedringer.
 
