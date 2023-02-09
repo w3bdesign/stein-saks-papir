@@ -24,7 +24,7 @@
     "cypress:open": "cypress open",
     "test:cypress": "cypress run",
     "dev": "start-test develop 3000 cy:open",
-    "stylelint": "stylelint **/*.css",
+    "stylelint": "npx stylelint **/*.css --fix",
     "lint": "eslint --fix --ext .js,.jsx .",
     "format": "prettier --write \"**/*.{js,jsx,json}\"",
     "refresh": "rm -rf node_modules && rm package-lock.json && npm i && npm run format && npm run lint"
