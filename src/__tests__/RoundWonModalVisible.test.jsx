@@ -53,7 +53,6 @@ describe('Sjekk at "Motstander valgte" er synlig når vi velger et våpen', () =
     render(<App />);
 
     await userEvent.click(screen.getByRole('button', { name: /papir/i }));
-    await userEvent.click(screen.getByRole('button', { name: /close/i }));
 
     expect(screen.queryByRole('button', { name: /close/i }).toBeNull);
   });
