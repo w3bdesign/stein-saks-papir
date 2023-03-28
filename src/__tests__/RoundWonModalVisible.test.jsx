@@ -63,7 +63,7 @@ describe('Sjekk at "Motstander valgte" er synlig når vi velger et våpen', () =
     const setShowWinnerModalMock = jest.fn();
     const { getByTestId } = render(
       <ShowWinner
-        showWinnerModal={true}
+        showWinnerModal
         setShowWinnerModal={setShowWinnerModalMock}
         computerSelected="Stein"
         winner="Player"
