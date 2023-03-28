@@ -8,7 +8,7 @@ import '@testing-library/jest-dom';
 
 import App from '../App';
 
-import ShowWinner from './ShowWinner';
+import ShowWinner from '../components/Pages/Index/ShowWinner.component';
 
 /**
  * Her tester vi at modal som dukker opp når vi har valgt et våpen fungerer som det skal
