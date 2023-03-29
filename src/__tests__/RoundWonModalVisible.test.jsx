@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { render, screen, fireEvent } from '@testing-library/react';
-import { describe, expect, test } from '@jest/globals';
+import { describe, expect, test, jest } from '@jest/globals';
 
 import userEvent from '@testing-library/user-event';
 import '@testing-library/jest-dom';
