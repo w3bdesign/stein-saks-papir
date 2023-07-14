@@ -53,5 +53,5 @@ workflows:
           # executor: with-chrome-and-firefox
           # there are no jobs to follow this one
           # so no need to save the workspace files (saves time)
-          # no-workspace: true
+          no-workspace: true
 
