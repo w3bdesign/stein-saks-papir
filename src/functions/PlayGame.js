@@ -18,20 +18,20 @@ function PlayGame(playerSelectedWeapon) {
   if (playerSelected.name === computerSelected.name) {
     return {
       winner: 'Uavgjort',
-      computerSelected: computerSelected.name,
+      computerSelected: computerSelected.name
     };
   }
 
   if (youWin) {
     return {
       winner: 'Spiller 1',
-      computerSelected: computerSelected.name,
+      computerSelected: computerSelected.name
     };
   }
 
   return {
     winner: 'CPU',
-    computerSelected: computerSelected.name,
+    computerSelected: computerSelected.name
   };
 }
 
