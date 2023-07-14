@@ -5,6 +5,7 @@ orbs:
   # the strict explicit version "cypress-io/cypress@1.x.y"
   # to lock the version and prevent unexpected CI changes
   cypress: cypress-io/cypress@3.1.2
+  codecov: codecov/codecov@3.2.5
 jobs:
     # 👇 Adds Chromatic as a job
   chromatic-deployment:
@@ -36,9 +37,7 @@ jobs:
       - run:
           name: Run Jest Tests
           command: npm test
-      - run:
-          name: Codecov
-          command: bash <(curl -s https://codecov.io/bash)
+      - codecov/upload
     parallelism: 6
 workflows:
   # 👇 Adds Chromatic to the workflow
@@ -51,7 +50,3 @@ workflows:
           cypress-command: npx cypress run --browser electron
           start-command: npm run dev
           # executor: with-chrome-and-firefox
-          # there are no jobs to follow this one
-          # so no need to save the workspace files (saves time)
-          # no-workspace: true
-
