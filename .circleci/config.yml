@@ -37,13 +37,9 @@ jobs:
       - run:
           name: Run Jest Tests
           command: npm test
+      - codecov/upload
     parallelism: 6
 workflows:
-# 👇 Adds Codecov to the workflow
-  upload-to-codecov:
-    jobs:
-      - checkout
-      - codecov/upload
   # 👇 Adds Chromatic to the workflow
   chromatic-deploy:
     jobs:
