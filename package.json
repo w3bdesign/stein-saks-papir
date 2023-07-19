@@ -63,7 +63,7 @@
     "netlify-plugin-cypress": "^2.2.1",
     "prettier": "^3.0.0",
     "start-server-and-test": "^2.0.0",
-    "stylelint": "^15.10.1",
+    "stylelint": "^15.10.2",
     "stylelint-config-standard": "^34.0.0"
   }
 }
