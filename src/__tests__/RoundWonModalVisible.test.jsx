@@ -1,12 +1,16 @@
 import React from 'react';
 
-import { render, screen } from '@testing-library/react';
-import { describe, expect, test } from '@jest/globals';
+import { render, screen, fireEvent } from '@testing-library/react';
+import {
+  describe, expect, test, jest,
+} from '@jest/globals';
 
 import userEvent from '@testing-library/user-event';
 import '@testing-library/jest-dom';
 
 import App from '../App';
+
+import ShowWinner from '../components/Pages/Index/ShowWinner.component';
 
 /**
  * Her tester vi at modal som dukker opp når vi har valgt et våpen fungerer som det skal
@@ -53,8 +57,24 @@ describe('Sjekk at "Motstander valgte" er synlig når vi velger et våpen', () =
     render(<App />);
 
     await userEvent.click(screen.getByRole('button', { name: /papir/i }));
-    await userEvent.click(screen.getByRole('button', { name: /close/i }));
 
     expect(screen.queryByRole('button', { name: /close/i }).toBeNull);
+  });
+
+  test('Kaller setShowWinnerModal med false når modal er trykket på', () => {
+    const setShowWinnerModalMock = jest.fn();
+    const { getByTestId } = render(
+      <ShowWinner
+        showWinnerModal
+        setShowWinnerModal={setShowWinnerModalMock}
+        computerSelected="Stein"
+        winner="Player"
+      />,
+    );
+
+    const modal = getByTestId('modalId');
+    fireEvent.click(modal);
+
+    expect(setShowWinnerModalMock).toHaveBeenCalledWith(false);
   });
 });
