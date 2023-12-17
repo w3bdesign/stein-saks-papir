@@ -7,14 +7,15 @@
     "@testing-library/react": "^14.1.2",
     "@testing-library/user-event": "^14.5.1",
     "bootstrap": "^5.3.2",
+    "cypress": "^13.6.1",
     "easy-peasy": "^6.0.4",
+    "jest": "^29.7.0",
     "postcss": "^8.4.32",
     "prop-types": "^15.8.1",
     "react": "18.2.0",
     "react-bootstrap": "^2.9.1",
     "react-dom": "18.2.0",
-    "react-scripts": "^5.0.1",
-    "cypress": "^13.6.1"
+    "react-scripts": "^5.0.1"
   },
   "scripts": {
     "start": "react-scripts start",
