@@ -10,7 +10,7 @@ jobs:
     # 👇 Adds Chromatic as a job
   chromatic-deployment:
     docker:
-      - image: cimg/node:21.6.2
+      - image: cimg/node:21.7.2
     working_directory: ~/stein-saks-papir
     steps:
       - checkout
@@ -22,7 +22,7 @@ jobs:
   build:
     working_directory: ~/stein-saks-papir
     docker:
-      - image: cimg/node:21.6.2-browsers
+      - image: cimg/node:21.7.2-browsers
     steps:
       - checkout
       - restore_cache:
