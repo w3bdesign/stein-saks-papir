@@ -1,9 +1,7 @@
 import React from 'react';
 
 import { render, screen, fireEvent } from '@testing-library/react';
-import {
-  describe, expect, test, jest,
-} from '@jest/globals';
+import { describe, expect, test, jest } from '@jest/globals';
 
 import userEvent from '@testing-library/user-event';
 import '@testing-library/jest-dom';
@@ -69,7 +67,7 @@ describe('Sjekk at "Motstander valgte" er synlig når vi velger et våpen', () =
         setShowWinnerModal={setShowWinnerModalMock}
         computerSelected="Stein"
         winner="Player"
-      />,
+      />
     );
 
     const modal = getByTestId('modalId');

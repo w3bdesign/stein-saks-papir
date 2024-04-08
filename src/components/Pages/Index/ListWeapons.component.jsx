@@ -38,12 +38,12 @@ function ListWeapons({ handlePlayGameClick, havewonThreeRounds }) {
 
 ListWeapons.defaultProps = {
   handlePlayGameClick: PropTypes.func,
-  havewonThreeRounds: PropTypes.string,
+  havewonThreeRounds: PropTypes.string
 };
 
 ListWeapons.propTypes = {
   handlePlayGameClick: PropTypes.func,
-  havewonThreeRounds: PropTypes.string,
+  havewonThreeRounds: PropTypes.string
 };
 
 export default ListWeapons;

@@ -15,9 +15,7 @@ import { ReactComponent as HandPaper } from '../../../assets/hand-paper-solid.sv
  * @param {String} winner Hvem som har vunnet
  */
 
-function ShowWinner({
-  showWinnerModal, setShowWinnerModal, computerSelected, winner,
-}) {
+function ShowWinner({ showWinnerModal, setShowWinnerModal, computerSelected, winner }) {
   const handleClose = () => {
     setShowWinnerModal(false);
   };
@@ -33,9 +31,7 @@ function ShowWinner({
       <Modal.Header closeButton />
       <Modal.Title>
         <h4 data-cy="winnermodaltext" className="text-center mt-2">
-          Vinner:
-          {' '}
-          {winner && winner.toString()}
+          Vinner: {winner && winner.toString()}
         </h4>
       </Modal.Title>
       <Modal.Body>
@@ -56,14 +52,14 @@ ShowWinner.defaultProps = {
   showWinnerModal: PropTypes.bool,
   setShowWinnerModal: PropTypes.func,
   computerSelected: PropTypes.string,
-  winner: PropTypes.string,
+  winner: PropTypes.string
 };
 
 ShowWinner.propTypes = {
   showWinnerModal: PropTypes.bool,
   setShowWinnerModal: PropTypes.func,
   computerSelected: PropTypes.string,
-  winner: PropTypes.string,
+  winner: PropTypes.string
 };
 
 export default ShowWinner;
