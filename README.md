@@ -37,7 +37,7 @@ Lag en interaktiv side der man kan spille stein-saks-papir (reglene finner du he
 -   Jest og React Testing Library
 -   Scanning av koden via SonarCloud og DeepScan
 -   Prop types validering
--   ESLint for kodestandard
+-   ESLint med AirBnb for kodestandard
 -   CircleCI som er integrert med CodeCov for opplasting av testdekningsrapport
 -   JSDoc for kode-dokumentering
 
