@@ -26,9 +26,9 @@
     "test:cypress": "cypress run",
     "dev": "start-test start 3000 cypress:open",
     "stylelint": "stylelint **/*.css",
-    "lint": "eslint --fix --ext .js,.jsx .",
+    "lint": "eslint --fix .",
     "format": "prettier --write \"**/*.{js,jsx,json}\"",
-    "refresh": "rm -rf node_modules && rm package-lock.json && npm i && npm run format && npm run lint"
+    "refresh": "rm -rf node_modules && rm package-lock.json && npm i && npm run format"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -53,8 +53,11 @@
     ]
   },
   "devDependencies": {
+    "@eslint/js": "^9.0.0",
     "@jest/globals": "^29.7.0",
-    "eslint": "^8.57.0",
+    "@typescript-eslint/eslint-plugin": "^7.5.0",
+    "@typescript-eslint/parser": "^7.5.0",
+    "eslint": "^9.0.0",
     "eslint-config-airbnb": "^19.0.4",
     "eslint-plugin-cypress": "^2.15.1",
     "eslint-plugin-import": "^2.29.1",

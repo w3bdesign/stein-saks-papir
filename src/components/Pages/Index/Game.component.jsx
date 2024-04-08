@@ -68,9 +68,7 @@ function Game() {
           aria-label="gamewinner"
           variant="success"
         >
-          {havewonThreeRounds}
-          {' '}
-          har vunnet! Hurra!
+          {havewonThreeRounds} har vunnet! Hurra!
         </Alert>
       )}
       <ListWeapons
