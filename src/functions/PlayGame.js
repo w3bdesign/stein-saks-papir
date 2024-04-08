@@ -10,35 +10,29 @@ import CheckWinner from './CheckWinner';
  */
 
 function PlayGame(playerSelectedWeapon) {
-
   const playerSelected = WEAPONS.find((weapon) => weapon.name === playerSelectedWeapon);
 
   const computerSelected = RandomWeapon();
   const youWin = CheckWinner(playerSelected, computerSelected);
 
   if (playerSelected.name === computerSelected.name) {
-
     return {
       winner: 'Uavgjort',
       computerSelected: computerSelected.name
     };
-
-}
+  }
 
   if (youWin) {
-
     return {
       winner: 'Spiller 1',
       computerSelected: computerSelected.name
     };
-
-}
+  }
 
   return {
     winner: 'CPU',
     computerSelected: computerSelected.name
   };
-
 }
 
 export default PlayGame;
