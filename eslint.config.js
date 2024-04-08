@@ -1,6 +1,5 @@
 const react = require('eslint-plugin-react');
 
-
 module.exports = [
   {
     languageOptions: {
@@ -19,19 +18,20 @@ module.exports = [
       react
     },
 
-
     rules: {
       'react/jsx-filename-extension': 'warn',
       'no-use-before-define': 'warn',
-      'no-undef': 'warn',
-      //'import/no-unresolved': 'warn',
+      // TODO: Need to wait for Eslint 9 support
+      // 'import/no-unresolved': 'warn',
       'no-param-reassign': 'warn',
       'no-multiple-empty-lines': 'warn',
       'padded-blocks': 'warn',
       'no-trailing-spaces': 'warn',
       'no-undef': 'warn',
       'comma-dangle': 'warn'
-      /*'import/extensions': [
+      /*
+      // TODO: Need to wait for Eslint 9 support
+      'import/extensions': [
         'warn',
         'ignorePackages',
         {
@@ -42,7 +42,5 @@ module.exports = [
         }
       ]*/
     }
-
-
   }
 ];
