@@ -1,5 +1,5 @@
 {
-  "extends": ["plugin:react/recommended", "airbnb"],
+  "extends": ["plugin:react/recommended"],
   "globals": {
     "cy": true
   },
