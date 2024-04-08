@@ -26,7 +26,7 @@
     "test:cypress": "cypress run",
     "dev": "start-test start 3000 cypress:open",
     "stylelint": "stylelint **/*.css",
-    "lint": "eslint ./**/**/**.{js,jsx} -c .eslintrc.json",
+    "lint": "eslint --fix .",
     "format": "prettier --write \"**/*.{js,jsx,json}\"",
     "refresh": "rm -rf node_modules && rm package-lock.json && npm i && npm run format"
   },
@@ -53,6 +53,7 @@
     ]
   },
   "devDependencies": {
+    "@eslint/js": "^9.0.0",
     "@jest/globals": "^29.7.0",
     "@typescript-eslint/eslint-plugin": "^7.5.0",
     "@typescript-eslint/parser": "^7.5.0",
