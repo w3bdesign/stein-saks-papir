@@ -4,13 +4,13 @@ orbs:
   # version "1.x.y" of the orb. We recommend you then use
   # the strict explicit version "cypress-io/cypress@1.x.y"
   # to lock the version and prevent unexpected CI changes
-  cypress: cypress-io/cypress@3.2.0
-  codecov: codecov/codecov@3.3.0
+  cypress: cypress-io/cypress@3.3.1
+  codecov: codecov/codecov@4.0.1
 jobs:
     # 👇 Adds Chromatic as a job
   chromatic-deployment:
     docker:
-      - image: cimg/node:21.4.0
+      - image: cimg/node:21.7.2
     working_directory: ~/stein-saks-papir
     steps:
       - checkout
@@ -22,7 +22,7 @@ jobs:
   build:
     working_directory: ~/stein-saks-papir
     docker:
-      - image: cimg/node:21.4.0-browsers
+      - image: cimg/node:21.7.2-browsers
     steps:
       - checkout
       - restore_cache:

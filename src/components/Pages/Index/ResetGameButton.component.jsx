@@ -27,11 +27,11 @@ function ResetGameButton({ sethavewonThreeRounds }) {
 }
 
 ResetGameButton.defaultProps = {
-  sethavewonThreeRounds: PropTypes.func,
+  sethavewonThreeRounds: PropTypes.func
 };
 
 ResetGameButton.propTypes = {
-  sethavewonThreeRounds: PropTypes.func,
+  sethavewonThreeRounds: PropTypes.func
 };
 
 export default ResetGameButton;
