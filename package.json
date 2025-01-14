@@ -68,6 +68,6 @@
     "prettier": "^3.4.2",
     "start-server-and-test": "^2.0.9",
     "stylelint": "^16.13.1",
-    "stylelint-config-standard": "^36.0.1"
+    "stylelint-config-standard": "^37.0.0"
   }
 }
