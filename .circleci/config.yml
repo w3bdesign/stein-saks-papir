@@ -5,7 +5,7 @@ orbs:
   # the strict explicit version "cypress-io/cypress@1.x.y"
   # to lock the version and prevent unexpected CI changes
   cypress: cypress-io/cypress@3.4.3
-  codecov: codecov/codecov@5.2.0
+  codecov: codecov/codecov@5.3.0
 jobs:
     # 👇 Adds Chromatic as a job
   chromatic-deployment:
