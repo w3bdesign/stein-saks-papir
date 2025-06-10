@@ -9,7 +9,7 @@
     "bootstrap": "^5.3.6",
     "cypress": "^14.4.1",
     "easy-peasy": "^6.1.0",
-    "jest": "^29.7.0",
+    "jest": "^30.0.0",
     "postcss": "^8.5.4",
     "prop-types": "^15.8.1",
     "react": "19.1.0",
