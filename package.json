@@ -7,7 +7,7 @@
     "@testing-library/react": "^16.3.0",
     "@testing-library/user-event": "^14.6.1",
     "bootstrap": "^5.3.8",
-    "cypress": "^15.4.0",
+    "cypress": "^15.5.0",
     "easy-peasy": "^6.1.0",
     "jest": "^30.2.0",
     "postcss": "^8.5.6",
