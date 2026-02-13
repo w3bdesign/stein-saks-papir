@@ -3,7 +3,7 @@
 [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=w3bdesign_stein-saks-papir&metric=alert_status)](https://sonarcloud.io/dashboard?id=w3bdesign_stein-saks-papir)
 [![Codacy Badge](https://app.codacy.com/project/badge/Grade/9c211fd2414342fba90652a01aa15377)](https://www.codacy.com/gh/w3bdesign/stein-saks-papir/dashboard?utm_source=github.com&utm_medium=referral&utm_content=w3bdesign/stein-saks-papir&utm_campaign=Badge_Grade)
 
-<img src="https://github.com/w3bdesign/stein-saks-papir/blob/master/screenshot/screenshot.jpg" alt="screenshot">
+<img src="screenshot/screenshot.jpg" alt="screenshot">
 
 Live URL: <https://steinsakspapir.dfweb.no>
 
