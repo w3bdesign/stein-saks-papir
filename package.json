@@ -9,7 +9,7 @@
     "bootstrap": "^5.3.8",
     "cypress": "^15.14.2",
     "easy-peasy": "^6.1.1",
-    "jest": "^30.3.0",
+    "jest": "^30.4.0",
     "postcss": "^8.5.14",
     "prop-types": "^15.8.1",
     "react": "19.2.6",
@@ -54,7 +54,7 @@
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",
-    "@jest/globals": "^30.3.0",
+    "@jest/globals": "^30.4.0",
     "@typescript-eslint/eslint-plugin": "^8.59.2",
     "@typescript-eslint/parser": "^8.59.2",
     "eslint": "^10.3.0",
