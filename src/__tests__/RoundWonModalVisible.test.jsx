@@ -1,7 +1,6 @@
 import React from 'react';
 
 import { render, screen, fireEvent } from '@testing-library/react';
-import { describe, expect, test, jest } from '@jest/globals';
 
 import userEvent from '@testing-library/user-event';
 import '@testing-library/jest-dom';
@@ -60,7 +59,7 @@ describe('Sjekk at "Motstander valgte" er synlig når vi velger et våpen', () =
   });
 
   test('Kaller setShowWinnerModal med false når modal er trykket på', () => {
-    const setShowWinnerModalMock = jest.fn();
+    const setShowWinnerModalMock = vi.fn();
     const { getByTestId } = render(
       <ShowWinner
         showWinnerModal
