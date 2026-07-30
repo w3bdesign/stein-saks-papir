@@ -1,9 +1,7 @@
 import js from '@eslint/js';
 import tseslint from 'typescript-eslint';
-// @ts-expect-error - no types available
 import reactPlugin from 'eslint-plugin-react';
 import reactHooksPlugin from 'eslint-plugin-react-hooks';
-// @ts-expect-error - no types available
 import jsxA11yPlugin from 'eslint-plugin-jsx-a11y';
 
 export default tseslint.config(
