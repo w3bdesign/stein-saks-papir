@@ -19,7 +19,7 @@ Lag en interaktiv side der man kan spille stein-saks-papir (reglene finner du he
 
 ## Teknologier / verktøy brukt
 
--   React 18 med hooks (useState og useEffect)
+-   React 19 med hooks (useState og useEffect)
 
 ### UI / design
 
@@ -35,7 +35,7 @@ Lag en interaktiv side der man kan spille stein-saks-papir (reglene finner du he
 -   Testdekninganalyse via CodeCov
 -   Vitest og React Testing Library
 -   Scanning av koden via SonarCloud og DeepScan
--   Prop types validering
+-   TypeScript for typesikkerhet
 -   ESLint med AirBnb for kodestandard
 -   CircleCI som er integrert med CodeCov for opplasting av testdekningsrapport
 -   JSDoc for kode-dokumentering
@@ -51,17 +51,17 @@ Lag en interaktiv side der man kan spille stein-saks-papir (reglene finner du he
 -   Jeg ville også satt opp `branch protection` på master og krevd minimum 1 code review fra en annen utvikler.
 -   Enighet om felles Git commit message template innad for kunden.
 -   Implementert React-Helmet for bedre kontroll over SEO
--   Hadde dette vært et større prosjekt hvor flere andre skulle samarbeidet ville jeg sannsynligvis implementert Typescript.
+-   Prosjektet er nå migrert til TypeScript for bedre typesikkerhet og utvikleropplevelse.
 
 ### Resonnering og tanker
 
 -   Jeg har valgt React ettersom jeg ikke så noe stort behov for å bruke Gatsby eller NextJS i dette prosjektet.
 -   Jeg valgte React Bootstrap for UI ettersom det er et populært bibliotek som er enkelt å bruke.
 -   Jeg har brukt ESLint og Airbnb for å opprettholde kodekvaliteten og gjøre utvikling enklere. Det fungerer også bra med integrert IDE støtte i VSCode. Det vil også gjøre videreutvikling og "maintainability" enklere på sikt. Jeg vurderte Typescript, men føler jeg må få mer erfaring med det først.
--   Jeg har brukt JSDoc for å dokumentere koden etter best mulig evne. Dette har jeg også gjort fordi jeg ikke har brukt Typescript.
+-   Jeg har brukt JSDoc for å dokumentere koden etter best mulig evne.
 -   Jeg har brukt SVG bilder fra FontAwesome for å sørge for at bildene ser bra ut uavhengig av oppløsning.
 -   Jeg har satt opp testing foreløpig med Jest, React-testing-library. Har også satt opp testing med Cypress. Alt er koblet oppimot CircleCI.
--   Jeg bruker Zustand for global state management ettersom det er lettvektig, enkelt å bruke, og fullt kompatibelt med React 18 og 19.
+-   Jeg bruker Zustand for global state management ettersom det er lettvektig, enkelt å bruke, og fullt kompatibelt med React 19.
 -   Jeg har implementert animasjoner med Animate.css fordi det er lettvint å implementere og jeg har brukt det før.
 -   Jeg har forsøkt å holde state "ren" ved å bare ha score, increaseScore og reset der.
 
@@ -73,6 +73,5 @@ Lag en interaktiv side der man kan spille stein-saks-papir (reglene finner du he
 -   Implementere beskrivelse av reglene. Bruk <https://react-bootstrap.github.io/components/accordion/>
 -   Vurder om Suspense og dynamisk rendering av komponenter ved behov bør implementeres.
 -   Erstatte Animate.css med GSAP eller React-spring? Tillater mer kompliserte animasjoner men krever mer koding.
--   Oppgradere kodebasen til Typescript?
 -   Se om jeg kan redusere prop drilling i komponenter ved å lagre mer informasjon i global state. Fordel er at komponenter blir "renere" fordi de ikke er avhengig av props. Ulempe er at det går imot det å holde state så "lavt" som mulig.
 -   Se om jeg kan separere mer kode i enda mindre komponenter for å gjøre koden ryddigere og enklere å vedlikeholde/oppdatere? (Allerede påbegynt).
