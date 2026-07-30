@@ -1,6 +1,6 @@
-import { ReactComponent as HandScissors } from '../assets/hand-scissors-solid.svg';
-import { ReactComponent as HandRock } from '../assets/hand-rock-solid.svg';
-import { ReactComponent as HandPaper } from '../assets/hand-paper-solid.svg';
+import HandScissors from '@/assets/HandScissors';
+import HandRock from '@/assets/HandRock';
+import HandPaper from '@/assets/HandPaper';
 
 /**
  * Konstant med våpnene som brukes og hva som vinner over hva
