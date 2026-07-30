@@ -53,7 +53,7 @@ describe('Sjekk at "Motstander valgte" er synlig når vi velger et våpen', () =
 
     await userEvent.click(screen.getByRole('button', { name: /papir/i }));
 
-    expect(screen.queryByRole('button', { name: /close/i })).not.toBeNull();
+    expect(screen.getByRole('button', { name: /close/i })).toBeInTheDocument();
   });
 
   test('Kaller setShowWinnerModal med false når modal er trykket på', () => {
