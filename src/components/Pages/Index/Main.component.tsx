@@ -1,5 +1,3 @@
-import React from 'react';
-
 import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
 import Card from 'react-bootstrap/Card';
@@ -10,7 +8,6 @@ import Game from './Game.component';
 
 /**
  * Hovedkomponenten som viser våpnene, resetknapp og poengtavle.
- * @returns {JSXElement} Returnerer JSX elementer. Se over for beskrivelse.
  */
 function Main() {
   return (

@@ -1,9 +1,9 @@
-import React, { useState, useEffect } from 'react';
-import { useStoreActions, useStoreState } from 'easy-peasy';
+import { useState, useEffect } from 'react';
 
 import Alert from 'react-bootstrap/Alert';
 
-import PlayGame from '../../../functions/PlayGame';
+import PlayGame from '@/functions/PlayGame';
+import useScoreBoardStore from '@/state/ScoreBoardStore';
 
 import ResetGameButton from './ResetGameButton.component';
 import ListWeapons from './ListWeapons.component';
@@ -12,18 +12,17 @@ import ShowWinner from './ShowWinner.component';
 /**
  * Generer knappene som viser våpnene
  * Håndterer det som skjer når knappene trykkes på via handlePlayGameClick()
- * Kaller increaseScore action fra Easy Peasy state
- * @returns void
+ * Kaller increaseScore action fra Zustand state
  */
 function Game() {
   const [showWinnerModal, setShowWinnerModal] = useState(false);
-  const [winner, setWinner] = useState(null);
+  const [winner, setWinner] = useState<string | null>(null);
   const [shouldCheckWinner, setshouldCheckWinner] = useState(false);
-  const [computerSelected, setcomputerSelected] = useState(null);
-  const [havewonThreeRounds, sethavewonThreeRounds] = useState(null);
+  const [computerSelected, setcomputerSelected] = useState<string | null>(null);
+  const [havewonThreeRounds, sethavewonThreeRounds] = useState<string | null>(null);
 
-  const increaseScore = useStoreActions((actions) => actions.increaseScore);
-  const getScore = useStoreState((score) => score.score);
+  const increaseScore = useScoreBoardStore((state) => state.increaseScore);
+  const getScore = useScoreBoardStore((state) => state.score);
 
   useEffect(() => {
     const haveFinalWinner = getScore.find((score) => score.Score > 2);
@@ -34,7 +33,7 @@ function Game() {
     }
   }, [shouldCheckWinner, getScore]);
 
-  const handlePlayGameClick = (Weapon) => {
+  const handlePlayGameClick = (Weapon: string) => {
     const resultOfGame = PlayGame(Weapon);
 
     setshouldCheckWinner(false);
@@ -64,7 +63,6 @@ function Game() {
       {havewonThreeRounds && (
         <Alert
           className="mt-4 animate__animated animate__zoomInUp"
-          name="gamewinner"
           aria-label="gamewinner"
           variant="success"
         >

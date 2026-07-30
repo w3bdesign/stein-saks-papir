@@ -3,14 +3,23 @@ import WEAPONS from '../const/WEAPONS';
 import RandomWeapon from './RandomWeapon';
 import CheckWinner from './CheckWinner';
 
+export interface GameResult {
+  winner: string;
+  computerSelected: string;
+}
+
 /**
  * Funksjonen som er ansvarlig for å spille spillet. Sjekker hvem som har vunnet via CheckWinner.
- * @param {String} playerSelectedWeapon Valgt spillervåpen
- * @returns {Object} Returnerer et objekt med resultatet og hva motstanderen valgte
+ * @param playerSelectedWeapon Valgt spillervåpen
+ * @returns Returnerer et objekt med resultatet og hva motstanderen valgte
  */
 
-function PlayGame(playerSelectedWeapon) {
+function PlayGame(playerSelectedWeapon: string): GameResult {
   const playerSelected = WEAPONS.find((weapon) => weapon.name === playerSelectedWeapon);
+
+  if (!playerSelected) {
+    throw new Error(`Unknown weapon: ${playerSelectedWeapon}`);
+  }
 
   const computerSelected = RandomWeapon();
   const youWin = CheckWinner(playerSelected, computerSelected);

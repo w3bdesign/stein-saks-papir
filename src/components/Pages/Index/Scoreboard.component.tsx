@@ -1,16 +1,14 @@
-import React from 'react';
-import { useStoreState } from 'easy-peasy';
-
 import Card from 'react-bootstrap/Card';
 import { CardGroup } from 'react-bootstrap';
+
+import useScoreBoardStore from '@/state/ScoreBoardStore';
 
 /**
  * Funksjonen som viser selve poengtavlen. Henter spillernavn og poeng dynamisk fra state.
  * Viser bare navn og score hvis verdiene er definerte og eksisterer.
- * @returns {JSXElement} Returnerer JSX elementer med poengtavle
  */
 function Scoreboard() {
-  const Player = useStoreState((player) => player.score);
+  const Player = useScoreBoardStore((state) => state.score);
   return (
     <Card className="mx-auto mt-5 text-center d-none d-xl-block d-lg-block d-md-block">
       <Card.Header>

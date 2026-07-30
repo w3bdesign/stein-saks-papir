@@ -1,17 +1,19 @@
-import React, { createElement, Fragment } from 'react';
-import PropTypes from 'prop-types';
+import { createElement, Fragment } from 'react';
 
 import Button from 'react-bootstrap/Button';
 
-import WEAPONS from '../../../const/WEAPONS';
+import WEAPONS from '@/const/WEAPONS';
 
 /**
  * Viser knapper med våpnene som vi kan velge
- * @param {Function} handlePlayGameClick Funksjon som setter spillet i gang
- * @param {String} havewonThreeRounds Hvem som har vunnet tre runder
  */
 
-function ListWeapons({ handlePlayGameClick, havewonThreeRounds }) {
+interface ListWeaponsProps {
+  readonly handlePlayGameClick: (weapon: string) => void;
+  readonly havewonThreeRounds: string | null;
+}
+
+function ListWeapons({ handlePlayGameClick, havewonThreeRounds }: Readonly<ListWeaponsProps>) {
   // Refaktorer onClick senere om hastighet blir et problem
   const weaponClass = `m-4 d-inline-block ${havewonThreeRounds && 'd-none'}`;
 
@@ -35,15 +37,5 @@ function ListWeapons({ handlePlayGameClick, havewonThreeRounds }) {
     </div>
   );
 }
-
-ListWeapons.defaultProps = {
-  handlePlayGameClick: PropTypes.func,
-  havewonThreeRounds: PropTypes.string
-};
-
-ListWeapons.propTypes = {
-  handlePlayGameClick: PropTypes.func,
-  havewonThreeRounds: PropTypes.string
-};
 
 export default ListWeapons;
