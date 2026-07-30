@@ -9,11 +9,11 @@ import WEAPONS from '@/const/WEAPONS';
  */
 
 interface ListWeaponsProps {
-  handlePlayGameClick: (weapon: string) => void;
-  havewonThreeRounds: string | null;
+  readonly handlePlayGameClick: (weapon: string) => void;
+  readonly havewonThreeRounds: string | null;
 }
 
-function ListWeapons({ handlePlayGameClick, havewonThreeRounds }: ListWeaponsProps) {
+function ListWeapons({ handlePlayGameClick, havewonThreeRounds }: Readonly<ListWeaponsProps>) {
   // Refaktorer onClick senere om hastighet blir et problem
   const weaponClass = `m-4 d-inline-block ${havewonThreeRounds && 'd-none'}`;
 

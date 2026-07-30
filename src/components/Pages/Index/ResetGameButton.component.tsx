@@ -8,10 +8,10 @@ import useScoreBoardStore from '@/state/ScoreBoardStore';
  */
 
 interface ResetGameButtonProps {
-  sethavewonThreeRounds: (value: string | null) => void;
+  readonly sethavewonThreeRounds: (value: string | null) => void;
 }
 
-function ResetGameButton({ sethavewonThreeRounds }: ResetGameButtonProps) {
+function ResetGameButton({ sethavewonThreeRounds }: Readonly<ResetGameButtonProps>) {
   const resetGame = useScoreBoardStore((state) => state.reset);
 
   const handleResetClick = () => {

@@ -9,13 +9,13 @@ import HandPaper from '@/assets/HandPaper';
  */
 
 interface ShowWinnerProps {
-  showWinnerModal: boolean;
-  setShowWinnerModal: (show: boolean) => void;
-  computerSelected: string | null;
-  winner: string | null;
+  readonly showWinnerModal: boolean;
+  readonly setShowWinnerModal: (show: boolean) => void;
+  readonly computerSelected: string | null;
+  readonly winner: string | null;
 }
 
-function ShowWinner({ showWinnerModal, setShowWinnerModal, computerSelected, winner }: ShowWinnerProps) {
+function ShowWinner({ showWinnerModal, setShowWinnerModal, computerSelected, winner }: Readonly<ShowWinnerProps>) {
   const handleClose = () => {
     setShowWinnerModal(false);
   };
