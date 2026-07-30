@@ -3,12 +3,14 @@ import type { Weapon } from '../const/WEAPONS';
 
 /**
  * Genererer et tilfeldig valgt våpen
- * Runder av verdien fra Math.random ganger med lengden av WEAPONS
+ * Bruker crypto.getRandomValues for kryptografisk sikker tilfeldighet
  * @returns Et tilfeldig valgt våpen
  */
 
 function RandomWeapon(): Weapon {
-  const randomIndex = Math.floor(Math.random() * WEAPONS.length);
+  const array = new Uint32Array(1);
+  crypto.getRandomValues(array);
+  const randomIndex = array[0]! % WEAPONS.length;
 
   return WEAPONS[randomIndex]!;
 }
