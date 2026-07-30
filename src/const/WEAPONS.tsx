@@ -1,3 +1,4 @@
+import React from 'react';
 import HandScissors from '@/assets/HandScissors';
 import HandRock from '@/assets/HandRock';
 import HandPaper from '@/assets/HandPaper';
