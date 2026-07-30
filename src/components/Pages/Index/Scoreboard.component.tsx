@@ -1,0 +1,42 @@
+import Card from 'react-bootstrap/Card';
+import { CardGroup } from 'react-bootstrap';
+
+import useScoreBoardStore from '@/state/ScoreBoardStore';
+
+/**
+ * Funksjonen som viser selve poengtavlen. Henter spillernavn og poeng dynamisk fra state.
+ * Viser bare navn og score hvis verdiene er definerte og eksisterer.
+ */
+function Scoreboard() {
+  const Player = useScoreBoardStore((state) => state.score);
+  return (
+    <Card className="mx-auto mt-5 text-center d-none d-xl-block d-lg-block d-md-block">
+      <Card.Header>
+        <h6>Poengtavle</h6>
+      </Card.Header>
+      <CardGroup className="m-4">
+        {Player?.map((player, index) => (
+          <Card key={player.Name}>
+            <Card.Body>
+              <Card.Title>
+                <span>{player.Name}</span>
+              </Card.Title>
+              <Card.Text>
+                <span
+                  id={`score-p${index}`}
+                  data-testid={`score-p${index}`}
+                  data-cy={`score-p${index}`}
+                  className="display-3"
+                >
+                  {player.Score}
+                </span>
+              </Card.Text>
+            </Card.Body>
+          </Card>
+        ))}
+      </CardGroup>
+    </Card>
+  );
+}
+
+export default Scoreboard;
