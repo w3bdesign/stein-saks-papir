@@ -1,27 +1,24 @@
 import React from 'react';
-import { StoreProvider } from 'easy-peasy';
 import Container from 'react-bootstrap/Container';
 
 import Main from './components/Pages/Index/Main.component';
-import ScoreBoardStore from './state/ScoreBoardStore';
+import useScoreBoardStore from './state/ScoreBoardStore';
 
 /**
- * Hovedapplikasjonen. Her bringer vi inn Easy Peasy store provider slik at alt har tilgang til den.
+ * Hovedapplikasjonen.
  */
 
 if (window.Cypress) {
-  window.store = ScoreBoardStore;
+  window.store = useScoreBoardStore;
 }
 
 function App() {
   return (
-    <StoreProvider store={ScoreBoardStore}>
-      <div className="root">
-        <Container fluid="md">
-          <Main />
-        </Container>
-      </div>
-    </StoreProvider>
+    <div className="root">
+      <Container fluid="md">
+        <Main />
+      </Container>
+    </div>
   );
 }
 

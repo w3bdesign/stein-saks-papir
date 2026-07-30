@@ -1,26 +1,24 @@
-import { action, createStore } from 'easy-peasy';
+import { create } from 'zustand';
 
 import DEFAULT_SCORE from '../const/DEFAULT_SCORE';
 
 /**
- * Easy Peasy store med poengstatus (score)
+ * Zustand store med poengstatus (score)
  * increaseScore for å øke score og reset for å nullstille poengstatus
  */
 
-const isDevelopmentEnv = process.env.NODE_ENV === 'development';
+const useScoreBoardStore = create((set) => ({
+  score: DEFAULT_SCORE.map((player) => ({ ...player })),
+  increaseScore: (playerName) =>
+    set((state) => ({
+      score: state.score.map((player) =>
+        player.Name === playerName ? { ...player, Score: player.Score + 1 } : player
+      )
+    })),
+  reset: () =>
+    set(() => ({
+      score: DEFAULT_SCORE.map((player) => ({ ...player, Score: 0 }))
+    }))
+}));
 
-const ScoreBoardStore = createStore({
-  score: DEFAULT_SCORE,
-  increaseScore: action((state, payload) => {
-    const playerIndex = state.score.findIndex((element) => element.Name === payload);
-    state.score[playerIndex].Score += 1;
-  }),
-  reset: action((state) => {
-    state.score.forEach((player) => {
-      player.Score = 0;
-    });
-  }),
-  devTools: isDevelopmentEnv
-});
-
-export default ScoreBoardStore;
+export default useScoreBoardStore;
