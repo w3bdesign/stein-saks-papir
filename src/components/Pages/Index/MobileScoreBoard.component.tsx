@@ -18,7 +18,7 @@ function MobileScoreboard() {
           {Player &&
             Player.map((player) => (
               <div key={player.Name} className="m-2">
-                <Card.Header bg="secondary">{player.Name}</Card.Header>
+                <Card.Header>{player.Name}</Card.Header>
                 <h5 className="font-weight-bold mt-2">{player.Score}</h5>
               </div>
             ))}

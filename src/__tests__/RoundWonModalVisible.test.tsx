@@ -1,5 +1,3 @@
-import React from 'react';
-
 import { render, screen, fireEvent } from '@testing-library/react';
 
 import userEvent from '@testing-library/user-event';
@@ -47,7 +45,7 @@ describe('Sjekk at "Motstander valgte" er synlig når vi velger et våpen', () =
 
     await userEvent.click(screen.getByRole('button', { name: /papir/i }));
 
-    expect(screen.getByRole('button', { name: /close/i }).toBeVisible);
+    expect(screen.getByRole('button', { name: /close/i })).toBeVisible();
   });
 
   test('Trykk lukkeknappen og sjekk at den ikke lenger eksisterer', async () => {
@@ -55,7 +53,7 @@ describe('Sjekk at "Motstander valgte" er synlig når vi velger et våpen', () =
 
     await userEvent.click(screen.getByRole('button', { name: /papir/i }));
 
-    expect(screen.queryByRole('button', { name: /close/i }).toBeNull);
+    expect(screen.queryByRole('button', { name: /close/i })).not.toBeNull();
   });
 
   test('Kaller setShowWinnerModal med false når modal er trykket på', () => {
