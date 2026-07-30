@@ -1,32 +1,40 @@
-import react from 'eslint-plugin-react';
+import js from '@eslint/js';
+import tseslint from 'typescript-eslint';
+// @ts-expect-error - no types available
+import reactPlugin from 'eslint-plugin-react';
+import reactHooksPlugin from 'eslint-plugin-react-hooks';
+// @ts-expect-error - no types available
+import jsxA11yPlugin from 'eslint-plugin-jsx-a11y';
 
-export default [
+export default tseslint.config(
+  js.configs.recommended,
+  ...tseslint.configs.recommended,
   {
-    languageOptions: {
-      globals: {
-        cy: true
-      },
-      parserOptions: {
-        ecmaFeatures: {
-          jsx: true
-        },
-        ecmaVersion: 13,
-        sourceType: 'module'
-      }
-    },
+    files: ['src/**/*.{ts,tsx}'],
     plugins: {
-      react
+      react: reactPlugin,
+      'react-hooks': reactHooksPlugin,
+      'jsx-a11y': jsxA11yPlugin,
     },
-
+    languageOptions: {
+      parserOptions: {
+        ecmaFeatures: { jsx: true },
+      },
+    },
+    settings: {
+      react: { version: 'detect' },
+    },
     rules: {
-      'react/jsx-filename-extension': 'warn',
-      'no-use-before-define': 'warn',
-      'no-param-reassign': 'warn',
-      'no-multiple-empty-lines': 'warn',
-      'padded-blocks': 'warn',
-      'no-trailing-spaces': 'warn',
-      'no-undef': 'warn',
-      'comma-dangle': 'warn'
-    }
+      'react/react-in-jsx-scope': 'off',
+      'react/jsx-uses-react': 'off',
+      'react-hooks/rules-of-hooks': 'error',
+      'react-hooks/exhaustive-deps': 'warn',
+      'react/prop-types': 'off',
+      'no-unused-vars': 'off',
+      '@typescript-eslint/no-unused-vars': ['error', { argsIgnorePattern: '^_' }],
+    },
+  },
+  {
+    ignores: ['build/**', 'dist/**', 'node_modules/**', 'cypress/**'],
   }
-];
+);
