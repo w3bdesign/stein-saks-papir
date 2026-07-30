@@ -1,22 +1,30 @@
 import js from '@eslint/js';
-import tseslint from 'typescript-eslint';
+import tseslintPlugin from '@typescript-eslint/eslint-plugin';
+import tseslintParser from '@typescript-eslint/parser';
 import reactPlugin from 'eslint-plugin-react';
 import reactHooksPlugin from 'eslint-plugin-react-hooks';
 import jsxA11yPlugin from 'eslint-plugin-jsx-a11y';
+import globals from 'globals';
 
-export default tseslint.config(
+export default [
   js.configs.recommended,
-  ...tseslint.configs.recommended,
   {
     files: ['src/**/*.{ts,tsx}'],
     plugins: {
+      '@typescript-eslint': tseslintPlugin,
       react: reactPlugin,
       'react-hooks': reactHooksPlugin,
       'jsx-a11y': jsxA11yPlugin,
     },
     languageOptions: {
+      parser: tseslintParser,
       parserOptions: {
         ecmaFeatures: { jsx: true },
+        ecmaVersion: 'latest',
+        sourceType: 'module',
+      },
+      globals: {
+        ...globals.browser,
       },
     },
     settings: {
@@ -33,6 +41,23 @@ export default tseslint.config(
     },
   },
   {
+    files: ['src/**/*.test.{ts,tsx}', 'src/**/*.spec.{ts,tsx}'],
+    languageOptions: {
+      globals: {
+        ...globals.vitest,
+        vi: 'readonly',
+        describe: 'readonly',
+        test: 'readonly',
+        it: 'readonly',
+        expect: 'readonly',
+        beforeAll: 'readonly',
+        beforeEach: 'readonly',
+        afterAll: 'readonly',
+        afterEach: 'readonly',
+      },
+    },
+  },
+  {
     ignores: ['build/**', 'dist/**', 'node_modules/**', 'cypress/**'],
-  }
-);
+  },
+];
