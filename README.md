@@ -34,7 +34,7 @@ Lag en interaktiv side der man kan spille stein-saks-papir (reglene finner du he
 
 -   Cypress integrert med CircleCI for E2E testing
 -   Testdekninganalyse via CodeCov
--   Jest og React Testing Library
+-   Vitest og React Testing Library
 -   Scanning av koden via SonarCloud og DeepScan
 -   Prop types validering
 -   ESLint med AirBnb for kodestandard
@@ -43,7 +43,7 @@ Lag en interaktiv side der man kan spille stein-saks-papir (reglene finner du he
 
 ### State management
 
--   Easy Peasy for å håndtere global state
+-   Zustand for å håndtere global state
 -   useState med prop drilling (holde state så lokal som mulig)
 
 ## Hva jeg ville gjort annerledes i en profesjonell setting
@@ -62,9 +62,9 @@ Lag en interaktiv side der man kan spille stein-saks-papir (reglene finner du he
 -   Jeg har brukt JSDoc for å dokumentere koden etter best mulig evne. Dette har jeg også gjort fordi jeg ikke har brukt Typescript.
 -   Jeg har brukt SVG bilder fra FontAwesome for å sørge for at bildene ser bra ut uavhengig av oppløsning.
 -   Jeg har satt opp testing foreløpig med Jest, React-testing-library. Har også satt opp testing med Cypress. Alt er koblet oppimot CircleCI.
--   Jeg bruker hooks med Easy Peasy ettersom det er enkelt å bruke og jeg har erfaring med det fra før av. I tillegg bruker det Redux "under the hood" så jeg har tilgang til Redux dev tools.
+-   Jeg bruker Zustand for global state management ettersom det er lettvektig, enkelt å bruke, og fullt kompatibelt med React 18 og 19.
 -   Jeg har implementert animasjoner med Animate.css fordi det er lettvint å implementere og jeg har brukt det før.
--   Jeg har forsøkt å holde state "ren" ved å bare ha score, increaseScore og reset der. Jeg vurderer å refaktorere koden til å bruke Easy Peasy state for å eliminere propdrilling.
+-   Jeg har forsøkt å holde state "ren" ved å bare ha score, increaseScore og reset der.
 
 ### <a id="todo">TODO med fremtidige potensielle/mulige forbedringer for refaktorering</a>
 
@@ -72,10 +72,7 @@ Lag en interaktiv side der man kan spille stein-saks-papir (reglene finner du he
 -   Fullfør arbeid med å separare ut state og actions i mindre filer i `/state/model` og slå de sammen. Gjør skalering og struktur bedre.
 -   Implementere tester for hver enkelt komponent (med React Testing Library) separat istedenfor sånn som vi har de nå?
 -   Implementere beskrivelse av reglene. Bruk <https://react-bootstrap.github.io/components/accordion/>
--   Vurder å bytte ut useState med <https://easy-peasy.now.sh/docs/api/create-component-store.html>
 -   Vurder om Suspense og dynamisk rendering av komponenter ved behov bør implementeres.
--   Lagre finalWinner via `computed` i state og hente ut denne senere? Vil cache verdien og gi oss en performance fordel (<https://easy-peasy.now.sh/docs/api/computed.html>)?
--   Se på muligheten for å erstatte setTimeOut i ListWeapons med actionOn thunk/async listener. (<https://easy-peasy.now.sh/docs/tutorial/using-listeners.html>)
 -   Erstatte Animate.css med GSAP eller React-spring? Tillater mer kompliserte animasjoner men krever mer koding.
 -   Oppgradere kodebasen til Typescript?
 -   Se om jeg kan redusere prop drilling i komponenter ved å lagre mer informasjon i global state. Fordel er at komponenter blir "renere" fordi de ikke er avhengig av props. Ulempe er at det går imot det å holde state så "lavt" som mulig.
