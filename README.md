@@ -57,10 +57,10 @@ Lag en interaktiv side der man kan spille stein-saks-papir (reglene finner du he
 
 -   Jeg har valgt React ettersom jeg ikke så noe stort behov for å bruke Gatsby eller NextJS i dette prosjektet.
 -   Jeg valgte React Bootstrap for UI ettersom det er et populært bibliotek som er enkelt å bruke.
--   Jeg har brukt ESLint og Airbnb for å opprettholde kodekvaliteten og gjøre utvikling enklere. Det fungerer også bra med integrert IDE støtte i VSCode. Det vil også gjøre videreutvikling og "maintainability" enklere på sikt. Jeg vurderte Typescript, men føler jeg må få mer erfaring med det først.
+-   Jeg har brukt ESLint og Airbnb for å opprettholde kodekvaliteten og gjøre utvikling enklere. Det fungerer også bra med integrert IDE støtte i VSCode. Det vil også gjøre videreutvikling og "maintainability" enklere på sikt. Prosjektet bruker nå TypeScript for full typesikkerhet.
 -   Jeg har brukt JSDoc for å dokumentere koden etter best mulig evne.
 -   Jeg har brukt SVG bilder fra FontAwesome for å sørge for at bildene ser bra ut uavhengig av oppløsning.
--   Jeg har satt opp testing foreløpig med Jest, React-testing-library. Har også satt opp testing med Cypress. Alt er koblet oppimot CircleCI.
+-   Jeg har satt opp testing med Vitest og React Testing Library. Har også satt opp testing med Cypress. Alt er koblet oppimot CircleCI.
 -   Jeg bruker Zustand for global state management ettersom det er lettvektig, enkelt å bruke, og fullt kompatibelt med React 19.
 -   Jeg har implementert animasjoner med Animate.css fordi det er lettvint å implementere og jeg har brukt det før.
 -   Jeg har forsøkt å holde state "ren" ved å bare ha score, increaseScore og reset der.
