@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 import Button from 'react-bootstrap/Button';
 
-import WEAPONS from '../../../const/WEAPONS';
+import WEAPONS from '@/const/WEAPONS';
 
 /**
  * Viser knapper med våpnene som vi kan velge

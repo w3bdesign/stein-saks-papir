@@ -1,6 +1,7 @@
 import React from 'react';
 import Card from 'react-bootstrap/Card';
-import { useStoreState } from 'easy-peasy';
+
+import useScoreBoardStore from '@/state/ScoreBoardStore';
 
 /**
  * Funksjonen som viser selve poengtavlen. Henter spillernavn og poeng dynamisk fra state.
@@ -8,7 +9,7 @@ import { useStoreState } from 'easy-peasy';
  * @returns {JSXElement} Returnerer JSX elementer med poengtavle
  */
 function MobileScoreboard() {
-  const Player = useStoreState((player) => player.score);
+  const Player = useScoreBoardStore((state) => state.score);
   return (
     <div className="d-xl-none d-lg-none d-md-none">
       <Card className="mt-2">

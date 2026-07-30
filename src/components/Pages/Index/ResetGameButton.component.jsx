@@ -2,17 +2,18 @@ import React from 'react';
 
 import Button from 'react-bootstrap/Button';
 import PropTypes from 'prop-types';
-import { useStoreActions } from 'easy-peasy';
+
+import useScoreBoardStore from '@/state/ScoreBoardStore';
 
 /**
  * Funksjon for å nullstille spillet og sette score for spillerne til 0.
- * Kaller reset funksjonen fra Easy Peasy store.
+ * Kaller reset funksjonen fra Zustand store.
  * @param {Function} sethavewonThreeRounds Funksjon som setter hvem som har vunnet 3 runder
  * @returns {JSXElement} Returnerer knappen som beskrevet over
  */
 
 function ResetGameButton({ sethavewonThreeRounds }) {
-  const resetGame = useStoreActions((actions) => actions.reset);
+  const resetGame = useScoreBoardStore((state) => state.reset);
 
   const handleResetClick = () => {
     resetGame();

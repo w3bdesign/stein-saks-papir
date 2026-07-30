@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import { useStoreActions, useStoreState } from 'easy-peasy';
 
 import Alert from 'react-bootstrap/Alert';
 
-import PlayGame from '../../../functions/PlayGame';
+import PlayGame from '@/functions/PlayGame';
+import useScoreBoardStore from '@/state/ScoreBoardStore';
 
 import ResetGameButton from './ResetGameButton.component';
 import ListWeapons from './ListWeapons.component';
@@ -12,7 +12,7 @@ import ShowWinner from './ShowWinner.component';
 /**
  * Generer knappene som viser våpnene
  * Håndterer det som skjer når knappene trykkes på via handlePlayGameClick()
- * Kaller increaseScore action fra Easy Peasy state
+ * Kaller increaseScore action fra Zustand state
  * @returns void
  */
 function Game() {
@@ -22,8 +22,8 @@ function Game() {
   const [computerSelected, setcomputerSelected] = useState(null);
   const [havewonThreeRounds, sethavewonThreeRounds] = useState(null);
 
-  const increaseScore = useStoreActions((actions) => actions.increaseScore);
-  const getScore = useStoreState((score) => score.score);
+  const increaseScore = useScoreBoardStore((state) => state.increaseScore);
+  const getScore = useScoreBoardStore((state) => state.score);
 
   useEffect(() => {
     const haveFinalWinner = getScore.find((score) => score.Score > 2);

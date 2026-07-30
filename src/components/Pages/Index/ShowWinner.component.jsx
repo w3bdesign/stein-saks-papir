@@ -3,9 +3,9 @@ import React from 'react';
 import Modal from 'react-bootstrap/Modal';
 import PropTypes from 'prop-types';
 
-import { ReactComponent as HandScissors } from '../../../assets/hand-scissors-solid.svg';
-import { ReactComponent as HandRock } from '../../../assets/hand-rock-solid.svg';
-import { ReactComponent as HandPaper } from '../../../assets/hand-paper-solid.svg';
+import HandScissors from '@/assets/HandScissors';
+import HandRock from '@/assets/HandRock';
+import HandPaper from '@/assets/HandPaper';
 
 /**
  * Viser hvem som har vunnet hver runde med en modal man kan lukke via show
