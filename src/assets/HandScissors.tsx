@@ -5,7 +5,7 @@ function HandScissors() {
       data-prefix="fas"
       data-icon="hand-scissors"
       className="svg-inline--fa fa-hand-scissors fa-w-16"
-      role="img"
+      aria-label="Saks"
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 512 512"
       width="50"

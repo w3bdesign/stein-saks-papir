@@ -5,7 +5,7 @@ function HandRock() {
       data-prefix="fas"
       data-icon="hand-rock"
       className="svg-inline--fa fa-hand-rock fa-w-16"
-      role="img"
+      aria-label="Stein"
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 512 512"
       width="50"

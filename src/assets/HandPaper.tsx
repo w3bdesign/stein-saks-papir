@@ -5,7 +5,7 @@ function HandPaper() {
       data-prefix="fas"
       data-icon="hand-paper"
       className="svg-inline--fa fa-hand-paper fa-w-14"
-      role="img"
+      aria-label="Papir"
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 448 512"
       width="50"
