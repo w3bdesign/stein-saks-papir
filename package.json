@@ -47,7 +47,7 @@
     "eslint-plugin-react-hooks": "^4.6.2",
     "jsdom": "^30.0.0",
     "netlify-plugin-cypress": "^2.2.1",
-    "postcss": "^8.5.24",
+    "postcss": "^8.5.25",
     "prettier": "^3.9.6",
     "start-server-and-test": "^2.1.5",
     "stylelint": "^16.26.1",
